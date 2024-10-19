@@ -1227,6 +1227,7 @@ $wp_customize->add_setting( 'post_image_type', array(
     'default'           => 'newsup_post_img_hei',
     'capability'        => 'edit_theme_options',
     'sanitize_callback' => 'newsup_sanitize_select',
+    'transport' => 'postMessage',
 ) );
 $wp_customize->add_control( 'post_image_type', array(
     'type'     => 'radio',

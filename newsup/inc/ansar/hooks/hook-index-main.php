@@ -244,3 +244,47 @@ if (!function_exists('newsup_single_comments_box')) :
     }
 endif;
 add_action('newsup_action_single_comments_box', 'newsup_single_comments_box', 40);
+
+if (!function_exists('newsup_main_list_content')) :
+    function newsup_main_list_content() {
+        global $post;
+        while(have_posts()){ the_post(); ?>
+            <article id="post-<?php the_ID(); ?>" <?php post_class('d-md-flex mg-posts-sec-post align-items-center'); ?>>
+                <?php newsup_post_image_display_type($post); ?>
+                <div class="mg-sec-top-post py-3 col">
+                    <?php newsup_post_categories(); ?> 
+                    <h4 class="entry-title title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
+                    <?php newsup_post_meta(); ?>
+                    <div class="mg-content">
+                        <?php $newsup_excerpt = newsup_the_excerpt( absint( 30 ) );
+                        if ( !empty( $newsup_excerpt ) ) {  echo wp_kses_post( wpautop( $newsup_excerpt ) ); } ?>
+                    </div>
+                </div>
+            </article>
+        <?php } newsup_page_pagination();
+    }
+endif;
+add_action('newsup_action_main_list_content', 'newsup_main_list_content', 40);
+
+if (!function_exists('newsup_main_grid_content')) :
+    function newsup_main_grid_content() {
+        global $post;
+        while(have_posts()){ the_post();  
+            $newsup_content_layout = esc_attr(get_theme_mod('newsup_content_layout','align-content-right')); ?>
+            <div id="post-<?php the_ID(); ?>" <?php if($newsup_content_layout == "grid-fullwidth") { echo post_class('col-lg-4 col-md-6'); } else { echo post_class('col-md-6'); } ?>>
+            <!-- mg-posts-sec mg-posts-modul-6 -->
+                <div class="mg-blog-post-box"> 
+                    <?php newsup_post_image_display_type($post); ?>
+                    <article class="small">
+                        <?php newsup_post_categories(); ?> 
+                        <h4 class="entry-title title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>  
+                        <?php newsup_post_meta(); ?>
+                        <?php $newsup_excerpt = newsup_the_excerpt( absint( 20 ) );
+                            if ( !empty( $newsup_excerpt ) ) { echo wp_kses_post( wpautop( $newsup_excerpt ) ); } ?>
+                    </article>
+                </div>
+            </div>
+        <?php }  newsup_page_pagination();
+    }
+endif;
+add_action('newsup_action_main_grid_content', 'newsup_main_grid_content', 40);
