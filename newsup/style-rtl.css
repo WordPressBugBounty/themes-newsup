@@ -25,7 +25,7 @@ Text Domain: newsup
 	z-index: 12;
 	width: 1.75rem;
 	height: 1rem; 
-	border: none;
+	border: none;	
 	outline: none;
 	background: none;
 	visibility: visible;
@@ -1293,7 +1293,8 @@ button.mfp-close:hover, button.mfp-close:focus {
 }
 .mg-info-author-block h4 {
 	font-size: 24px;
-	font-weight: 700;
+    font-weight: 700;
+    margin-bottom: 0;
 }
 .mg-info-author-block h4 span {
 	font-size: 14px;
@@ -1303,7 +1304,7 @@ button.mfp-close:hover, button.mfp-close:focus {
 	padding-right: 5px;
 }
 .mg-info-author-block .mg-author-pic img {
-	margin: 0 0 15px 25px;
+	margin: 0 0 0px 25px;
 	float: left;
 	border-radius: 50%;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -1324,7 +1325,9 @@ button.mfp-close:hover, button.mfp-close:focus {
 	font-size: 16px;
 	line-height: 38px;
 }
-
+.mg-info-author-block a{
+	display: inline-block;
+}
 .post-edit-link i{
 	margin-right: 4px;
 	margin-left: unset;
@@ -1775,7 +1778,6 @@ footer .widget_post_list .widget_post_list_inner{
 .mg-posts-sec-inner .small-list-post .small-post{
   list-style: none;
   padding: 8px;
-  margin-bottom: 20px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.15);
   gap: 20px;
 }
@@ -3148,7 +3150,7 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
 .comment-content {
     position: relative;
     z-index: 0;
-    padding: 16px 40px 16px 0;
+    padding: 16px 0px 16px 40px;
 }
 .comment-content p {
     margin: 0;
