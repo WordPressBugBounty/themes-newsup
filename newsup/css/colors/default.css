@@ -1,6 +1,5 @@
 /*==================== Site Titel =======================*/
-body .site-title-footer a, body .site-description-footer
-{
+body .site-title-footer a, body .site-description-footer {
 	color: #fff;
 }
 /*==================== Top Bar color ====================*/
@@ -131,7 +130,6 @@ a.newsup-categories.category-color-4{background: #82b74b;}
     background: #1151d3;
     color: #fff;
 }
-
 .mobilehomebtn:hover, .mobilehomebtn:focus{color:#fff;}
 .btn:hover, .btn:focus, .btn.focus{	color: #fff;}
 /*=== navbar drop down hover color ===*/
@@ -476,13 +474,11 @@ blockquote::after {
 .wp-block-search .wp-block-search__label::after, .mg-widget .wp-block-group h2::after {
 	background-color: #1151d3;
 }
-
 .wp-block-file *+.wp-block-file__button{
     background: #1151d3;
     color: #ffffff;
     text-decoration: none;
 }
-
 /*==================== Sidebar ====================*/
 .mg-sidebar .mg-widget {
 	background: #fff;
@@ -541,8 +537,8 @@ blockquote::after {
 	color: #1151d3;
 	border-color: #f3eeee;
 }
-.wp-block-tag-cloud a:hover, .wp-block-tag-cloud a:focus,
- .wp-block-tag-cloud a:hover, .wp-block-tag-cloud a:focus,
+.wp-block-tag-cloud a:hover, .wp-block-tag-cloud a:focus, 
+.wp-block-tag-cloud a:hover, .wp-block-tag-cloud a:focus, 
 .mg-widget .wp-block-tag-cloud a:hover  {
 	color: #fff;
 	background: #1151d3;
@@ -575,11 +571,9 @@ blockquote::after {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	color: #212121;
 }
-
 .btn {
 	background: #1151d3;
 	color: #fff;
-
 }
 .btn-theme, .more_btn, .more-link {
 	background: #1151d3;
@@ -595,7 +589,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	background: #fff;
 	color: #999;
 }
-
 .nav-next a, .nav-previous a {
 	color: #000;
 }
@@ -629,13 +622,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .mg-heading-bor-bt h5 {
 	color: #212121;
 }
-
 /*==================== Tags ======================*/
-.newsup-tags a:hover
-{
+.newsup-tags a:hover{
 	color: #1151d3;
 }
-
 #wp-calendar tbody td#today{color: #1151d3; }
 /*==================== footer background ====================*/
 footer .overlay {
@@ -654,7 +644,6 @@ footer .mg-widget ul li a {
 footer .mg-widget ul li a:hover, footer .mg-widget ul li a:focus {
 	color: #1151d3;
 }
-
 footer .mg-social li span.icon-soci a {
     color: #fff;
 }
@@ -697,22 +686,17 @@ footer .mg-social li span.icon-soci a {
 	background: #0078ca;
 	color:#fff;
 }
-
 .telegram {
 	background: #0088cc;
 	color:#fff;
 }
-
-.post-share-icons .email
-{
+.post-share-icons .email{
 	background: #222;
 }
-
 .print-r {
     background: #000;
     color: #fff;
 }
-
 footer .mg-footer-copyright {
 	background: #090818;
 }
@@ -725,7 +709,6 @@ footer .mg-footer-copyright a:hover, footer .mg-footer-copyright a:focus {
 footer .mg-widget p {
 	color: #fff;
 }
-
 footer .mg-widget h1, footer .mg-widget h2, footer .mg-widget h3, footer .mg-widget h4, footer .mg-widget h5, footer .mg-widget h6{
 	color: #fff;
 }
@@ -745,9 +728,8 @@ footer .mg-widget .wp-block-calendar table caption, footer .mg-widget .wp-block-
     color: #bcbcbc;
 }
 footer .mg-widget .small-post-content p, footer .mg-widget .small-post-content .mg-blog-meta a{
-color: #212121;
+	color: #212121;
 }
-
 footer .mg-posts-modul-6 .mg-sec-top-post p{ color: #000; }
 
 footer .mg-posts-modul-6 .mg-sec-top-post .mg-blog-meta a{ color: #000; }
@@ -870,11 +852,9 @@ footer .small-post .title a{
 .woocommerce-page .woocommerce .woocommerce-info a, .woocommerce-page .woocommerce .woocommerce-info:before, .woocommerce-page .woocommerce-message, .woocommerce-page .woocommerce-message a, .woocommerce-page .woocommerce-message a:hover, .woocommerce-page .woocommerce-message a:focus, .woocommerce .woocommerce-message::before, .woocommerce-page .woocommerce-error, .woocommerce-page .woocommerce-error a, .woocommerce-page .woocommerce .woocommerce-error:before, .woocommerce-page .woocommerce-info, .woocommerce-page .woocommerce-info a, .woocommerce-page .woocommerce-info:before, .woocommerce-page .woocommerce .woocommerce-info, .woocommerce-cart .wc-proceed-to-checkout a .checkout-button, .woocommerce .cart .button, .woocommerce .cart input.button, .woocommerce a.button, .woocommerce button.button, .woocommerce #respond input#submit, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce nav .woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page .products a.button, .woocommerce #respond input#submit:hover, .woocommerce #respond input#submit:focus, .woocommerce a.button:hover, .woocommerce a.button:focus, .woocommerce button.button:hover, .woocommerce button.button:focus, .woocommerce input.button:hover, .woocommerce input.button:focus {
 	color: #fff;
 }
-
 .woocommerce .products span.onsale, .woocommerce span.onsale {
 	background: #1151d3;
 }
-
 .woocommerce-page .products a .price, .woocommerce ul.products li.product .price, .woocommerce div.product p.price, .woocommerce div.product span.price {
 	color: #000;
 }
@@ -931,17 +911,14 @@ footer .small-post .title a{
 .woocommerce form .form-row label { 
 	color: #222;
 }
-
-div.wpforms-container-full .wpforms-form button[type=submit], div.wpforms-container-full .wpforms-form button[type=submit]:focus, div.wpforms-container-full .wpforms-form button[type=submit]:hover
-{
+div.wpforms-container-full .wpforms-form button[type=submit], div.wpforms-container-full .wpforms-form button[type=submit]:focus, div.wpforms-container-full .wpforms-form button[type=submit]:hover {
     background-color: #1151d3;
     color: #fff;
 }
 .wp-block-search .wp-block-search__input:hover, .wp-block-search .wp-block-search__input:focus {
     border-color: #1151d3;
 }
-.wp-block-search .wp-block-search__button
-{
+.wp-block-search .wp-block-search__button{
     background: #1151d3;
     border-color: #1151d3;
     color: #fff;

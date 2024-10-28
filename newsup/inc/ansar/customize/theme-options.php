@@ -843,6 +843,7 @@ $wp_customize->add_setting('you_missed_enable',
     array(
         'default' => true,
         'sanitize_callback' => 'newsup_sanitize_checkbox',
+        'transport' => $selective_refresh
     )
 );
 $wp_customize->add_control(new Newsup_Toggle_Control( $wp_customize, 'you_missed_enable', 
