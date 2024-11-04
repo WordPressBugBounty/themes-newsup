@@ -4,9 +4,9 @@ Theme URI: https://themeansar.com/free-themes/newsup/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://demo.themeansar.com/newsup and documentation at https://docs.themeansar.com/docs/newsup/
-Version: 4.0.0.59
+Version: 4.0.0.60
 Tested up to: 6.6
-Requires PHP: 7.0
+Requires PHP: 7.4
 Requires at least: 5.4
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
 License: GNU General Public License v3 or later
@@ -1001,12 +1001,9 @@ button.mfp-close:hover, button.mfp-close:focus {
     margin-top: 1rem;
     margin-bottom: 0rem;
 }
-
-.mg-sidebar .mg-widget .wp-block-group .is-nowrap p, .mg-sidebar .mg-widget .wp-block-group .is-vertical p
-{
+.mg-sidebar .mg-widget .wp-block-group .is-nowrap p, .mg-sidebar .mg-widget .wp-block-group .is-vertical p {
 	padding: 0;	
 }
-
 .mg-sidebar .mg-widget.widget_tag_cloud, .mg-widget.widget_tag_cloud {
 	padding:  10px 20px;
 }
@@ -2498,6 +2495,16 @@ body.search {
 	padding: 5px;
 	text-align: right;
 	text-transform: uppercase;
+}
+.mg-sidebar .mg-widget .latest-posts-widget .col-md-6 {
+	max-width: inherit;
+    flex: auto;
+}
+.mg-widget .latest-posts-widget .mg-posts-sec-post {
+	flex-direction: column; 
+}
+.mg-widget .latest-posts-widget .mg-post-thumb{
+	margin-right: 0;
 }
 /*--calendar_wrap end--*/ 
 /*----woocommerce footer-widget----*/

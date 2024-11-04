@@ -51,7 +51,7 @@ if (!class_exists('Newsup_Latest_Post')) :
             echo $args['before_widget'];
             ?>
              <!-- mg-posts-sec mg-posts-modul-6 -->
-            <div class="mg-posts-sec mg-posts-modul-6">
+            <div class="mg-posts-sec mg-posts-modul-6 latest-posts-widget">
                 <?php if (!empty($title)): ?>
                 <!-- mg-sec-title -->
                 <div class="mg-sec-title">
