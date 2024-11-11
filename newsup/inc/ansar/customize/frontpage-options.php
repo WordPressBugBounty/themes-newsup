@@ -175,6 +175,7 @@ $wp_customize->add_setting('show_flash_news_section',
         'default' => $newsup_default['show_flash_news_section'],
         'capability' => 'edit_theme_options',
         'sanitize_callback' => 'newsup_sanitize_checkbox',
+        'transport' => $selective_refresh
     )
 );
 $wp_customize->add_control('show_flash_news_section',
@@ -211,6 +212,7 @@ $wp_customize->add_setting('select_flash_news_category',
         'default' => $newsup_default['select_flash_news_category'],
         'capability' => 'edit_theme_options',
         'sanitize_callback' => 'absint',
+        'transport' => $selective_refresh
     )
 );
 $wp_customize->add_control(new Newsup_Dropdown_Taxonomies_Control($wp_customize, 'select_flash_news_category',

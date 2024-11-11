@@ -11,12 +11,11 @@ if (!function_exists('newsup_banner_trending_posts')):
      *
      */
     function newsup_banner_exclusive_posts()  { 
-            if (is_front_page() || is_home()) {
-                $show_flash_news_section = newsup_get_option('show_flash_news_section');
-            if ($show_flash_news_section): 
-        ?>
-            <section class="mg-latest-news-sec">
+        if (is_front_page() || is_home()) { ?>
+            <section class="mg-latest-news-sec"> 
                 <?php
+                $show_flash_news_section = newsup_get_option('show_flash_news_section');
+                if ($show_flash_news_section) {
                 $category = newsup_get_option('select_flash_news_category');
                 $number_of_posts = newsup_get_option('number_of_flash_news');
                 $newsup_ticker_news_title = newsup_get_option('flash_news_title');
@@ -53,9 +52,9 @@ if (!function_exists('newsup_banner_trending_posts')):
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- Excluive line END -->
-        <?php endif;
+                <!-- Excluive line END -->
+            <?php }
+            echo '</section>';
         }
     }
 endif;
