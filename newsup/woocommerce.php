@@ -6,7 +6,7 @@
  */
 get_header(); ?>
 <!--==================== breadcrumb section ====================-->
-<?php get_template_part('index','banner'); ?>
+<?php if ( function_exists( 'is_product' ) && !is_product() ) { get_template_part('index','banner'); } ?>
 
 <!-- #main -->
 <main id="content">

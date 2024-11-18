@@ -8,16 +8,19 @@ if ( has_header_image() ) { $newsup_background_image = get_header_image(); } ?>
           <div class="col-md-12 col-sm-12">
             <div class="mg-breadcrumb-title">
               <?php
-              if( class_exists( 'WooCommerce' ) && is_shop() ) { ?>
-                <h1>
-                  <?php woocommerce_page_title(); ?>
-                </h1>
-                <?php    
+              if( class_exists( 'WooCommerce' )) {
+               if(is_shop()) { ?>
+                  <h1 class="title"><?php woocommerce_page_title();?></h1><?php
+                } elseif(is_product_category() || is_product_tag()){ 
+                  the_archive_title( '<h2 class="title">', '</h2>' );
+                } else { ?>
+                  <h1 class="title"><?php the_title(); ?></h1>
+                <?php }
               } elseif(is_archive()) {
-                the_archive_title( '<h1>', '</h1>' );
+                the_archive_title( '<h1 class="title">', '</h1>' );
                 the_archive_description( '<div class="archive-description">', '</div>' );
               } else { ?>
-                <h1><?php the_title(); ?></h1>
+                <h1 class="title"><?php the_title(); ?></h1>
               <?php } ?>
             </div>
           </div>

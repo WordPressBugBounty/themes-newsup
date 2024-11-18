@@ -601,7 +601,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	color: #fff;
 }
 /*==================== typo ====================*/
-.mg-breadcrumb-title h1 {
+.mg-breadcrumb-title h1, .mg-breadcrumb-title .title {
 	color: #222;
 }
 .mg-page-breadcrumb > li a {
