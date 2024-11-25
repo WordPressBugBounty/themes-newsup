@@ -169,6 +169,14 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
 	font-size: 26px;
 	line-height: 40px;
 }
+.product_meta .sku_wrapper, .product_meta .posted_in, .product_meta .tagged_as {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.product_meta .sku_wrapper .sku, .product_meta .posted_in a, .product_meta .tagged_as a {
+    font-weight: 400;
+}
 /*woocommerce-form*/
 .woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
 	height: 40px;

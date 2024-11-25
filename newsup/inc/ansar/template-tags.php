@@ -87,7 +87,15 @@ endif;
 if ( ! function_exists( 'newsup_post_comment' ) ) :
     function newsup_post_comment() { ?>
         <span class="comments-link"><i class="fas fa-comments"></i>
-            <a href="<?php the_permalink(); ?>"><?php echo get_comments_number(); ?> <?php esc_html_e( get_comments_number() <= 1 ? __('Comment', 'newsup') : __('Comments', 'newsup')); ?> </a> 
+            <a href="<?php the_permalink(); ?>">
+                <?php
+                if ( get_comments_number() == 0 ) {
+                    esc_html_e(  __('No Comments', 'blogarise') );
+                } else {
+                    echo get_comments_number() . ' ';
+                    esc_html_e( get_comments_number() == 1 ? __('Comment', 'blogarise') : __('Comments', 'blogarise') );
+                } ?>
+            </a>
         </span>  
     <?php }
 endif;

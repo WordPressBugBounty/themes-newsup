@@ -2,10 +2,10 @@
 Contributors: Themeansar
 Author: Themeansar
 Requires at least: WordPress 5.4
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 4.0.0.62
-Version: 4.0.0.62
+Stable tag: 4.0.0.63
+Version: 4.0.0.63
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -1070,3 +1070,6 @@ Added Selective Refresh On Latest Posts Section.
 
 = Version 4.0.0.62
 Fixed Woocommerce Page Title Tag Issue.
+
+= Version 4.0.0.63
+Fixed Comments label Issue.
