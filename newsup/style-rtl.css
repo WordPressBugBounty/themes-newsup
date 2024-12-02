@@ -1197,7 +1197,7 @@ button.mfp-close:hover, button.mfp-close:focus {
 	display: inherit;
 }
 .mg-blog-category {
-    margin: 0px;
+    margin: 0 0 5px;
     width: auto;
 }
 .mg-blog-category a {
