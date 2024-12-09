@@ -90,10 +90,10 @@ if ( ! function_exists( 'newsup_post_comment' ) ) :
             <a href="<?php the_permalink(); ?>">
                 <?php
                 if ( get_comments_number() == 0 ) {
-                    esc_html_e(  __('No Comments', 'blogarise') );
+                    esc_html_e(  __('No Comments', 'newsup') );
                 } else {
                     echo get_comments_number() . ' ';
-                    esc_html_e( get_comments_number() == 1 ? __('Comment', 'blogarise') : __('Comments', 'blogarise') );
+                    esc_html_e( get_comments_number() == 1 ? __('Comment', 'newsup') : __('Comments', 'newsup') );
                 } ?>
             </a>
         </span>  
