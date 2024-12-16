@@ -74,7 +74,8 @@ if (!function_exists('newsup_banner_tabbed_posts')):
         $categorised_title = newsup_get_option('trending_tab_title');
         $category = newsup_get_option('select_trending_tab_news_category');
         $tab_id = 'tan-main-banner-latest-trending-popular'
-        ?>
+        ?> 
+        <div class="col-md-4 top-right-area">
             <div id="exTab2" >
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
@@ -110,6 +111,7 @@ if (!function_exists('newsup_banner_tabbed_posts')):
                     <?php endif; ?>
                 </div>
             </div>
+        </div>
         <?php
     }
 endif;
@@ -179,9 +181,7 @@ if (!function_exists('newsup_front_page_banner_section')) :
                                         <?php newsup_get_block('list', 'banner'); ?>
                                     </div>
                                 </div>
-                                <div class="col-md-4 top-right-area">
-                                    <?php do_action('newsup_action_banner_tabbed_posts'); ?>
-                                </div> 
+                                <?php do_action('newsup_action_banner_tabbed_posts'); ?>
                             </div>
                         </div>
                     </div>
