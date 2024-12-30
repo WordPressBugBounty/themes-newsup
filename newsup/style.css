@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newsup/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://demo.themeansar.com/newsup and documentation at https://docs.themeansar.com/docs/newsup/
-Version: 4.0.0.67
+Version: 4.0.0.68
 Tested up to: 6.7
 Requires PHP: 7.4
 Requires at least: 5.4
@@ -1042,7 +1042,7 @@ footer .wp-block-search .wp-block-search__label, footer .mg-widget .wp-block-gro
 footer .wp-block-group__inner-container{
 	overflow: hidden;
 }
-footer .small-post {
+footer .small-post, footer .mg-posts-sec-inner .small-list-post .small-post {
     box-shadow: 0 1px 3px rgb(191 191 191 / 15%);
     margin: 1px;
 }
@@ -2728,7 +2728,6 @@ footer .mg-widget .mg-widget-tags a, footer .mg-widget .tagcloud a {
 footer .mg-widget .mg-widget-tags a:hover, footer .mg-widget .tagcloud a:hover {
 	transition: all 0.4s ease-in-out 0s;
 }
-
 .calendar_wrap caption {
     caption-side: top;
     background-color: #e9e9e9;
@@ -2743,7 +2742,6 @@ footer .mg-widget .mg-widget-tags a:hover, footer .mg-widget .tagcloud a:hover {
 footer .mg-widget{
     overflow: hidden;
 }
-
 footer .calendar_wrap table tbody #today:hover {
 	transition: all 0.3s ease 0s;
 }
@@ -2776,6 +2774,11 @@ footer .mg-widget .form-control {
 	background: rgba(0,0,0,0);
 	color: #fff;
 }
+footer .top-right-area .nav-tabs .tab{
+	padding: 0;
+	margin: 0;
+}
+footer .top-right-area .nav-tabs .tab a:hover{ padding-left: 8px;}
 /*----woocommerce footer-widget----*/
 footer .mg-widget.widget_product_search .btn {
 	padding: 2px 12px;
