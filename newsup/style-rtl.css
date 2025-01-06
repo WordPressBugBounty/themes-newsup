@@ -2571,6 +2571,11 @@ footer .mg-widget .input-group-btn .btn {
 	padding: 5px 35px;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
+footer .double-category-widget .col-lg-6.col-md-6.col-sm-12.col-xs-12{
+	-ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
 .wc-block-components-form .wc-block-components-text-input input[type=text], 
 .wc-block-components-combobox .wc-block-components-combobox-control input.components-combobox-control__input, 
 .wc-block-components-form .wc-block-components-combobox .wc-block-components-combobox-control input.components-combobox-control__input{

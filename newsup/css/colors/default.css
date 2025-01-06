@@ -647,6 +647,9 @@ footer .mg-widget ul li a:hover, footer .mg-widget ul li a:focus {
 footer .mg-social li span.icon-soci a {
     color: #fff;
 }
+footer .mg-widget .double-category-widget .small-post-content p, footer .mg-widget .double-category-widget .small-post-content .mg-blog-meta a, footer .double-category-widget i{
+	color: #fff;
+}
 .facebook{
 	background: #3b5998;
 	color:#fff;
@@ -657,7 +660,6 @@ footer .mg-social li span.icon-soci a {
 } 
 .x-twitter{
 	background: #222;
-	color:#fff;
 }
 .linkedin{
 	background: #0e76a8;

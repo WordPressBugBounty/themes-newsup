@@ -4,8 +4,8 @@ Author: Themeansar
 Requires at least: WordPress 5.4
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 4.0.0.68
-Version: 4.0.0.68
+Stable tag: 4.0.0.69
+Version: 4.0.0.69
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -1089,3 +1089,6 @@ Fixed Styling Issue in Footer.
 
 = Version 4.0.0.68
 Fixed Tabbed Widget Styling Issue in Footer.
+
+= Version 4.0.0.69
+Fixed Styling Issue.
