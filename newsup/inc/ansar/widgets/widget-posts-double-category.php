@@ -3,15 +3,13 @@ if (!class_exists('Newsup_Dbl_Col_Cat_Posts')) :
     /**
      * Adds Newsup_Dbl_Col_Cat_Posts widget.
      */
-    class Newsup_Dbl_Col_Cat_Posts extends Newsup_Widget_Base
-    {
+    class Newsup_Dbl_Col_Cat_Posts extends Newsup_Widget_Base {
         /**
          * Sets up a new widget instance.
          *
          * @since 1.0.0
          */
-        function __construct()
-        {
+        function __construct() {
             $this->text_fields = array('newsup-categorised-posts-title-1', 'newsup-categorised-posts-title-2', 'newsup-posts-number-1', 'newsup-posts-number-2');
             $this->select_fields = array('newsup-select-category-1', 'newsup-select-category-2', 'newsup-select-layout-1', 'newsup-select-layout-2');
 
@@ -33,11 +31,9 @@ if (!class_exists('Newsup_Dbl_Col_Cat_Posts')) :
          * @param array $instance Saved values from database.
          */
 
-        public function widget($args, $instance)
-        {
+        public function widget($args, $instance) {
 
             $instance = parent::newsup_sanitize_data($instance, $instance);
-
 
             /** This filter is documented in wp-includes/default-widgets.php */
 
@@ -50,37 +46,27 @@ if (!class_exists('Newsup_Dbl_Col_Cat_Posts')) :
             $number_of_posts_1 =  4;
             $number_of_posts_2 =  4;
 
-
             // open the widget container
             echo $args['before_widget'];
             ?>
-
-
             <div class="mg-posts-sec mg-posts-modul-4 double-category-widget">
                 <div class="mg-posts-sec-inner row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mr-xs <?php echo esc_attr($layout_1); ?>">
                         <?php if (!empty($title_1)): ?>
                             <div class="mg-sec-title">
-                            <h4><?php echo esc_html($title_1); ?> </h4>
+                            <h4><?php echo esc_html($title_1); ?></h4>
                             </div>
-                        <?php endif; ?>
-                            <?php $all_posts = newsup_get_posts($number_of_posts_1, $category_1); ?>
-                            <?php
+                        <?php endif;
+                            $all_posts = newsup_get_posts($number_of_posts_1, $category_1);
                             $count_1 = 1;
-
 
                             if ($all_posts->have_posts()) :
                                 while ($all_posts->have_posts()) : $all_posts->the_post();
-
-
-
-                                        if ($count_1 == 1) {
-                                            $thumbnail_size = 'newsup-medium';
-
-                                        } else {
-                                            $thumbnail_size = 'thumbnail';
-                                        }
-
+                                    if ($count_1 == 1) {
+                                        $thumbnail_size = 'newsup-medium';
+                                    } else {
+                                        $thumbnail_size = 'thumbnail';
+                                    }
 
                                     global $post;
                                     $url = newsup_get_freatured_image_url($post->ID, $thumbnail_size);
@@ -89,45 +75,40 @@ if (!class_exists('Newsup_Dbl_Col_Cat_Posts')) :
                                         $img_class = 'no-image';
                                     }
                                     global $post;
-                                    ?>
-                                    
-                                        <div class="small-list-post mg-post-<?php echo esc_attr($count_1); ?>">
-                                            <div class="small-post clearfix mg-post-<?php echo esc_attr($count_1); ?> mr-bot20">
-                                                <!-- small_post -->
-                                                <?php if(has_post_thumbnail()) { ?>
-                                                <div class="img-small-post">
-                                                    <!-- img-small-post -->
-                                                    <a href="<?php the_permalink(); ?>">
-                                                        <?php if (!empty($url)): ?>
-                                                            <img src="<?php echo esc_url($url); ?>" alt="<?php the_title(); ?>">
-                                                        <?php endif; ?>
-                                                    </a>
-                                                    
-                                                </div>
-                                                <?php } ?>
-                                                <!-- // img-small-post -->
-                                                <div class="small-post-content">
-                                                    <?php newsup_post_categories(); ?> 
-                                                    <!-- small-post-content -->
-                                                    <h5 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-                                                    <?php if($count_1 == 1) { ?>
-                                                    <?php newsup_post_meta(); ?>
-                                                    <!-- // title_small_post -->
-                                                        <?php the_content();?><?php } ?>
-                                                    <!-- // title_small_post -->
-                                                </div>
-                                                <!-- // small-post-content -->
+                                    ?>                                    
+                                    <div class="small-list-post mg-post-<?php echo esc_attr($count_1); ?>">
+                                        <div class="small-post clearfix mg-post-<?php echo esc_attr($count_1); ?> mr-bot20">
+                                            <!-- small_post -->
+                                            <?php if(has_post_thumbnail()) { ?>
+                                            <div class="img-small-post">
+                                                <!-- img-small-post -->
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <?php if (!empty($url)): ?>
+                                                        <img src="<?php echo esc_url($url); ?>" alt="<?php the_title(); ?>">
+                                                    <?php endif; ?>
+                                                </a>
                                             </div>
-                                            <!-- // small_post --> 
+                                            <?php } ?>
+                                            <!-- // img-small-post -->
+                                            <div class="small-post-content">
+                                                <?php newsup_post_categories(); ?> 
+                                                <!-- small-post-content -->
+                                                <h5 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+                                                <?php if($count_1 == 1) { ?>
+                                                <?php newsup_post_meta(); ?>
+                                                <!-- // title_small_post -->
+                                                    <?php the_content();?><?php } ?>
+                                                <!-- // title_small_post -->
+                                            </div>
+                                            <!-- // small-post-content -->
                                         </div>
-                                            
+                                        <!-- // small_post --> 
+                                    </div>
                                     <?php
                                     $count_1++;
                                 endwhile;
-                                ?>
-                                
-                            <?php endif;
-                            wp_reset_postdata(); ?>
+                            endif;
+                        wp_reset_postdata(); ?>
                     </div>
 
                     <div class="col-lg-6 col-md-6 <?php echo esc_attr($layout_2); ?> col-sm-12 col-xs-12">
@@ -137,25 +118,17 @@ if (!class_exists('Newsup_Dbl_Col_Cat_Posts')) :
                             <h4><?php echo esc_html($title_2); ?></h4>
                         </div>
                         <!-- // mg-sec-title -->
-                        <?php endif; ?>
-                            <?php $all_posts = newsup_get_posts($number_of_posts_2, $category_2); ?>
-                            <?php
+                        <?php endif; 
+                            $all_posts = newsup_get_posts($number_of_posts_2, $category_2);
                             $count_2 = 1;
-
 
                             if ($all_posts->have_posts()) :
                                 while ($all_posts->have_posts()) : $all_posts->the_post();
-
-
-
-                                        if ($count_2 == 1) {
-                                            $thumbnail_size = 'newsup-medium';
-
-                                        } else {
-                                            $thumbnail_size = 'thumbnail';
-                                        }
-
-
+                                    if ($count_2 == 1) {
+                                        $thumbnail_size = 'newsup-medium';
+                                    } else {
+                                        $thumbnail_size = 'thumbnail';
+                                    }
 
                                     global $post;
                                     $url = newsup_get_freatured_image_url($post->ID, $thumbnail_size);
@@ -163,9 +136,6 @@ if (!class_exists('Newsup_Dbl_Col_Cat_Posts')) :
                                     if ($url == '') {
                                         $img_class = 'no-image';
                                     }
-
-                                    global $post;
-
                                     ?>
 
                                     <div class="small-list-post mg-post-<?php echo esc_attr($count_2); ?>"> 
@@ -201,7 +171,6 @@ if (!class_exists('Newsup_Dbl_Col_Cat_Posts')) :
                                 ?>
                             <?php endif;
                             wp_reset_postdata(); ?>
-                        
                     </div>
                 </div>
             </div>
@@ -218,8 +187,7 @@ if (!class_exists('Newsup_Dbl_Col_Cat_Posts')) :
          *
          * @param array $instance Previously saved values from database.
          */
-        public function form($instance)
-        {
+        public function form($instance) {
             $this->form_instance = $instance;
 
             //print_pre($terms);
@@ -232,11 +200,7 @@ if (!class_exists('Newsup_Dbl_Col_Cat_Posts')) :
                 echo parent::newsup_generate_text_input('newsup-categorised-posts-title-2', __('Title 2', 'newsup'), 'Double Categories Posts 2');
                 echo parent::newsup_generate_select_options('newsup-select-category-2', __('Select category 2', 'newsup'), $categories);
             }
-
             //print_pre($terms);
-
-
         }
-
     }
 endif;

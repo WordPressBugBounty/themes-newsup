@@ -3,15 +3,13 @@ if (!class_exists('Newsup_Tab_Posts')) :
     /**
      * Adds newsup_Tabbed_Posts widget.
      */
-    class Newsup_Tab_Posts extends Newsup_Widget_Base
-    {
+    class Newsup_Tab_Posts extends Newsup_Widget_Base {
         /**
          * Sets up a new widget instance.
          *
          * @since 1.0.0
          */
-        function __construct()
-        {
+        function __construct() {
             $this->text_fields = array('newsup-tabbed-popular-posts-title', 'newsup-tabbed-latest-posts-title', 'newsup-tabbed-categorised-posts-title', 'newsup-excerpt-length', 'newsup-posts-number');
 
             $this->select_fields = array('newsup-show-excerpt', 'newsup-enable-categorised-tab', 'newsup-select-category');
@@ -34,11 +32,9 @@ if (!class_exists('Newsup_Tab_Posts')) :
          * @param array $instance Saved values from database.
          */
 
-        public function widget($args, $instance)
-        {
+        public function widget($args, $instance) {
             $instance = parent::newsup_sanitize_data($instance, $instance);
             $tab_id = 'tabbed-' . $this->number;
-
 
             /** This filter is documented in wp-includes/default-widgets.php */
 
@@ -120,16 +116,12 @@ if (!class_exists('Newsup_Tab_Posts')) :
          *
          * @param array $instance Previously saved values from database.
          */
-        public function form($instance)
-        {
+        public function form($instance)   {
             $this->form_instance = $instance;
             $enable_categorised_tab = array(
                 'true' => __('Yes', 'newsup'),
                 'false' => __('No', 'newsup')
-
             );
-
-
 
             // generate the text input for the title of the widget. Note that the first parameter matches text_fields array entry
             ?><h4><?php _e('Latest Posts', 'newsup'); ?></h4><?php
@@ -145,9 +137,7 @@ if (!class_exists('Newsup_Tab_Posts')) :
                 echo parent::newsup_generate_select_options('newsup-enable-categorised-tab', __('Enable Categorised Tab', 'newsup'), $enable_categorised_tab);
                 echo parent::newsup_generate_text_input('newsup-tabbed-categorised-posts-title', __('Title', 'newsup'), __('Trending', 'newsup'));
                 echo parent::newsup_generate_select_options('newsup-select-category', __('Select category', 'newsup'), $categories);
-
             }
-
         }
     }
 endif;

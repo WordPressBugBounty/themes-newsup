@@ -180,7 +180,7 @@ a {
 a:hover, a:focus {
 	color: #002954;
 }
-blockquote{
+blockquote, blockquote.wp-block-quote{
 	background: #f5f5f5;
 	border-color: #1151d3;
 }

@@ -7,8 +7,6 @@ function newsup_get_terms( $category_id = 0, $taxonomy='category', $default='' )
             $term = get_term_by('id', absint($category_id), $taxonomy );
             if($term)
                 return esc_html($term->name);
-
-
     } else {
         $terms = get_terms(array(
             'taxonomy' => $taxonomy,
@@ -17,7 +15,6 @@ function newsup_get_terms( $category_id = 0, $taxonomy='category', $default='' )
             'hide_empty' => true,
         ));
 
-
         if (isset($terms) && !empty($terms)) {
             foreach ($terms as $term) {
                 if( $default != 'first' ){
@@ -25,7 +22,6 @@ function newsup_get_terms( $category_id = 0, $taxonomy='category', $default='' )
                 }
                 $array[$term->term_id] = esc_html($term->name);
             }
-
             return $array;
         }
     }
@@ -80,10 +76,6 @@ if(!function_exists('newsup_no_image_url')):
 
 endif;
 
-
-
-
-
 /**
  * Outputs the tab posts
  *
@@ -129,7 +121,6 @@ if (!function_exists('newsup_render_posts')):
                 $args['cat'] = absint($category);
             }
             break;
-
 
         default:
             break;
@@ -183,5 +174,3 @@ if (!function_exists('newsup_render_posts')):
     }
 }
 endif;
-
-

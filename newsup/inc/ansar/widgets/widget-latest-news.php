@@ -3,15 +3,13 @@ if (!class_exists('Newsup_Latest_Post')) :
     /**
      * Adds Newsup_Latest_Post widget.
      */
-    class Newsup_Latest_Post extends Newsup_Widget_Base
-    {
+    class Newsup_Latest_Post extends Newsup_Widget_Base {
         /**
          * Sets up a new widget instance.
          *
          * @since 1.0.0
          */
-        function __construct()
-        {
+        function __construct() {
             $this->text_fields = array('newsup-categorised-posts-title', 'newsup-posts-number', 'newsup-excerpt-length');
             $this->select_fields = array('newsup-select-category', 'newsup-show-excerpt');
 
@@ -33,11 +31,9 @@ if (!class_exists('Newsup_Latest_Post')) :
          * @param array $instance Saved values from database.
          */
 
-        public function widget($args, $instance)
-        {
+        public function widget($args, $instance) {
 
             $instance = parent::newsup_sanitize_data($instance, $instance);
-
 
             /** This filter is documented in wp-includes/default-widgets.php */
 
@@ -103,13 +99,11 @@ if (!class_exists('Newsup_Latest_Post')) :
          *
          * @param array $instance Previously saved values from database.
          */
-        public function form($instance)
-        {
+        public function form($instance)  {
             $this->form_instance = $instance;
             $options = array(
                 'true' => __('Yes', 'newsup'),
                 'false' => __('No', 'newsup')
-
             );
 
             $categories = newsup_get_terms();
@@ -118,17 +112,9 @@ if (!class_exists('Newsup_Latest_Post')) :
                 // generate the text input for the title of the widget. Note that the first parameter matches text_fields array entry
                 echo parent::newsup_generate_text_input('newsup-categorised-posts-title', 'Title', 'Latest News');
                 echo parent::newsup_generate_select_options('newsup-select-category', __('Select category', 'newsup'), $categories);
-
                 echo parent::newsup_generate_select_options('newsup-show-excerpt', __('Show excerpt', 'newsup'), $options);
-
-
-
             }
-
             //print_pre($terms);
-
-
         }
-
     }
 endif;

@@ -3,15 +3,13 @@ if (!class_exists('Newsup_Posts_Slider')) :
     /**
      * Adds Newsup_Posts_Slider widget.
      */
-    class Newsup_Posts_Slider extends Newsup_Widget_Base
-    {
+    class Newsup_Posts_Slider extends Newsup_Widget_Base {
         /**
          * Sets up a new widget instance.
          *
          * @since 1.0.0
          */
-        function __construct()
-        {
+        function __construct() {
             $this->text_fields = array('newsup-posts-slider-title', 'newsup-excerpt-length', 'newsup-posts-slider-number');
             $this->select_fields = array('newsup-select-category', 'newsup-show-excerpt');
 
@@ -33,10 +31,8 @@ if (!class_exists('Newsup_Posts_Slider')) :
          * @param array $instance Saved values from database.
          */
 
-        public function widget($args, $instance)
-        {
+        public function widget($args, $instance) {
             $instance = parent::newsup_sanitize_data($instance, $instance);
-
 
             /** This filter is documented in wp-includes/default-widgets.php */
             $title = apply_filters('widget_title', $instance['newsup-posts-slider-title'], $instance, $this->id_base);
@@ -57,37 +53,32 @@ if (!class_exists('Newsup_Posts_Slider')) :
 
             $all_posts = newsup_get_posts($number_of_posts, $category);
             ?>
-
             <div class="postcrousel owl-carousel mr-bot60">
                 <?php
-                    if ($all_posts->have_posts()) :
-                        while ($all_posts->have_posts()) : $all_posts->the_post();
-                            global $post;
-                            $url = newsup_get_freatured_image_url($post->ID, 'newsup-slider-full');
-                            ?>
-                <div class="item">
-                    
-                            <div class="mg-blog-post lg back-img" style="background-image: url('<?php echo esc_url($url); ?>');">
-                                <a class="link-div" href="<?php the_permalink(); ?>"></a>
-                                <article class="bottom">
+                if ($all_posts->have_posts()) :
+                    while ($all_posts->have_posts()) : $all_posts->the_post();
+                    global $post;
+                    $url = newsup_get_freatured_image_url($post->ID, 'newsup-slider-full');
+                    ?>
+                    <div class="item">                    
+                        <div class="mg-blog-post lg back-img" style="background-image: url('<?php echo esc_url($url); ?>');">
+                            <a class="link-div" href="<?php the_permalink(); ?>"></a>
+                            <article class="bottom">
                                 <?php echo newsup_post_format_type($post); 
                                 newsup_post_categories(); ?> 
-                                    
-                                    <h4 class="title">
-                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                    </h4>
-                                        <?php newsup_post_meta(); ?>
-                                </article>
-                            </div>
+                                <h4 class="title">
+                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                </h4>
+                                <?php newsup_post_meta(); ?>
+                            </article>
                         </div>
-                        <?php
-                        endwhile;
-                    endif;
-                    wp_reset_postdata();
-                    ?>
-                
+                    </div>
+                    <?php
+                    endwhile;
+                endif;
+                wp_reset_postdata();
+                ?>
             </div>
-
             <?php
             // close the widget container
             echo $args['after_widget'];
@@ -100,8 +91,7 @@ if (!class_exists('Newsup_Posts_Slider')) :
          *
          * @param array $instance Previously saved values from database.
          */
-        public function form($instance)
-        {
+        public function form($instance) {
             $this->form_instance = $instance;
             $options = array(
                 'true' => __('Yes', 'newsup'),
@@ -112,10 +102,7 @@ if (!class_exists('Newsup_Posts_Slider')) :
             if (isset($categories) && !empty($categories)) {
                 // generate the text input for the title of the widget. Note that the first parameter matches text_fields array entry
                 echo parent::newsup_generate_text_input('newsup-posts-slider-title', __('Title', 'newsup'), 'Posts Slider');
-
                 echo parent::newsup_generate_select_options('newsup-select-category', __('Select category', 'newsup'), $categories);
-
-
             }
         }
     }

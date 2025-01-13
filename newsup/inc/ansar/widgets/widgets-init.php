@@ -17,7 +17,6 @@ require get_template_directory() . '/inc/ansar/widgets/featured-post-widget.php'
 require get_template_directory() . '/inc/ansar/widgets/widget-design-slider.php';
 
 
-
 /* Register site widgets */
 if ( ! function_exists( 'newsup_widgets' ) ) :
     /**

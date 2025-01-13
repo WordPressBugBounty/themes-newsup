@@ -3,15 +3,13 @@ if (!class_exists('Newsup_Design_Slider')) :
     /**
      * Adds Newsup_Design_Slider widget.
      */
-    class Newsup_Design_Slider extends Newsup_Widget_Base
-    {
+    class Newsup_Design_Slider extends Newsup_Widget_Base {
         /**
          * Sets up a new widget instance.
          *
          * @since 1.0.0
          */
-        function __construct()
-        {
+        function __construct() {
             $this->text_fields = array('newsup-posts-design-slider-title', 'newsup-excerpt-length', 'newsup-posts-slider-number');
             $this->select_fields = array('newsup-select-category', 'newsup-show-excerpt');
 
@@ -33,10 +31,8 @@ if (!class_exists('Newsup_Design_Slider')) :
          * @param array $instance Saved values from database.
          */
 
-        public function widget($args, $instance)
-        {
+        public function widget($args, $instance) {
             $instance = parent::newsup_sanitize_data($instance, $instance);
-
 
             /** This filter is documented in wp-includes/default-widgets.php */
             $title = apply_filters('widget_title', $instance['newsup-posts-design-slider-title'], $instance, $this->id_base);
@@ -47,21 +43,19 @@ if (!class_exists('Newsup_Design_Slider')) :
             echo $args['before_widget'];
             ?>
             <div class="mg-posts-sec mg-posts-modul-3">
-            <?php if (!empty($title)): ?>
-             <div class="mg-sec-title">
-            <!-- mg-sec-title -->
-                <h4><?php echo esc_html($title); ?></h4>
-            </div>
-            <!-- // mg-sec-title -->
-            <?php endif; ?>
-            <?php
+                <?php if (!empty($title)): ?>
+                <!-- mg-sec-title -->
+                <div class="mg-sec-title">
+                    <h4><?php echo esc_html($title); ?></h4>
+                </div>
+                <!-- // mg-sec-title -->
+                <?php endif;
+                $all_posts = newsup_get_posts($number_of_posts, $category);
+                ?>
 
-            $all_posts = newsup_get_posts($number_of_posts, $category);
-            ?>
-
-            <div class="colmnthree owl-carousel">
-                                            <!-- item -->
-                <?php
+                <div class="colmnthree owl-carousel">
+                    <!-- item -->
+                    <?php
                     if ($all_posts->have_posts()) :
                         while ($all_posts->have_posts()) : $all_posts->the_post();
                             global $post;
@@ -84,7 +78,7 @@ if (!class_exists('Newsup_Design_Slider')) :
                     endif;
                     wp_reset_postdata();
                     ?>
-                     </div>
+                </div>
             </div>
 
             <?php
@@ -99,8 +93,7 @@ if (!class_exists('Newsup_Design_Slider')) :
          *
          * @param array $instance Previously saved values from database.
          */
-        public function form($instance)
-        {
+        public function form($instance) {
             $this->form_instance = $instance;
             $options = array(
                 'true' => __('Yes', 'newsup'),
@@ -110,10 +103,7 @@ if (!class_exists('Newsup_Design_Slider')) :
             $categories = newsup_get_terms();
             if (isset($categories) && !empty($categories)) {
                 echo parent::newsup_generate_text_input('newsup-posts-design-slider-title', __('Title', 'newsup'), 'Posts 3 Column Slider');
-
                 echo parent::newsup_generate_select_options('newsup-select-category', __('Select category', 'newsup'), $categories);
-
-
             }
         }
     }

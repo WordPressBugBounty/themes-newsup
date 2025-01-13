@@ -3,8 +3,7 @@
 /**
  * Base Widget Class
  */
-class Newsup_Widget_Base extends WP_Widget
-{
+class Newsup_Widget_Base extends WP_Widget {
     /**
      * @var Array of string
      */
@@ -35,8 +34,7 @@ class Newsup_Widget_Base extends WP_Widget
     /**
      * Register widget with WordPress.
      */
-    function __construct($id, $name, $args = array(), $controls = array())
-    {
+    function __construct($id, $name, $args = array(), $controls = array()) {
         parent::__construct(
             $id, // Base ID
             $name, // Name
@@ -52,8 +50,7 @@ class Newsup_Widget_Base extends WP_Widget
      * @param string $label
      * @param string $note field note to appear below
      */
-    public function newsup_generate_text_input($field, $label, $value, $type = 'text', $note = '', $class = '')
-    {
+    public function newsup_generate_text_input($field, $label, $value, $type = 'text', $note = '', $class = '') {
         $instance = isset($this->form_instance[$field]) ? $this->form_instance[$field] : $value;
         ?>
         <p>
@@ -79,8 +76,7 @@ class Newsup_Widget_Base extends WP_Widget
      * @param string $label
      * @param string $note field note to appear below
      */
-    public function newsup_generate_textarea($field, $label, $note = '')
-    {
+    public function newsup_generate_textarea($field, $label, $note = '') {
         $instance = isset($this->form_instance[$field]) ? $this->form_instance[$field] : '';
         ?>
         <p>
@@ -106,8 +102,7 @@ class Newsup_Widget_Base extends WP_Widget
      * @param Object $instance widget instance
      * @param Array_A $elements
      */
-    public function newsup_generate_checkbox_input($field, $label, $elements, $note = '')
-    {
+    public function newsup_generate_checkbox_input($field, $label, $elements, $note = '') {
         $instance = isset($this->form_instance[$field]) ? $this->form_instance[$field] : true;
         ?>
         <div class="newsup-multiple-check-form">
@@ -145,8 +140,7 @@ class Newsup_Widget_Base extends WP_Widget
      * @param string $note field note to appear below
      * @param Array_A $elements
      */
-    public function newsup_generate_select_options($field, $label, $elements, $note = '')
-    {
+    public function newsup_generate_select_options($field, $label, $elements, $note = '') {
         $instance = isset($this->form_instance[$field]) ? $this->form_instance[$field] : $label;
         ?>
         <p>
@@ -167,9 +161,7 @@ class Newsup_Widget_Base extends WP_Widget
         <?php
     }
 
-
-    public function newsup_generate_image_upload($field, $label, $value, $note = '', $class = '')
-    {
+    public function newsup_generate_image_upload($field, $label, $value, $note = '', $class = '') {
         $instance = isset($this->form_instance[$field]) ? $this->form_instance[$field] : '';
         ?>
         <div>
@@ -179,23 +171,16 @@ class Newsup_Widget_Base extends WP_Widget
             <p></p>
             <div class="image-preview-wrap">
                 <div class="image-preview">
-                    <?php if (!empty($instance)) :
+                    <?php if (!empty($instance)) {
                         $image_attributes = wp_get_attachment_image_src($instance);
-                        if ($image_attributes):
-                            ?>
-
-                            <img src="<?php echo esc_attr($image_attributes[0]); ?>" alt="upload"/>
-                        <?php endif; ?>
-                    <?php endif; ?>
+                            if ($image_attributes){ ?>
+                                <img src="<?php echo esc_attr($image_attributes[0]); ?>" alt="upload"/>
+                            <?php }
+                        } ?>
                 </div><!-- .image-preview -->
 
-                <input type="hidden" class="img" name="<?php echo esc_attr($this->get_field_name($field)); ?>"
-                       id="<?php echo esc_attr($this->get_field_id($field)); ?>"
-                       value="<?php echo esc_attr($instance); ?>"/>
-                <input type="button" class="select-img button button-primary"
-                       value="<?php esc_attr_e('Upload', 'newsup'); ?>"
-                       data-uploader_title="<?php esc_attr_e('Select Image', 'newsup'); ?>"
-                       data-uploader_button_text="<?php esc_attr_e('Choose Image', 'newsup'); ?>"/>
+                <input type="hidden" class="img" name="<?php echo esc_attr($this->get_field_name($field)); ?>" id="<?php echo esc_attr($this->get_field_id($field)); ?>" value="<?php echo esc_attr($instance); ?>"/>
+                <input type="button" class="select-img button button-primary" value="<?php esc_attr_e('Upload', 'newsup'); ?>" data-uploader_title="<?php esc_attr_e('Select Image', 'newsup'); ?>" data-uploader_button_text="<?php esc_attr_e('Choose Image', 'newsup'); ?>"/>
                 <?php
                 $image_status = false;
                 if (!empty($instance)) {
@@ -206,17 +191,11 @@ class Newsup_Widget_Base extends WP_Widget
                     $remove_button_style = 'display:inline-block;';
                 }
                 ?>
-                <input type="button" value="<?php echo _x('X', 'Remove', 'newsup'); ?>"
-                       class="button button-secondary btn-image-remove"
-                       style="<?php echo esc_attr($remove_button_style); ?>"/>
-
-
+                <input type="button" value="<?php echo _x('X', 'Remove', 'newsup'); ?>" class="button button-secondary btn-image-remove" style="<?php echo esc_attr($remove_button_style); ?>"/>
             </div>
         </div><!-- .image-preview-wrap -->
-
         <?php
     }
-
 
     /**
      * Sanitize widget form values as they are saved.
@@ -228,15 +207,13 @@ class Newsup_Widget_Base extends WP_Widget
      *
      * @return array Updated safe values to be saved.
      */
-    public function update($new_instance, $old_instance)
-    {
+    public function update($new_instance, $old_instance) {
         $instance = array();
         $instance = $this->newsup_sanitize_data($instance, $new_instance);
         return $instance;
     }
 
-    public function newsup_sanitize_data($instance, $new_instance)
-    {
+    public function newsup_sanitize_data($instance, $new_instance) {
         if (is_array($this->text_fields)) {
             // update the text fields values
             foreach ($this->text_fields as $field) {
@@ -279,8 +256,7 @@ class Newsup_Widget_Base extends WP_Widget
      * @param object $new_instance
      * @return object validate new instance
      */
-    public function newsup_update_text($name, $new_instance)
-    {
+    public function newsup_update_text($name, $new_instance) {
         $instance = array();
         $instance[$name] = (!empty($new_instance[$name])) ? sanitize_text_field($new_instance[$name]) : '';
         return $instance;
@@ -293,8 +269,7 @@ class Newsup_Widget_Base extends WP_Widget
      * @param object $new_instance
      * @return object validate new instance
      */
-    public function newsup_update_url($name, $new_instance)
-    {
+    public function newsup_update_url($name, $new_instance) {
         $instance = array();
         $instance[$name] = (!empty($new_instance[$name])) ? esc_url_raw($new_instance[$name]) : '';
         return $instance;
@@ -307,8 +282,7 @@ class Newsup_Widget_Base extends WP_Widget
      * @param object $new_instance
      * @return object validate new instance
      */
-    public function newsup_update_textarea($name, $new_instance)
-    {
+    public function newsup_update_textarea($name, $new_instance) {
         $instance = array();
         $instance[$name] = (!empty($new_instance[$name])) ? sanitize_textarea_field($new_instance[$name]) : '';
         return $instance;
@@ -321,8 +295,7 @@ class Newsup_Widget_Base extends WP_Widget
      * @param object $new_instance
      * @return object validate new instance
      */
-    public function newsup_update_checkbox($name, $new_instance)
-    {
+    public function newsup_update_checkbox($name, $new_instance) {
         $instance = array();
         // make sure any checkbox has been checked
         if (!empty($new_instance[$name])) {
@@ -346,12 +319,9 @@ class Newsup_Widget_Base extends WP_Widget
      * @param object $new_instance
      * @return object validate new instance
      */
-    public function newsup_update_select($name, $new_instance)
-    {
+    public function newsup_update_select($name, $new_instance) {
         $instance = array();
         $instance[$name] = (!empty($new_instance[$name])) ? esc_attr($new_instance[$name]) : '';
         return $instance;
     }
-
-
 }

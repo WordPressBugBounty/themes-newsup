@@ -3,15 +3,13 @@ if (!class_exists('Newsup_Posts_Carousel')) :
     /**
      * Adds Newsup_Posts_Carousel widget.
      */
-    class Newsup_Posts_Carousel extends Newsup_Widget_Base
-    {
+    class Newsup_Posts_Carousel extends Newsup_Widget_Base {
         /**
          * Sets up a new widget instance.
          *
          * @since 0.1
          */
-        function __construct()
-        {
+        function __construct() {
             $this->text_fields = array('newsup-posts-slider-title', 'newsup-posts-slider-subtitle', 'newsup-posts-slider-number');
             $this->select_fields = array('newsup-select-category');
 
@@ -33,8 +31,7 @@ if (!class_exists('Newsup_Posts_Carousel')) :
          * @param array $instance Saved values from database.
          */
 
-        public function widget($args, $instance)
-        {
+        public function widget($args, $instance) {
             $instance = parent::newsup_sanitize_data($instance, $instance);
             /** This filter is documented in wp-includes/default-widgets.php */
 
@@ -55,8 +52,7 @@ if (!class_exists('Newsup_Posts_Carousel')) :
                         <h4><?php echo esc_html($title);  ?></h4>
                     <?php endif; ?>
                 </div> <!-- // mg-sec-title -->
-                <?php endif; ?>                    
-                <?php
+                <?php endif;
                 $all_posts = newsup_get_posts($number_of_posts, $category);
                 ?>
                 <!-- mg-posts-sec-inner -->
@@ -98,10 +94,6 @@ if (!class_exists('Newsup_Posts_Carousel')) :
                 </div> <!-- // mg-posts-sec-inner -->
             </div>
             <!-- // mg-posts-sec mg-posts-modul-3 --> 
-
-                
-                
-
             <?php
             //print_pre($all_posts);
 
@@ -116,17 +108,13 @@ if (!class_exists('Newsup_Posts_Carousel')) :
          *
          * @param array $instance Previously saved values from database.
          */
-        public function form($instance)
-        {
+        public function form($instance) {
             $this->form_instance = $instance;
             $categories = newsup_get_terms();
             if (isset($categories) && !empty($categories)) {
                 // generate the text input for the title of the widget. Note that the first parameter matches text_fields array entry
                 echo parent::newsup_generate_text_input('newsup-posts-slider-title', 'Title', 'Posts Carousel');
                 echo parent::newsup_generate_select_options('newsup-select-category', __('Select category', 'newsup'), $categories);
-
-
-
             }
         }
     }
