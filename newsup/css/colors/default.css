@@ -771,8 +771,15 @@ footer .mg-widget h6::before {
 footer .mg-widget h6::after {
     background-color: #1151d3;
 }
-footer .small-post, footer .mg-posts-sec-inner .small-list-post .small-post{
+footer .small-post, footer .mg-posts-sec-inner .small-list-post .small-post {
 	background: #121026;
+}
+footer .latest-posts-widget .mg-posts-sec-post{
+	background: #121026;
+	border: 1px solid #211f32;
+}
+footer .latest-posts-widget .mg-sec-top-post .title a, footer .latest-posts-widget .mg-sec-top-post p, footer .latest-posts-widget .mg-blog-meta i, footer .latest-posts-widget.mg-posts-modul-6 .mg-sec-top-post .mg-blog-meta a{
+	color: #fff;
 }
 footer .small-post .title a{
 	color: #fff;
