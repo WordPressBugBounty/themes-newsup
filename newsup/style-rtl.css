@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newsup/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://demo.themeansar.com/newsup and documentation at https://docs.themeansar.com/docs/newsup/
-Version: 4.0.0.71
+Version: 4.0.0.72
 Tested up to: 6.7
 Requires PHP: 7.4
 Requires at least: 5.4
@@ -1302,7 +1302,7 @@ footer .small-post, footer .mg-posts-sec-inner .small-list-post .small-post {
 }
 .mg-info-author-block h4 span {
 	font-size: 14px;
-	padding-right: 5px;
+	padding-left: 5px;
 }
 .mg-info-author-block h4 span i {
 	padding-right: 5px;
@@ -3147,6 +3147,10 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
     -ms-flex-direction: column;
     flex-direction: column;
 }
+.comments-area.mg-card-box .comment-list {
+    padding-right: 8px;
+}
+
 .comments-area .comment-meta .comment-author img {
 	padding: 3px;
 	border-width: 2px;
@@ -3211,7 +3215,7 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
     position: relative;
     padding: 0;
     margin: 0;
-    margin-left: 2.5rem;
+    margin-right: 2.5rem;
     z-index: 0;
     list-style: none;
 }
@@ -3266,6 +3270,9 @@ pre {
 	.mg-posts-modul-6 .mg-sec-top-post .title {
 		max-height: 100%;
 		-webkit-line-clamp: 5;
+	}
+	.mg-blog-post-box .mg-header h1 {
+		font-size: 32px;
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -3768,6 +3775,16 @@ input:not([type]), input[type="email"], input[type="number"], input[type="passwo
 	}
 }
 @media (max-width: 767.98px) {
+	.wp-block-embed iframe {
+		max-width: 100%;
+		height: auto;
+	}
+	.comment-list .children {
+		margin-right: 0.66666em;
+	}
+	.comment-content {
+		padding: 16px 0px 16px 0;
+	}
 	.widget_featured_post .widget_featured_post_inner{ 
 		grid-template-columns: repeat(1, minmax(0, 1fr));
 	}
