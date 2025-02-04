@@ -129,6 +129,15 @@
 			}
 		} );
 	} );
+	wp.customize( 'newsup_header_overlay_color', function( value ) {
+		value.bind( function( newVal ) {
+			if(newVal !== ''){
+				$('.mg-nav-widget-area-back .inner').css('background', newVal);
+			}else{
+				$('.mg-nav-widget-area-back .inner').css('background', '');
+			}
+		} );
+	} );
 	// Footer all Text color.
 	wp.customize( 'newsup_footer_column_layout', function( value ) {
 		var colum = 12 / value();
