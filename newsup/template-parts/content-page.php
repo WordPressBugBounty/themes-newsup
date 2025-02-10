@@ -18,7 +18,11 @@
 			<div class="<?php echo esc_attr($newsup_page_layout == 'page-full-width-content' ? 'col-md-12' : 'col-md-8') ?>">
 				<div class="mg-card-box padding-20"> <?php 
 					while ( have_posts() ) : the_post(); 
+					if(has_post_thumbnail()) {
+						echo'<figure class="post-thumbnail">';
 						the_post_thumbnail( '', array( 'class'=>'img-responsive' ) );
+						echo'</figure>';
+					}
 						the_content();
 						
 							wp_link_pages(array(

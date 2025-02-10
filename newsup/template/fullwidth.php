@@ -18,9 +18,13 @@ get_template_part('index','banner'); ?>
 		    <div class="mg-card-box padding-20"> <?php
           while ( have_posts() ) : the_post(); 
 
-              the_post_thumbnail( '', array( 'class'=>'img-responsive' ) );
-              the_content();
-              newsup_edit_link();
+            if(has_post_thumbnail()) {
+              echo'<figure class="post-thumbnail">';
+                the_post_thumbnail( '', array( 'class'=>'img-responsive' ) );
+              echo'</figure>';
+            }
+            the_content();
+            newsup_edit_link();
 
             // If comments are open or we have at least one comment, load up the comment template.
             if ( comments_open() || get_comments_number() ) :
