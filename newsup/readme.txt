@@ -1107,3 +1107,6 @@ Added Selective Refresh to Header Image Background Color.
 
 = Version 4.0.0.74
 Fixed Full Width Page Image Issue.
+
+= Version 4.0.0.75
+Fixed Blocks Stytling Issues.

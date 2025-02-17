@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newsup/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://demo.themeansar.com/newsup and documentation at https://docs.themeansar.com/docs/newsup/
-Version: 4.0.0.74
+Version: 4.0.0.75
 Tested up to: 6.7
 Requires PHP: 7.4
 Requires at least: 5.4
@@ -1249,6 +1249,10 @@ footer .small-post, footer .mg-posts-sec-inner .small-list-post .small-post {
 .mg-blog-post-box .small img, .mg-blog-post-box .small figure {
 	max-width: 100%;
 	height: auto;
+}
+.mg-blog-post-box .small figure.alignwide, .mg-blog-post-box .small figure.alignfull, .alignwide.wp-block-cover, .alignfull.wp-block-cover {
+	max-width: unset;
+	width: unset;
 }
 .mg-blog-thumb {
 	position: relative;
@@ -3224,16 +3228,15 @@ address i {
 }
 .alignwide,
 .alignfull {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: -40px;
+    margin-right: -40px;
     position: relative;
     clear: both;
     left: -20px;
     width: calc(100% + 40px);
     max-width: calc(100% + 40px);
 }
-div.wpforms-container-full .wpforms-form button[type=submit]
-{
+div.wpforms-container-full .wpforms-form button[type=submit] {
 	border: 1px solid #ddd;
     font-size: 1em;
     padding: 5px 20px;
@@ -3503,6 +3506,11 @@ pre {
 	}
 	.widget_post_list .widget_post_list_inner{ 
 		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+	.alignwide, .alignfull {
+		margin-left: -30px;
+		margin-right: -30px;
+		left: 0;
 	}
 }
 @media (max-width: 576px) {
