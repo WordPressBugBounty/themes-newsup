@@ -16,12 +16,16 @@ if ( has_header_image() ) { $newsup_background_image = get_header_image(); } ?>
                 }elseif(is_archive()) {
                   the_archive_title( '<h1 class="title">', '</h1>' );
                   the_archive_description( '<div class="archive-description">', '</div>' );
+                } elseif(is_search()){ ?>
+                  <h1><?php /* translators: %s: search term */ printf( esc_html__( 'Search Results for: %s','newsup'), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1> <?php
                 } else { ?>
                   <h1 class="title"><?php the_title(); ?></h1>
                 <?php }
               } elseif(is_archive()) {
                 the_archive_title( '<h1 class="title">', '</h1>' );
                 the_archive_description( '<div class="archive-description">', '</div>' );
+              } elseif(is_search()){ ?>
+                <h1><?php /* translators: %s: search term */ printf( esc_html__( 'Search Results for: %s','newsup'), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1> <?php
               } else { ?>
                 <h1 class="title"><?php the_title(); ?></h1>
               <?php } ?>

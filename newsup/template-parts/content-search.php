@@ -7,7 +7,7 @@
 ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <!-- mg-posts-sec mg-posts-modul-6 -->
-        <div class="mg-posts-sec mg-posts-modul-6 mt-4">
+        <div class="mg-posts-sec mg-posts-modul-6">
             <!-- mg-posts-sec-inner -->
                 <div class="mg-posts-sec-inner">
                     <?php if ( have_posts() ) { /* Start the Loop */
