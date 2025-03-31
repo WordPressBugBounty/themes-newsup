@@ -9,7 +9,7 @@
 	require( $newsup_theme_path . '/font/font.php');
 	require( $newsup_theme_path . '/template-tags.php');
 	require( $newsup_theme_path . '/template-functions.php');
-	require( $newsup_theme_path. '/widgets/widgets-common-functions.php');
+	require( $newsup_theme_path . '/widgets/widgets-common-functions.php');
 	require ( $newsup_theme_path . '/custom-control/custom-control.php');
 	require_once( trailingslashit( get_template_directory() ) . 'inc/ansar/customize-pro/class-customize.php' );
 
