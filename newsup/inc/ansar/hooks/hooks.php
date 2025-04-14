@@ -99,14 +99,14 @@ if (!function_exists('newsup_banner_tabbed_posts')):
                 </ul>
                 <div class="tab-content">
                     <div id="<?php echo esc_attr($tab_id); ?>-recent" role="tabpanel" class="tab-pane active fade show">
-                        <?php  newsup_render_posts('recent', $show_excerpt, $excerpt_length, $number_of_posts); ?>
+                        <?php newsup_render_posts('recent', $show_excerpt, $excerpt_length, $number_of_posts); ?>
                     </div>
                     <div id="<?php echo esc_attr($tab_id); ?>-popular" role="tabpanel" class="tab-pane fade">
-                        <?php  newsup_render_posts('popular', $show_excerpt, $excerpt_length, $number_of_posts); ?>
+                        <?php newsup_render_posts('popular', $show_excerpt, $excerpt_length, $number_of_posts); ?>
                     </div>
                     <?php if ($enable_categorised_tab == 'true'): ?>
                         <div id="<?php echo esc_attr($tab_id); ?>-categorised" role="tabpanel" class="tab-pane fade">
-                            <?php  newsup_render_posts('categorised', $show_excerpt, $excerpt_length, $number_of_posts, $category); ?>
+                            <?php newsup_render_posts('categorised', $show_excerpt, $excerpt_length, $number_of_posts, $category); ?>
                         </div>
                     <?php endif; ?>
                 </div>

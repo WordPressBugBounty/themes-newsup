@@ -86,7 +86,7 @@ function newsup_footer_text_color() {
 	$newsup_footer_text_color = get_theme_mod('newsup_footer_text_color');
 	if($newsup_footer_text_color) { ?>
 		<style>
-			footer .mg-widget p, footer .site-title-footer a, footer .site-title a:hover , footer .site-description-footer, footer .site-description:hover{
+			footer .mg-widget p, footer .site-title-footer a, footer .site-title a:hover, footer .site-description-footer, footer .site-description:hover, footer .mg-widget ul li a{
 				color: <?php echo esc_attr($newsup_footer_text_color); ?>;
 			}
 		</style>

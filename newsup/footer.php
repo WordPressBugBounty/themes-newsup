@@ -13,9 +13,10 @@
     <!--==================== FOOTER AREA ====================-->
     <?php $newsup_footer_widget_background = get_theme_mod('newsup_footer_widget_background');
     $newsup_footer_overlay_color = get_theme_mod('newsup_footer_overlay_color'); 
-    $style = !empty($newsup_footer_widget_background) ? "background-image:url('".esc_url($newsup_footer_widget_background)."');" : ""; ?>
-    <footer class="footer back-img" style="<?php echo $style; ?>">
-        <div class="overlay" style="background-color: <?php echo esc_attr($newsup_footer_overlay_color);?>;">
+    $style = !empty($newsup_footer_widget_background) ? "style=background-image:url('".esc_url($newsup_footer_widget_background)."');" : "";
+    $fBgColor = !empty($newsup_footer_overlay_color) ? 'style=background-color:'.esc_attr($newsup_footer_overlay_color).'' : ''; ?>
+    <footer class="footer back-img" <?php echo $style; ?>>
+        <div class="overlay" <?php echo ($fBgColor);?>>
         <?php do_action('newsup_action_footer_widget_area'); 
         do_action('newsup_action_footer_bottom_area'); ?>
             <div class="mg-footer-copyright">

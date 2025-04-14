@@ -123,9 +123,9 @@
 	wp.customize( 'newsup_footer_text_color', function( value ) {
 		value.bind( function( newVal ) {
 			if(newVal !== ''){
-				$('footer .mg-widget p, footer .site-title-footer a, footer .site-title a:hover , footer .site-description-footer, footer .site-description:hover').css('color', newVal);
+				$('footer .mg-widget p, footer .site-title-footer a, footer .site-title a:hover, footer .site-description-footer, footer .site-description:hover, footer .mg-widget ul li a').css('color', newVal);
 			}else{
-				$('footer .mg-widget p, footer .site-title-footer a, footer .site-title a:hover , footer .site-description-footer, footer .site-description:hover').css('color', '');
+				$('footer .mg-widget p, footer .site-title-footer a, footer .site-title a:hover, footer .site-description-footer, footer .site-description:hover, footer .mg-widget ul li a').css('color', '');
 			}
 		} );
 	} );
