@@ -77,7 +77,7 @@ if (!class_exists('Newsup_Dbl_Col_Cat_Posts')) :
                                     global $post;
                                     ?>                                    
                                     <div class="small-list-post mg-post-<?php echo esc_attr($count_1); ?>">
-                                        <div class="small-post clearfix mg-post-<?php echo esc_attr($count_1); ?> mr-bot20">
+                                        <div class="small-post mg-post-<?php echo esc_attr($count_1); ?> mr-bot20">
                                             <!-- small_post -->
                                             <?php if(has_post_thumbnail()) { ?>
                                             <div class="img-small-post">
@@ -139,7 +139,7 @@ if (!class_exists('Newsup_Dbl_Col_Cat_Posts')) :
                                     ?>
 
                                     <div class="small-list-post mg-post-<?php echo esc_attr($count_2); ?>"> 
-                                        <div class="small-post clearfix mg-post-<?php echo esc_attr($count_2); ?> mr-bot20">
+                                        <div class="small-post mg-post-<?php echo esc_attr($count_2); ?> mr-bot20">
                                             <?php if(has_post_thumbnail()) { ?>
                                             <!-- small_post -->
                                             <div class="img-small-post">

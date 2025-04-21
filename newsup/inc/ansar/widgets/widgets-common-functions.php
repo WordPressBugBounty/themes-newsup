@@ -131,7 +131,7 @@ if (!function_exists('newsup_render_posts')):
         if($all_posts->have_posts()):
             echo '<div class="mg-posts-sec mg-posts-modul-2"><div class="mg-posts-sec-inner row"><div class="small-list-post col-lg-12">';
             while($all_posts->have_posts()): $all_posts->the_post(); ?>   
-                <div class="small-post clearfix">
+                <div class="small-post">
                     <?php
                     if(has_post_thumbnail()){
                         $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()));

@@ -65,7 +65,7 @@ if (!class_exists('Newsup_Posts_List')) :
                             $url = newsup_get_freatured_image_url($post->ID, 'thumbnail');
                             ?>
                             <!-- small-list-post --> 
-                                <div class="small-post clearfix mb-0">
+                                <div class="small-post mb-0">
                                     <!-- small_post -->
                                     <?php if ( has_post_thumbnail() ) {  ?>
                                     <div class="img-small-post">
