@@ -14,14 +14,18 @@
                         while ( have_posts() ) { the_post(); ?>
                             <article class="d-md-flex mg-posts-sec-post">
                                 <?php newsup_post_image_display_type($post); ?>
-                                    <div class="mg-sec-top-post py-3 col">
+                                <div class="mg-sec-top-post py-3 col">
                                     <?php newsup_post_categories(); ?> 
-                                            <h4 class="entry-title title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
-                                            <?php newsup_post_meta(); ?>
-                                            <div class="mg-content">
-                                                <p><?php echo wp_trim_words( get_the_excerpt(), 20 ); ?></p>
-                                        </div>
+                                        <h4 class="entry-title title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
+                                        <!-- Show meta for posts and other types, hide for pages in search results -->
+                                        <?php if ( is_search() && get_post_type() === 'page' ) {}
+                                        else {
+                                            newsup_post_meta();
+                                        } ?>
+                                        <div class="mg-content">
+                                            <p><?php echo wp_trim_words( get_the_excerpt(), 20 ); ?></p>
                                     </div>
+                                </div>
                             </article>
                         <?php } 
                         newsup_page_pagination();
