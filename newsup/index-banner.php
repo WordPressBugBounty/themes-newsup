@@ -18,6 +18,7 @@ if ( has_header_image() ) { $newsup_background_image = get_header_image(); } ?>
                   the_archive_description( '<div class="archive-description">', '</div>' );
                 } elseif(is_search()){ ?>
                   <h1><?php /* translators: %s: search term */ printf( esc_html__( 'Search Results for: %s','newsup'), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1> <?php
+                  newsup_search_count();
                 } else { ?>
                   <h1 class="title"><?php the_title(); ?></h1>
                 <?php }
@@ -26,6 +27,7 @@ if ( has_header_image() ) { $newsup_background_image = get_header_image(); } ?>
                 the_archive_description( '<div class="archive-description">', '</div>' );
               } elseif(is_search()){ ?>
                 <h1><?php /* translators: %s: search term */ printf( esc_html__( 'Search Results for: %s','newsup'), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1> <?php
+                newsup_search_count();
               } else { ?>
                 <h1 class="title"><?php the_title(); ?></h1>
               <?php } ?>

@@ -135,19 +135,18 @@ add_filter( 'the_content_more_link', 'newsup_read_more' );
 
 if (!function_exists('newsup_page_pagination')) :
 
-    function newsup_page_pagination()
-    {
-        ?>
-            <div class="col-md-12 text-center d-flex justify-content-center">
-                <?php //Previous / next page navigation
-                    $prev_text =  (is_rtl()) ? "right" : "left";
-                    $next_text =  (is_rtl()) ? "left" : "right";
-                    the_posts_pagination( array(
-                       'prev_text'          => '<i class="fa fa-angle-'.$prev_text.'"></i>',
-                       'next_text'          => '<i class="fa fa-angle-'.$next_text.'"></i>',
-                       ) 
-                    ); ?>                            
-            </div>
+    function newsup_page_pagination() { ?>
+    
+        <div class="col-md-12 text-center d-flex justify-content-center">
+            <?php //Previous / next page navigation
+                $prev_text =  (is_rtl()) ? "right" : "left";
+                $next_text =  (is_rtl()) ? "left" : "right";
+                the_posts_pagination( array(
+                    'prev_text'          => '<i class="fa fa-angle-'.$prev_text.'"></i>',
+                    'next_text'          => '<i class="fa fa-angle-'.$next_text.'"></i>',
+                    ) 
+                ); ?>                            
+        </div>
         <?php
     }
 endif;
@@ -188,5 +187,28 @@ if ( ! function_exists( 'newsup_the_excerpt' ) ) :
         $trimmed_content = wp_trim_words( $source_content, $length, '&hellip;' );
         return $trimmed_content;
 
+    }
+endif;
+
+if ( ! function_exists( 'newsup_search_count' ) ) :
+    function newsup_search_count() { 
+        global $wp_query;
+        $total_results = $wp_query->found_posts;
+        ?>
+        <!-- Results Count -->
+        <p class="search-results-count">
+            <?php
+            if ( $total_results > 0 ) {
+                // Translators: %s is the number of found results.
+                echo sprintf(
+                    _n( '%s result found', '%s results found', $total_results, 'newsup' ),
+                    number_format_i18n( $total_results )
+                );
+            } else {
+                echo esc_html__( 'No results found', 'newsup' );
+            }
+            ?>
+        </p>
+        <?php
     }
 endif;

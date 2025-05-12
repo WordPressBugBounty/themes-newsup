@@ -134,7 +134,7 @@ if (!function_exists('newsup_render_posts')):
                 <div class="small-post">
                     <?php
                     if(has_post_thumbnail()){
-                        $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()));
+                        $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'medium');
                         $url = $thumb !== false ? '' . $thumb[0] . '' : '""';
                         $col_class = 'col-sm-8';
                     }else {
