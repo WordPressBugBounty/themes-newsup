@@ -31,13 +31,13 @@ if (!function_exists('newsup_main_content_layouts')) :
         $newsup_content_layout = esc_attr(get_theme_mod('newsup_content_layout','align-content-right'));
 
         if($newsup_content_layout == "align-content-left" || $newsup_content_layout == "grid-left-sidebar" ){ ?>
-            <aside class="col-md-4">
+            <aside class="col-md-4 sidebar-sticky">
                 <?php get_sidebar();?>
             </aside>
         <?php } ?>
         <?php do_action('newsup_action_content_layouts'); ?>
         <?php if($newsup_content_layout == "align-content-right" || $newsup_content_layout == "grid-right-sidebar")  { ?>
-            <aside class="col-md-4">
+            <aside class="col-md-4 sidebar-sticky">
                 <?php get_sidebar();?>
             </aside>
         <?php }
