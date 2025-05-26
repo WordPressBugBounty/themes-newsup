@@ -25,7 +25,7 @@ get_header(); ?>
             </div>
 
             <?php if($newsup_page_layout == "page-align-content-right") { ?>
-                <aside class="col-md-4 sidebar-right">
+                <aside class="col-md-4 sidebar-right sidebar-sticky">
                     <?php get_sidebar();?>
                 </aside>
             <?php } ?>

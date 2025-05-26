@@ -6,7 +6,7 @@
 
 $newsup_single_page_layout = get_theme_mod('newsup_single_page_layout','single-align-content-right');
 if($newsup_single_page_layout == "single-align-content-left") { ?>
-        <aside class="col-lg-3 col-md-4">
+        <aside class="col-lg-3 col-md-4 sidebar-sticky">
                 <?php get_sidebar();?>
         </aside>
 <?php } ?>
@@ -14,7 +14,7 @@ if($newsup_single_page_layout == "single-align-content-left") { ?>
                 <?php do_action('newsup_action_main_single_content'); ?>
         </div>
 <?php if($newsup_single_page_layout == "single-align-content-right") { ?>
-        <aside class="col-lg-3 col-md-4">
+        <aside class="col-lg-3 col-md-4 sidebar-sticky">
                 <?php get_sidebar();?>
         </aside>
 <?php } ?>
