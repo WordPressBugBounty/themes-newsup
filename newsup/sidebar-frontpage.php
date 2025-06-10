@@ -10,7 +10,7 @@ if ( ! is_active_sidebar( 'front-page-sidebar' ) ) {
 }
 ?>
 
-<aside class="col-md-4">
+<aside class="col-md-4 sidebar-sticky">
 	<div id="sidebar-right" class="mg-sidebar">
 		<?php dynamic_sidebar( 'front-page-sidebar' );
 		 ?>

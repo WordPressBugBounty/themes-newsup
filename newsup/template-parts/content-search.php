@@ -40,7 +40,7 @@
                         </div><!-- .blog_con_mn -->
                     <?php } ?>
                 </div>
-                <!-- // mg-posts-sec-inner -->
+            <!-- // mg-posts-sec-inner -->
         </div>
         <!-- // mg-posts-sec block_6 -->
     <!--col-md-12-->

@@ -4,8 +4,8 @@ Author: Themeansar
 Requires at least: WordPress 6.6
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 4.0.0.88
-Version: 4.0.0.88
+Stable tag: 4.0.0.89
+Version: 4.0.0.89
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -1150,3 +1150,6 @@ Fixed Styling Issue.
 
 = Version 4.0.0.88
 Added Sticky Sidebar In Pages.
+
+= Version 4.0.0.89
+Added Sticky Sidebar In Frontpage.
