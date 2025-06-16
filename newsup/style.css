@@ -4,10 +4,10 @@ Theme URI: https://themeansar.com/free-themes/newsup/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://demo.themeansar.com/newsup and documentation at https://docs.themeansar.com/docs/newsup/
-Version: 4.0.0.89
+Version: 4.0.0.90
 Tested up to: 6.8
 Requires PHP: 7.4
-Requires at least: 6.6
+Requires at least: 6.7
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl.html
@@ -3425,6 +3425,9 @@ pre {
 	.mg-fea-area .pd-r-10 {
 		padding-right: 0px;
 	}
+	.missed-inner .col-lg-3.col-sm-6:is(:nth-child(4), :nth-child(5)) .mg-blog-post-3.minh {
+		margin-bottom: 0;
+	}
 }
 @media screen and (min-width: 240px) and (max-width: 767px) { 
 
@@ -3597,6 +3600,13 @@ pre {
 	}
 	.mg-blog-post-box .mg-header h1 {
 		font-size: 32px;
+	}
+	.missed-inner .col-lg-3.col-sm-6:nth-child(4) .mg-blog-post-3.minh {
+		margin-bottom: 30px;
+	}
+	.search-results-count{
+		text-align: center;
+		font-size: 16px;
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {

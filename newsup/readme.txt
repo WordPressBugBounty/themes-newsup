@@ -1,11 +1,11 @@
 ﻿=== Newsup ===
 Contributors: Themeansar
 Author: Themeansar
-Requires at least: WordPress 6.6
+Requires at least: WordPress 6.7
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 4.0.0.89
-Version: 4.0.0.89
+Stable tag: 4.0.0.90
+Version: 4.0.0.90
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -1153,3 +1153,6 @@ Added Sticky Sidebar In Pages.
 
 = Version 4.0.0.89
 Added Sticky Sidebar In Frontpage.
+
+= Version 4.0.0.90
+Fixed RTL Responsive Issues.
