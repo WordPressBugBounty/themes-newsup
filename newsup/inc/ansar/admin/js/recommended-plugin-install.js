@@ -48,7 +48,6 @@ jQuery( document ).ready(
 							// Reload the page.
 							if ( typeof(redirect) !== 'undefined' && redirect !== '' ) {
 								window.location.replace( redirect );
-								location.reload();
 							} else {
 								location.reload();
 							}
