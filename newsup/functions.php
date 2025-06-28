@@ -11,6 +11,7 @@
 	require( $newsup_theme_path . '/template-functions.php');
 	require( $newsup_theme_path . '/widgets/widgets-common-functions.php');
 	require ( $newsup_theme_path . '/custom-control/custom-control.php');
+	require ( $newsup_theme_path . '/customizer-admin/newsup-admin-plugin-install.php');
 	require_once( trailingslashit( get_template_directory() ) . 'inc/ansar/customize-pro/class-customize.php' );
 
 	$newsup_theme_start = wp_get_theme();
@@ -18,7 +19,7 @@
 		( 'Newslay' == $newsup_theme_start->name) || ( 'Foodup' == $newsup_theme_start->name) || ( 'News Live' == $newsup_theme_start->name) || 
 		( 'Mag Dark' == $newsup_theme_start->name) || ( 'News Talk' == $newsup_theme_start->name) || ( 'News Way' == $newsup_theme_start->name) || ( 'News Bit' == $newsup_theme_start->name) || ( 'News Maz' == $newsup_theme_start->name) || ( 'News Jack' == $newsup_theme_start->name) || ( 'News Hunt' == $newsup_theme_start->name) || ( 'Max News' == $newsup_theme_start->name) || ( 'Newspaperex' == $newsup_theme_start->name) || ( 'Newswiz' == $newsup_theme_start->name) || ( 'Newsgine' == $newsup_theme_start->name) || ( 'Newsmark' == $newsup_theme_start->name) )  {
 		if ( is_admin() ) {
-			require ($newsup_theme_path . '/admin/getting-started.php');
+			// require ($newsup_theme_path . '/admin/getting-started.php');
 		}
 	}
 
