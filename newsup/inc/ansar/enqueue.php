@@ -90,7 +90,13 @@ function newsup_footer_text_color() {
 				color: <?php echo esc_attr($newsup_footer_text_color); ?>;
 			}
 		</style>
-	<?php }
+	<?php } ?>
+	<style>
+		.wp-block-search .wp-block-search__label::before, .mg-widget .wp-block-group h2:before {
+			background: inherit;
+		}
+	</style>
+	<?php
 }
 add_action('wp_footer','newsup_footer_text_color');
 
