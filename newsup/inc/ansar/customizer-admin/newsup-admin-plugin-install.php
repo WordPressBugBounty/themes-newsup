@@ -35,21 +35,21 @@ function newsup_deprecated_hook_admin_notice() {
                             printf( esc_html__('Welcome to %1$s', 'newsup'), esc_html( $theme_info->Name ), esc_html( $theme_info->Version ) ); ?>
                         </h1>
                         
-                        <p><?php esc_html_e("Thank you for choosing newsup theme. To take full advantage of the complete features of the theme click the Starter Sites and Install and Activate the", "newsup");?> <a href="https://wordpress.org/plugins/ansar-import"><?php esc_html_e("Ansar Import", "newsup");?></a> <?php esc_html_e("plugin then use the demo importer and install the Newsup Demo according to your need.", "newsup"); ?></p>
+                        <p><?php esc_html_e("Thank you for choosing Newsup theme. To take full advantage of the complete features of the theme click the Starter Sites and Install and Activate the", "newsup");?> <a href="https://wordpress.org/plugins/ansar-import"><?php esc_html_e("Ansar Import", "newsup");?></a> <?php esc_html_e("plugin then use the demo importer and install the Newsup Demo according to your need.", "newsup"); ?></p>
 
                         <div class="panel-column-6">
                             <div class="newsup-notice-buttons">
-                                <a class="newsup-btn-get-started button button-primary button-hero newsup-button-padding" href="#" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-images-alt"></span><?php esc_html_e( 'Starter Sites', 'newsup' ) ?></a>
-                                <a class="newsup-btn-get-started-customize button button-primary button-hero newsup-button-padding" href="<?php echo esc_url( admin_url( '/customize.php' ) ); ?>" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-welcome-widgets-menus"></span><?php esc_html_e( 'Customize Site', 'newsup' ) ?></a>
+                                <a class="newsup-btn-get-started button button-primary button-hero newsup-button-padding" href="#" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-images-alt"></span><?php esc_html_e( 'Get Started', 'newsup' ) ?></a>
+                                <a class="newsup-btn-get-started-customize button button-secondary button-hero newsup-button-padding" href="<?php echo esc_url( admin_url( '/customize.php' ) ); ?>" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-welcome-widgets-menus"></span><?php esc_html_e( 'Customize Site', 'newsup' ) ?></a>
                             </div>
                             <div class="newsup-notice-links">
-                                <div class="newsup-documentation newsup-notice-link">
-                                    <span aria-hidden="true" class="dashicons dashicons-list-view"></span>
-                                    <a class="newsup-documentation" href="<?php echo esc_url('https://docs.themeansar.com/docs/newsup-lite/')?>" data-name="" data-slug=""><?php esc_html_e( 'View Documentation', 'newsup' ) ?></a>
-                                </div>
                                 <div class="newsup-demos newsup-notice-link">
                                     <span aria-hidden="true" class="dashicons dashicons-images-alt"></span>
                                     <a class="newsup-demos" href="<?php echo esc_url('https://demos.themeansar.com/newsup-demos')?>" data-name="" data-slug=""><?php esc_html_e( 'View Demos', 'newsup' ) ?></a>
+                                </div>
+                                <div class="newsup-documentation newsup-notice-link">
+                                    <span aria-hidden="true" class="dashicons dashicons-list-view"></span>
+                                    <a class="newsup-documentation" href="<?php echo esc_url('https://docs.themeansar.com/docs/newsup-lite/')?>" data-name="" data-slug=""><?php esc_html_e( 'View Documentation', 'newsup' ) ?></a>
                                 </div>
                                 <div class="newsup-support newsup-notice-link">
                                     <span aria-hidden="true" class="dashicons dashicons-format-chat"></span>
@@ -64,9 +64,9 @@ function newsup_deprecated_hook_admin_notice() {
                     </div>
                     <div class="newsup-notice_image">
                     <?php 
-                    $image_url = get_theme_file_uri( '/images/newsup.customize.jpg' );
+                    $image_url = get_theme_file_uri( '/images/newsup.customize.png' );
                     // Check if the file exists
-                    if ( file_exists( get_theme_file_path( '/images/newsup.customize.jpg' ) ) ) { ?>
+                    if ( file_exists( get_theme_file_path( '/images/newsup.customize.png' ) ) ) { ?>
                         <img class="newsup-screenshot" src="<?php echo esc_url( $image_url ); ?>" alt="<?php esc_attr_e( 'Newsup', 'newsup' ); ?>" />
                     <?php } ?>
                     </div>

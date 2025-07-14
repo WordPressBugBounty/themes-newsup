@@ -8,7 +8,7 @@ function newsup_fonts_url() {
 		
     $font_families = array();
  
-	$font_families = array('Montserrat:400,500,700,800|Work+Sans:300,400,500,600,700,800,900&display=swap');
+	$font_families = array('Montserrat:400,500,700,800|Inter:300,400,500,600,700,800,900&display=swap');
  
         $query_args = array(
             'family' => urlencode( implode( '|', $font_families ) ),
