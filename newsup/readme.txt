@@ -4,8 +4,8 @@ Author: Themeansar
 Requires at least: WordPress 6.7
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 4.0.0.96
-Version: 4.0.0.96
+Stable tag: 4.0.0.97
+Version: 4.0.0.97
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -48,9 +48,9 @@ https://github.com/twittem/wp-bootstrap-navwalker
     License: [Google Fonts Licensing](https://fonts.google.com/knowledge/glossary/licensing)  
     Source: [Montserrat on Google Fonts](https://fonts.google.com/specimen/Montserrat)
 
-* Inter
+* Work Sans
     License: [Google Fonts Licensing](https://fonts.google.com/knowledge/glossary/licensing)  
-    Source: [Inter on Google Fonts](https://fonts.google.com/specimen/Inter)  
+    Source: [Work Sans on Google Fonts](https://fonts.google.com/specimen/Work+Sans)  
 
 == Font Awesome license ==
 ======================================
@@ -1182,5 +1182,8 @@ Fixed RTL Stytling Issues.
 Fixed Sidebar Title Style Issues.
 
 = Version 4.0.0.96
-Fixed Notice.
-Change Body Typography.
+Fixed Notice
+Fixed Sidebar Title Style Issues.
+
+= Version 4.0.0.97
+Fixed Sidebar Title Style Issues.

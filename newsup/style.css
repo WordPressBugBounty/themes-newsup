@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newsup/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://demo.themeansar.com/newsup and documentation at https://docs.themeansar.com/docs/newsup/
-Version: 4.0.0.96
+Version: 4.0.0.97
 Tested up to: 6.8
 Requires PHP: 7.4
 Requires at least: 6.7
@@ -20,7 +20,7 @@ Text Domain: newsup
 -----------------------------------------*/
 :root{
 	--headFont: 'Montserrat', sans-serif;
-	--bodyFont: 'Inter', sans-serif;
+	--bodyFont: 'Work Sans', sans-serif;
 }
 /* navbar toggle */
 .burger {
@@ -382,7 +382,7 @@ Text Domain: newsup
 	padding: 0em;
 	line-height: 1em;
 	cursor: pointer;
-	color: var(--pri-color);
+	color: var(--pri-color);;
 	font-weight: normal 
 }
 .newsup-button .newsup-button-inner-left:before {
@@ -429,11 +429,11 @@ Text Domain: newsup
 	font-weight: bold 
 } 
 .newsup-button.active .newsup-button-inner-left {
-	color: var(--pri-color);
+	color: var(--pri-color);;
 	font-weight: normal 
 }
 .newsup-button.active .newsup-button-inner-left + .newsup-button-inner {
-	color: var(--pri-color);
+	color: var(--pri-color);;
 	font-weight: bold 
 }
 .btn-bell {
@@ -1292,16 +1292,14 @@ footer .small-post, footer .mg-posts-sec-inner .small-list-post .small-post {
     padding: 20px;
 }
 .mg-blog-post-box .small.single {
-    line-height: 1.7;
+    line-height: 27px;
     padding: 20px 40px 40px 40px;
-    font-size: 18px;
+    font-size: 16px;
 }
 .mg-blog-post-box .small > p {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
-.mg-blog-post-box .small :is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
-    margin-bottom: 12px;
-}
+
 .mg-blog-post-box .small img, .mg-blog-post-box .small figure {
 	max-width: 100%;
 	height: auto;
@@ -1344,10 +1342,10 @@ footer .small-post, footer .mg-posts-sec-inner .small-list-post .small-post {
 }
 .mg-blog-date {
 	padding: 0;
-    font-size: 14px;
+    font-size: 12px;
     margin-right: 14px;
     font-weight: 500;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 .mg-blog-date span {
 	font-size: 16px;
@@ -1418,10 +1416,10 @@ footer .small-post, footer .mg-posts-sec-inner .small-list-post .small-post {
 .mg-blog-meta a {
 	display: inline;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     padding: 0;
     line-height: 16px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     letter-spacing: 1px;
 }
 .mg-blog-meta a img {
@@ -2113,7 +2111,9 @@ footer .widget_post_list .widget_post_list_inner{
 .mg-posts-modul-6 .mg-sec-top-post .mg-blog-category {
   	margin: 0;
 }
-.small-list-post:last-child{
+
+small-list-post:last-child
+{
 	margin-bottom: 0px;
 }
 .mg-posts-modul-6 .mg-sec-top-post .title{
@@ -3428,9 +3428,6 @@ pre {
 	.missed-inner .col-lg-3.col-sm-6:is(:nth-child(4), :nth-child(5)) .mg-blog-post-3.minh {
 		margin-bottom: 0;
 	}
-	.mg-blog-post-box .small > p{
-		font-size: 17px;
-	}
 }
 @media screen and (min-width: 240px) and (max-width: 767px) { 
 
@@ -3609,9 +3606,6 @@ pre {
 	}
 	.search-results-count{
 		text-align: center;
-		font-size: 16px;
-	}
-	.mg-blog-post-box .small > p{
 		font-size: 16px;
 	}
 }
