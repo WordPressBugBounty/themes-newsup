@@ -1,4 +1,5 @@
-<?php /**
+<?php 
+/**
  * AJAX handler to store the state of dismissible notices.
  */
 function newsup_ajax_notice_handler() {
@@ -35,12 +36,24 @@ function newsup_deprecated_hook_admin_notice() {
                             printf( esc_html__('Welcome to %1$s', 'newsup'), esc_html( $theme_info->Name ), esc_html( $theme_info->Version ) ); ?>
                         </h1>
                         
-                        <p><?php esc_html_e("Thank you for choosing Newsup theme. To take full advantage of the complete features of the theme click the Starter Sites and Install and Activate the", "newsup");?> <a href="https://wordpress.org/plugins/ansar-import"><?php esc_html_e("Ansar Import", "newsup");?></a> <?php esc_html_e("plugin then use the demo importer and install the Newsup Demo according to your need.", "newsup"); ?></p>
+                       <p>
+                        <?php
+                            echo wp_kses_post( sprintf(
+                                __(
+                                    'Thank you for choosing %1$s theme. To take full advantage of the complete features of the theme, click Get Started and install and activate the %2$s plugin, then use the demo importer and install the %3$s demo according to your need.',
+                                    'newsup'
+                                ),
+                                esc_html($theme_info->Name),
+                                '<a href="https://wordpress.org/plugins/ansar-import" target="_blank">' . esc_html__('Ansar Import', 'newsup') . '</a>',
+                                esc_html($theme_info->Name)
+                            ) );
+                            ?>
+                        </p>
 
                         <div class="panel-column-6">
                             <div class="newsup-notice-buttons">
-                                <a class="newsup-btn-get-started button button-primary button-hero newsup-button-padding" href="#" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-images-alt"></span><?php esc_html_e( 'Starter Sites', 'newsup' ) ?></a>
-                                <a class="newsup-btn-get-started-customize button button-primary button-hero newsup-button-padding" href="<?php echo esc_url( admin_url( '/customize.php' ) ); ?>" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-welcome-widgets-menus"></span><?php esc_html_e( 'Customize Site', 'newsup' ) ?></a>
+                                <a class="newsup-btn-get-started button button-primary button-hero newsup-button-padding" href="#" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-images-alt"></span><?php esc_html_e( 'Get Started', 'newsup' ) ?></a>
+                                <a class="newsup-btn-get-started-customize button button-secondary button-hero newsup-button-padding" href="<?php echo esc_url( admin_url( '/customize.php' ) ); ?>" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-welcome-widgets-menus"></span><?php esc_html_e( 'Customize Site', 'newsup' ) ?></a>
                             </div>
                             <div class="newsup-notice-links">
                                 <div class="newsup-demos newsup-notice-link">
