@@ -503,7 +503,7 @@ blockquote::after {
 	border-left-color: #1151d3;
     border-color: transparent transparent transparent #1151d3;
 }
-.mg-sidebar .mg-widget ul li {
+.mg-sidebar .mg-widget ul li, .wp-block-latest-comments li {
 	border-color: #eee;
 }
 .mg-sidebar .mg-widget ul li a {
