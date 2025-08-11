@@ -92,7 +92,7 @@ function newsup_footer_text_color() {
 		</style>
 	<?php } ?>
 	<style>
-		.wp-block-search .wp-block-search__label::before, .mg-widget .wp-block-group h2:before, .mg-sidebar .mg-widget .wtitle::before {
+		.wp-block-search .wp-block-search__label::before, .mg-widget .wp-block-group h2:before, .mg-sidebar .mg-widget .wtitle::before, .mg-sec-title h4::before {
 			background: inherit;
 		}
 	</style>
