@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newsup/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://demo.themeansar.com/newsup and documentation at https://docs.themeansar.com/docs/newsup/
-Version: 5.0.1
+Version: 5.0.2
 Tested up to: 6.8
 Requires PHP: 7.4
 Requires at least: 6.7
@@ -1746,7 +1746,7 @@ footer .small-post, footer .mg-posts-sec-inner .small-list-post .small-post {
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
     content: "";
     width: 30px;
-    height: 40px;
+    height: 41px;
 }
 .featured-post-1{display: none;}
 
@@ -1863,6 +1863,7 @@ footer .widget_post_list .widget_post_list_inner{
 
 .small-post { 
 	display: flex;
+	align-items: center;
 }
 .small-post .small-post-content {
 	flex: 1;
@@ -1913,6 +1914,10 @@ footer .widget_post_list .widget_post_list_inner{
 .double-category-widget .mg-posts-sec-inner .small-list-post:nth-last-child(1) .small-post{
 	margin-bottom: 0;
 }
+.double-category-widget .small-list-post.mg-post-1 .small-post .small-post-content {
+	padding: 0 10px 10px;
+	width: 100%;
+}
 .double-category-widget .mg-posts-sec-inner .small-list-post .mg-blog-category{
 	margin: 0;
 	line-height: 1rem;
@@ -1927,6 +1932,9 @@ footer .widget_post_list .widget_post_list_inner{
 }
 .double-category-widget .mg-posts-sec-inner .small-list-post .small-post::after{
 	display: none;
+}
+.double-category-widget .mg-posts-sec-inner .small-list-post .small-post-content:has(.post-btn) p{
+	margin-bottom: -10px;
 }
 .mg-sidebar .double-category-widget .col-lg-6.col-md-6.col-sm-12.col-xs-12{
 	-ms-flex: 0 0 100%;
