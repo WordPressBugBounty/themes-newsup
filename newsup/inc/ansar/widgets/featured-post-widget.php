@@ -77,7 +77,7 @@
 
 		$get_featured_posts = new WP_Query($post_type);
 
-		//echo $args['before_widget']; ?>
+		echo $args['before_widget']; ?>
 		<!-- widget_featured_post -->
 		<div class="mg-posts-sec mg-posts-modul-1 widget_featured_post">
         	<?php if($widget_title) { ?>
@@ -143,7 +143,9 @@
 				<!-- // small-list-post -->
         	</div>
         	<!-- // mg-posts-sec-inner -->
+		</div>
+		<!-- // widget_featured_post -->
 
-		<?php echo $args['after_widget'] . '<!-- /widget_featured_post -->';
+		<?php echo $args['after_widget'] ;
 	}
 }
