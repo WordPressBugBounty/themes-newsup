@@ -110,7 +110,7 @@ if (!function_exists('newsup_single_head_content')) :
                     </div>
                     <?php if($single_show_featured_image == true) {
                         if(has_post_thumbnail()){
-                        the_post_thumbnail( '', array( 'class'=>'img-fluid' ) );
+                        the_post_thumbnail( '', array( 'class'=>'img-fluid single-featured-image' ) );
                     
                             $thumbnail_id = get_post_thumbnail_id();
                             $caption = get_post($thumbnail_id)->post_excerpt;
