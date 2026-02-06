@@ -10,7 +10,7 @@ get_header(); ?>
 <!--==================== main content section ====================-->
 <div id="content">
     <!--container-->
-    <div class="container-fluid">
+    <div class="container-fluid search-class">
     <!--row-->
         <div class="row">
         <?php $newsup_page_layout = get_theme_mod('newsup_page_layout','page-align-content-right');

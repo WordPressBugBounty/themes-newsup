@@ -1,6 +1,18 @@
-<?php define( 'NEWSUP_THEME_DIR', get_template_directory() . '/' );
+<?php 
+/**
+ * Newsup functions and definitions
+ *
+ * @package Newsup
+ */
+
+    // Global variables define
+    define( 'NEWSUP_THEME_DIR', get_template_directory() . '/' );
 	define( 'NEWSUP_THEME_URI', get_template_directory_uri() . '/' );
 	define( 'NEWS_THEME_SETTINGS', 'newsup-settings' );
+
+	if ( is_admin() ) {
+   		require_once get_template_directory() . '/admin/admin.php';
+	}
 	
 	$newsup_theme_path = get_template_directory() . '/inc/ansar/';
 
@@ -17,7 +29,7 @@
 	$newsup_theme_start = wp_get_theme();
 	if (( 'Newsup' == $newsup_theme_start->name) || ( 'Newsup Child' == $newsup_theme_start->name) || ( 'Newsberg' == $newsup_theme_start->name) || ( 'Newsbulk' == $newsup_theme_start->name) || 
 		( 'Newslay' == $newsup_theme_start->name) || ( 'Foodup' == $newsup_theme_start->name) || ( 'News Live' == $newsup_theme_start->name) || 
-		( 'Mag Dark' == $newsup_theme_start->name) || ( 'News Talk' == $newsup_theme_start->name) || ( 'News Way' == $newsup_theme_start->name) || ( 'News Bit' == $newsup_theme_start->name) || ( 'News Maz' == $newsup_theme_start->name) || ( 'News Jack' == $newsup_theme_start->name) || ( 'News Hunt' == $newsup_theme_start->name) || ( 'Max News' == $newsup_theme_start->name) || ( 'Newspaperex' == $newsup_theme_start->name) || ( 'Newswiz' == $newsup_theme_start->name) || ( 'Newsgine' == $newsup_theme_start->name) || ( 'Newsmark' == $newsup_theme_start->name) )  {
+		( 'Mag Dark' == $newsup_theme_start->name) || ( 'News Talk' == $newsup_theme_start->name) || ( 'News Way' == $newsup_theme_start->name) || ( 'News Bit' == $newsup_theme_start->name) || ( 'News Maz' == $newsup_theme_start->name) || ( 'News Jack' == $newsup_theme_start->name) || ( 'News Hunt' == $newsup_theme_start->name) || ( 'Max News' == $newsup_theme_start->name) || ( 'Newspaperex' == $newsup_theme_start->name) || ( 'Newswiz' == $newsup_theme_start->name) || ( 'Newsgine' == $newsup_theme_start->name) || ( 'Newsmark' == $newsup_theme_start->name) || ( 'Paper News' == $newsup_theme_start->name) )  {
 		if ( is_admin() ) {
 			// require ($newsup_theme_path . '/admin/getting-started.php');
 		}
@@ -25,8 +37,14 @@
 
 	// Theme version.
 	$newsup_theme = wp_get_theme();
-	define( 'NEWSUP_THEME_VERSION', $newsup_theme->get( 'Version' ) );
-	define ( 'NEWSUP_THEME_NAME', $newsup_theme->get( 'Name' ) );
+
+	if ( ! defined( 'NEWSUP_THEME_VERSION' ) ) {
+		define( 'NEWSUP_THEME_VERSION', $newsup_theme->get( 'Version' ) );
+	}
+
+	if ( ! defined( 'NEWSUP_THEME_NAME' ) ) {
+		define( 'NEWSUP_THEME_NAME', $newsup_theme->get( 'Name' ) );
+	}
 
 	/*-----------------------------------------------------------------------------------*/
 	/*	Enqueue scripts and styles.
@@ -89,6 +107,13 @@ function newsup_setup() {
 	/* Add theme support for gutenberg block */
 	add_theme_support( 'align-wide' );
 	add_theme_support( 'responsive-embeds' );
+	add_theme_support('wp-block-styles');
+	add_theme_support('custom-spacing');
+    add_theme_support('appearance-tools');
+	add_theme_support('custom-units');
+    add_theme_support('custom-line-height');
+    add_theme_support('border');
+	add_theme_support( 'link-color' );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.

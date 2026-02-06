@@ -12,13 +12,15 @@
                 <div class="mg-posts-sec-inner">
                     <?php if ( have_posts() ) { /* Start the Loop */
                         while ( have_posts() ) { the_post(); ?>
-                            <article class="d-md-flex mg-posts-sec-post">
+                            <article <?php post_class('d-md-flex mg-posts-sec-post') ?>>
                                 <?php newsup_post_image_display_type($post); ?>
                                 <div class="mg-sec-top-post py-3 col">
                                     <?php newsup_post_categories(); ?> 
                                         <h4 class="entry-title title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
                                         <!-- Show meta for posts and other types, hide for pages in search results -->
-                                        <?php if ( is_search() && get_post_type() === 'page' ) {}
+                                        <?php 
+                                            $post_type = get_post_type(); 
+                                        if ( is_search() && ($post_type === 'page' || $post_type === 'product') ) {}
                                         else {
                                             newsup_post_meta();
                                         } ?>

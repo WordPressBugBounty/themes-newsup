@@ -2,10 +2,10 @@
 Contributors: Themeansar
 Author: Themeansar
 Requires at least: WordPress 6.7
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 5.0.8
-Version: 5.0.8
+Stable tag: 5.2.6
+Version: 5.2.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -1220,3 +1220,63 @@ Fixed Sidebar Comments Styling.
 
 = Version 5.0.8
 * Fixed Footer menus Styling Issues.
+
+= Version 5.0.9
+* Fixed Category Count Styling.
+
+= Version 5.0.10
+* Fixed Styling Issue.
+
+= Version 5.0.11
+* Fixed Plugin Issue.
+
+= Version 5.1.0
+* Fixed Double Category Stytling Issues.
+
+= Version 5.1.1
+* Fixed RTL Responsive Stytling Issues.
+
+= Version 5.1.2
+* Added Theme Support Function. 
+
+= Version 5.1.3
+* Fixed Inputs RTL Styling Issues.
+
+= Version 5.1.4
+* Fixed RTL Styling Issues.
+
+= Version 5.1.5
+* Added Woocommerce Category on Products.
+
+= Version 5.1.6
+* Fixed Product Meta Issue on Search Page
+
+= Version 5.1.7
+* Fixed Post Meta on Search Page.
+
+= Version 5.1.8
+* Fixed WooCommerce Product Page Styling Issues.
+
+= Version 5.1.9
+* Fixed Bootstrap RTL.
+
+= Version 5.2.0
+* Added Navigation On Product Featured Image.
+
+= Version 5.2.1
+* Fixed WooCommerce Product Price Color Issues.
+
+= Version 5.2.2
+* Fixed Shop Page Pagination Styling.
+
+= Version 5.2.3
+* Added Theme Color Variable.
+
+= Version 5.2.4
+* Added custom admin dashboard with theme options for improved user experience.
+
+= Version 5.2.5
+* Update theme name for admin dashboard.
+
+= Version 5.2.6
+* Fixed WooCommerce Styling Issues.
