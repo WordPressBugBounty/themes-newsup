@@ -4,25 +4,25 @@ jQuery(window).on('load', function() {
   // Enable Hover for Bootstrap Nav Dropdowns
   jQuery('.dropdown-toggle').keyup(function(e) {
     if (e.keyCode == 9) {
-        $(this).dropdown('toggle');
+      $(this).dropdown('toggle');
     }
-});
+  });
 });
 /* =================================
 ===        STICKY HEADER        ====
 =================================== */
 function homefeatured() {
   jQuery(".featuredcat").owlCarousel({
-      autoPlay: 3000, //Set AutoPlay to 3 seconds
-      pagination: false,
+    autoPlay: 3000, //Set AutoPlay to 3 seconds
+    pagination: false,
     items : 3,
     itemsDesktop : [1199,1],
     itemsDesktopSmall : [979,2],
     navigation : false,
     navigationText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>"
-        ]
+      "<i class='fa fa-angle-left'></i>",
+      "<i class='fa fa-angle-right'></i>"
+    ]
   });
 }
 homefeatured();
@@ -33,9 +33,9 @@ function homemain() {
     pagination: false,
     navigation : true,
     navigationText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>"
-        ]
+      "<i class='fa fa-angle-left'></i>",
+      "<i class='fa fa-angle-right'></i>"
+    ]
   });
 }
 homemain(); 
@@ -43,7 +43,7 @@ homemain();
 // post crousel
 function postcrousel() {
   jQuery(".postcrousel").owlCarousel({
-     autoPlay: 3000, //Set AutoPlay to 3 seconds
+    autoPlay: 3000, //Set AutoPlay to 3 seconds
     items : 1,
     itemsDesktop : [1199,1],
     itemsDesktopSmall : [979,1],
@@ -51,9 +51,9 @@ function postcrousel() {
     pagination : false,
     navigation : true,
     navigationText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>"
-        ]
+      "<i class='fa fa-angle-left'></i>",
+      "<i class='fa fa-angle-right'></i>"
+    ]
   });
 }
 postcrousel(); 
@@ -61,16 +61,16 @@ postcrousel();
 // colmnthree crousel
 function colmnthree() {
   jQuery(".colmnthree").owlCarousel({
-     autoPlay: 3000, //Set AutoPlay to 3 seconds
+    autoPlay: 3000, //Set AutoPlay to 3 seconds
     items : 3,
     itemsDesktop : [1199,3],
     itemsDesktopSmall : [979,2],
     pagination : false,
     navigation : true,
     navigationText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>"
-        ]
+      "<i class='fa fa-angle-left'></i>",
+      "<i class='fa fa-angle-right'></i>"
+    ]
   });
 }
 colmnthree();
@@ -78,16 +78,16 @@ colmnthree();
 // realatedpost
 function realatedpost() {
   jQuery(".realatedpost").owlCarousel({
-     autoPlay: 3000, //Set AutoPlay to 3 seconds
+    autoPlay: 3000, //Set AutoPlay to 3 seconds
     items : 3,
     itemsDesktop : [1199,3],
     itemsDesktopSmall : [979,2],
     pagination : false,
     navigation : true,
     navigationText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>"
-        ]
+      "<i class='fa fa-angle-left'></i>",
+      "<i class='fa fa-angle-right'></i>"
+    ]
   });
 }
 realatedpost(); 
@@ -115,12 +115,12 @@ function taupr() {
 taupr();
 function marquee() {
   jQuery('.marquee').marquee({
-  speed: 50,
-  direction: 'left',
-  delayBeforeStart: 0,
-  duplicated: true,
-  pauseOnHover: true,
-  startVisible: true
+    speed: 50,
+    direction: 'left',
+    delayBeforeStart: 0,
+    duplicated: true,
+    pauseOnHover: true,
+    startVisible: true
   });
 }
 marquee();
@@ -135,9 +135,9 @@ function colmnthree() {
     itemsDesktopSmall : [979,1],
     navigation : false,
     navigationText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>"
-        ]
+      "<i class='fa fa-angle-left'></i>",
+      "<i class='fa fa-angle-right'></i>"
+    ]
   });
 }
 colmnthree();

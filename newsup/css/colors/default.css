@@ -794,7 +794,7 @@ footer .small-post .title a{
 .ta_upscr {
 	background: var(--pri-color);
 	border-color: var(--pri-color);
-	color: #fff !important;
+	color: #fff;
 }
 .ta_upscr:hover, .ta_upscr:focus {
 	color: #fff;
