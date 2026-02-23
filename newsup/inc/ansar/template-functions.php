@@ -267,17 +267,17 @@ function newsup_post_format_type($post_id){
 
 function newsup_social_share_post($post) {
 
-    $single_show_share_icon = esc_attr(get_theme_mod('single_show_share_icon','true'));
+    $single_show_share_icon = esc_attr(get_theme_mod('single_show_share_icon',true));
     if($single_show_share_icon == true) {
-        $post_link  = esc_url( get_the_permalink() );
-        $post_link = urlencode( esc_url( get_the_permalink() ) );
+        $post_link = urlencode( get_permalink() );
+        // $post_link = urlencode( esc_url( get_the_permalink() ) );
         $post_title = get_the_title();
 
         $facebook_url = add_query_arg(
             array(
             'u' => $post_link,
             ),
-            'https://www.facebook.com/sharer.php'
+            'https://www.facebook.com/sharer/sharer.php'
         );
 
         $twitter_url = add_query_arg(
@@ -330,22 +330,22 @@ function newsup_social_share_post($post) {
         </script>
         <div class="post-share">
             <div class="post-share-icons cf">
-                <a href="<?php echo esc_url("$facebook_url"); ?>" class="link facebook" target="_blank" >
+                <a href="<?php echo esc_url($facebook_url); ?>" class="link facebook" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="<?php echo esc_url("$twitter_url"); ?>" class="link x-twitter" target="_blank">
+                <a href="<?php echo esc_url($twitter_url); ?>" class="link x-twitter" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-x-twitter"></i>
                 </a>
-                <a href="<?php echo esc_url("$email_url"); ?>" class="link email" target="_blank" >
+                <a href="<?php echo esc_url($email_url); ?>" class="link email" target="_blank" >
                     <i class="fas fa-envelope"></i>
                 </a>
-                <a href="<?php echo esc_url("$linkedin_url"); ?>" class="link linkedin" target="_blank" >
+                <a href="<?php echo esc_url($linkedin_url); ?>" class="link linkedin" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="<?php echo esc_url("$telegram_url"); ?>" class="link telegram" target="_blank" >
+                <a href="<?php echo esc_url($telegram_url); ?>" class="link telegram" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-telegram"></i>
                 </a>
-                <a href="javascript:pinIt();" class="link pinterest">
+                <a href="javascript:pinIt();" class="link pinterest" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-pinterest"></i>
                 </a>
                 <a class="print-r" href="javascript:window.print()">

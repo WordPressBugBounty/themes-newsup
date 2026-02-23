@@ -1,3 +1,5 @@
+= Version 5.2.9
+* Fixed Post Sharing Issues.
 
 = Version 5.2.8
 * Fixed Style Issues.
