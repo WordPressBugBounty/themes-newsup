@@ -1,3 +1,6 @@
+= Version 5.3.0
+* Fixed Customizer Style Issues.
+
 = Version 5.2.9
 * Fixed Post Sharing Issues.
 

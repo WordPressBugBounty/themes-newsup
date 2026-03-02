@@ -12,10 +12,9 @@ li.customize-control-section-title h3{
 }
 .customize-control select,
 .select2-container--default .selection .select2-selection--single {
-	border: none;
-	background: #fcfcff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background-color: #fcfcff;
 	position: relative;
-	border-radius: 0;
 	height: 27px;
 	line-height: 27px;
 	outline: none;
@@ -54,10 +53,7 @@ input[type="email"],
 input[type="date"] {
 	background: #fcfcff;
 	position: relative;
-	border-radius: 0;
 	border: 1px solid #eee;
-	height: 50px;
-	line-height: 50px;
 	outline: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
