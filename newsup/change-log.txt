@@ -1,3 +1,6 @@
+= Version 5.3.1
+* Fixed Footer Overlay Image.
+
 = Version 5.3.0
 * Fixed Customizer Style Issues.
 

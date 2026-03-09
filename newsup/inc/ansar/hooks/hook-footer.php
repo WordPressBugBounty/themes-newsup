@@ -63,13 +63,13 @@ if (!function_exists('newsup_footer_copyright')) :
                     <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'newsup' ) ); ?>">
                     <?php
                     /* translators: placeholder replaced with string */
-                    printf( esc_html__( 'Proudly powered by %s', 'newsup' ), 'WordPress' );
+                    printf( __( 'Proudly powered by %s', 'newsup' ), 'WordPress' );
                     ?>
                     </a>
                     <span class="sep"> | </span>
                     <?php
                     /* translators: placeholder replaced with string */
-                    printf( esc_html__( 'Theme: %1$s by %2$s.', 'newsup' ), 'Newsup', '<a href="' . esc_url( __( 'https://themeansar.com/', 'newsup' ) ) . '" rel="designer">Themeansar</a>' );
+                    printf( __( 'Theme: %1$s by %2$s.', 'newsup' ), 'Newsup', '<a href="' . esc_url( __( 'https://themeansar.com/', 'newsup' ) ) . '" rel="designer">Themeansar</a>' );
                     ?>
                     </p>
                 </div>

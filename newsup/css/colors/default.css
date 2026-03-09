@@ -638,6 +638,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 footer .overlay {
 	background: #121026;
 }
+footer[style*=background-image] .overlay{
+	background: #121026bf;
+}
 footer .mg-footer-top-area h6, footer .mg-widget h6 {
 	color: #fff;
 }
