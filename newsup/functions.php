@@ -124,8 +124,8 @@ function newsup_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary menu', 'newsup' ),
-        'footer' => esc_html__( 'Footer menu', 'newsup' ),
+		'primary' => __( 'Primary menu', 'newsup' ),
+        'footer' => __( 'Footer menu', 'newsup' ),
 	) );
 
 	
@@ -175,10 +175,10 @@ function newsup_setup() {
 	
 	//Custom logo
 	add_theme_support(
-    'custom-logo',
-    array(
-        'unlink-homepage-logo' => true, // Add Here!
-    	)
+		'custom-logo',
+		array(
+			'unlink-homepage-logo' => true, // Add Here!
+		)
 	);
 	
 	// custom header Support
@@ -203,21 +203,19 @@ function newsup_setup() {
 endif;
 add_action( 'after_setup_theme', 'newsup_setup' );
 
+function newsup_the_custom_logo() {
 
-	function newsup_the_custom_logo() {
-	
-		if ( function_exists( 'the_custom_logo' ) ) {
-			the_custom_logo();
-		}
-
+	if ( function_exists( 'the_custom_logo' ) ) {
+		the_custom_logo();
 	}
 
-	add_filter('get_custom_logo','newsup_logo_class');
-	function newsup_logo_class($html)
-	{
-		$html = str_replace('custom-logo-link', 'navbar-brand', $html);
-		return $html;
-	}
+}
+
+add_filter('get_custom_logo','newsup_logo_class');
+function newsup_logo_class($html) {
+	$html = str_replace('custom-logo-link', 'navbar-brand', $html);
+	return $html;
+}
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -243,7 +241,7 @@ function newsup_widgets_init() {
 	$newsup_footer_column_layout = 12 / $newsup_footer_column_layout;
 	
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar Widget Area', 'newsup' ),
+		'name'          => __( 'Sidebar Widget Area', 'newsup' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="mg-widget %2$s">',
@@ -253,7 +251,7 @@ function newsup_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Front-page Content Section', 'newsup'),
+		'name'          => __( 'Front-page Content Section', 'newsup'),
 		'id'            => 'front-page-content',
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="newsup-front-page-content-widget %2$s">',
@@ -263,7 +261,7 @@ function newsup_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Front-page Sidebar Section', 'newsup'),
+		'name'          => __( 'Front-page Sidebar Section', 'newsup'),
 		'id'            => 'front-page-sidebar',
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="mg-widget %2$s">',
@@ -273,7 +271,7 @@ function newsup_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Widget Area', 'newsup' ),
+		'name'          => __( 'Footer Widget Area', 'newsup' ),
 		'id'            => 'footer_widget_area',
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="col-md-'.$newsup_footer_column_layout.' rotateInDownLeft animated mg-widget %2$s">',

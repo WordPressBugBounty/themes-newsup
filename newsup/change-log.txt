@@ -1,3 +1,6 @@
+= Version 5.3.2
+* Fixed Latest Posts Refresh Issues.
+
 = Version 5.3.1
 * Fixed Footer Overlay Image.
 
