@@ -194,7 +194,11 @@ class NewsUp_Admin {
                                                         );
                                                     ?>
                                                 </p>
-                                                <a href="#" class="newsup-content-btn newsup-str-sites"><?php esc_html_e('Start with Demo Sites','newsup'); ?></a>
+                                            <?php if ( is_plugin_active( 'ansar-import/ansar-import.php' ) ) : ?>
+                                                <a href="<?php echo esc_url(admin_url( 'admin.php?page=ansar-demo-import' )); ?>" class="newsup-content-btn newsup-str-sites"><?php esc_html_e('Start with Demo Sites','newsup'); ?></a>
+                                            <?php else : ?>
+                                                <a href="#" class="newsup-content-btn newsup-str-sites load"><?php esc_html_e('Start with Demo Sites','newsup'); ?></a>
+                                            <?php endif; ?>
                                         </div>
                                         <div class="newsup-getstart-image">
                                             <iframe src="https://www.youtube.com/embed/255CSHjfFJU?si=a2zBoFRrIbP44EB9" frameborder="0" allowfullscreen></iframe>
@@ -420,7 +424,7 @@ class NewsUp_Admin {
                                             <div>
                                                 <h4><?php esc_html_e("Ansar Import","newsup"); ?></h4>
                                                 <p><?php esc_html_e("Click View Demo Button to install a ready-made News & Magazine Demos — fast, simple, and customizable.","newsup"); ?></p>
-                                                <a href="#" class="newsup-btn-ins newsup-str-sites" >
+                                                <a href="#" class="newsup-btn-ins newsup-str-sites load" >
                                                     <?php 
                                                         esc_html_e( 'View Demos', 'newsup' );
                                                     ?>

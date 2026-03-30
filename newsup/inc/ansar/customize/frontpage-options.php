@@ -40,7 +40,7 @@ $wp_customize->add_setting('remove_header_image_overlay',
 );
 $wp_customize->add_control('remove_header_image_overlay',
     array(
-        'label'    => esc_html__('Remove Image Overlay', 'newsup'),
+        'label'    => __('Remove Image Overlay', 'newsup'),
         'section'  => 'header_image',
         'type'     => 'checkbox',
         'priority' => 50,
@@ -49,7 +49,7 @@ $wp_customize->add_control('remove_header_image_overlay',
 // Add Frontpage Options Panel.
 $wp_customize->add_panel('frontpage_option_panel',
     array(
-        'title' => esc_html__('Frontpage Options', 'newsup'),
+        'title' => __('Frontpage Options', 'newsup'),
         'priority' => 40,
         'capability' => 'edit_theme_options',
     )
@@ -57,7 +57,7 @@ $wp_customize->add_panel('frontpage_option_panel',
 // Advertisement Section.
 $wp_customize->add_section('frontpage_advertisement_settings',
     array(
-        'title' => esc_html__('Banner Advertisement', 'newsup'),
+        'title' => __('Banner Advertisement', 'newsup'),
         'priority' => 50,
         'capability' => 'edit_theme_options',
         'panel' => 'frontpage_option_panel',
@@ -75,8 +75,8 @@ $wp_customize->add_setting('banner_advertisement_section',
 $wp_customize->add_control(
     new WP_Customize_Cropped_Image_Control($wp_customize, 'banner_advertisement_section',
         array(
-            'label' => esc_html__('Banner Section Advertisement', 'newsup'),
-            'description' => sprintf(esc_html__('Recommended Size %1$s px X %2$s px', 'newsup'), 930, 100),
+            'label' => __('Banner Section Advertisement', 'newsup'),
+            'description' => sprintf(__('Recommended Size %1$s px X %2$s px', 'newsup'), 930, 100),
             'section' => 'frontpage_advertisement_settings',
             'width' => 930,
             'height' => 100,
@@ -97,7 +97,7 @@ $wp_customize->add_setting('banner_advertisement_section_url',
 );
 $wp_customize->add_control('banner_advertisement_section_url',
     array(
-        'label' => esc_html__('URL Link', 'newsup'),
+        'label' => __('URL Link', 'newsup'),
         'section' => 'frontpage_advertisement_settings',
         'type' => 'url',
         'priority' => 130,
@@ -112,7 +112,7 @@ $wp_customize->add_setting('newsup_open_on_new_tab',
 );
 $wp_customize->add_control(new Newsup_Toggle_Control( $wp_customize, 'newsup_open_on_new_tab', 
     array(
-        'label' => esc_html__('Open link in a new tab', 'newsup'),
+        'label' => __('Open link in a new tab', 'newsup'),
         'type' => 'toggle',
         'section' => 'frontpage_advertisement_settings',
         'priority' => 140,
@@ -123,7 +123,7 @@ $wp_customize->add_control(new Newsup_Toggle_Control( $wp_customize, 'newsup_ope
 //=================================
 $wp_customize->add_section('newsup_popular_tags_section_settings',
     array(
-        'title' => esc_html__('Top Tags', 'newsup'),
+        'title' => __('Top Tags', 'newsup'),
         'priority' => 50,
         'capability' => 'edit_theme_options',
         'panel' => 'frontpage_option_panel',
@@ -155,7 +155,7 @@ $wp_customize->add_setting('show_popular_tags_title',
 );
 $wp_customize->add_control('show_popular_tags_title',
     array(
-        'label' => esc_html__('Section Title', 'newsup'),
+        'label' => __('Section Title', 'newsup'),
         'section' => 'newsup_popular_tags_section_settings',
         'type' => 'text',
         'priority' => 100,
@@ -168,7 +168,7 @@ $wp_customize->add_control('show_popular_tags_title',
 //=================================
 $wp_customize->add_section('newsup_flash_posts_section_settings',
     array(
-        'title' => esc_html__('Latest Posts', 'newsup'),
+        'title' => __('Latest Posts', 'newsup'),
         'priority' => 50,
         'capability' => 'edit_theme_options',
         'panel' => 'frontpage_option_panel',
@@ -184,7 +184,7 @@ $wp_customize->add_setting('show_flash_news_section',
 );
 $wp_customize->add_control('show_flash_news_section',
     array(
-        'label' => esc_html__('Enable Latest Posts Section', 'newsup'),
+        'label' => __('Enable Latest Posts Section', 'newsup'),
         'section' => 'newsup_flash_posts_section_settings',
         'type' => 'checkbox',
         'priority' => 22,
@@ -202,7 +202,7 @@ $wp_customize->add_setting('flash_news_title',
 );
 $wp_customize->add_control('flash_news_title',
     array(
-        'label' => esc_html__('Latest Post Title', 'newsup'),
+        'label' => __('Latest Post Title', 'newsup'),
         'section' => 'newsup_flash_posts_section_settings',
         'type' => 'text',
         'priority' => 23,
@@ -221,8 +221,8 @@ $wp_customize->add_setting('select_flash_news_category',
 );
 $wp_customize->add_control(new Newsup_Dropdown_Taxonomies_Control($wp_customize, 'select_flash_news_category',
     array(
-        'label' => esc_html__('Latest Posts Category', 'newsup'),
-        'description' => esc_html__('Posts to be shown on trending posts ', 'newsup'),
+        'label' => __('Latest Posts Category', 'newsup'),
+        'description' => __('Posts to be shown on trending posts ', 'newsup'),
         'section' => 'newsup_flash_posts_section_settings',
         'type' => 'dropdown-taxonomies',
         'taxonomy' => 'category',
@@ -237,7 +237,7 @@ $wp_customize->add_control(new Newsup_Dropdown_Taxonomies_Control($wp_customize,
 // Main banner Sider Section.
 $wp_customize->add_section('frontpage_main_banner_section_settings',
     array(
-        'title' => esc_html__('Slider Banner & Tab Section', 'newsup'),
+        'title' => __('Slider Banner & Tab Section', 'newsup'),
         'priority' => 50,
         'capability' => 'edit_theme_options',
         'panel' => 'frontpage_option_panel',
@@ -253,7 +253,7 @@ $wp_customize->add_setting('show_main_news_section',
 );
 $wp_customize->add_control('show_main_news_section',
     array(
-        'label' => esc_html__('Enable Slider Banner Section', 'newsup'),
+        'label' => __('Enable Slider Banner Section', 'newsup'),
         'section' => 'frontpage_main_banner_section_settings',
         'type' => 'checkbox',
         'priority' => 10,
@@ -266,14 +266,14 @@ $wp_customize->add_setting('main_banner_section_background_image',
         'default' => $newsup_default['main_banner_section_background_image'],
         'capability' => 'edit_theme_options',
         'sanitize_callback' => 'absint',
-        'transport' => 'postMessage',
+        'transport' => 'refresh',
     )
 );
 $wp_customize->add_control(
     new WP_Customize_Cropped_Image_Control($wp_customize, 'main_banner_section_background_image',
         array(
-            'label' => esc_html__('Background image', 'newsup'),
-            'description' => sprintf(esc_html__('Recommended Size %1$s px X %2$s px', 'newsup'), 1200, 720),
+            'label' => __('Background image', 'newsup'),
+            'description' => sprintf(__('Recommended Size %1$s px X %2$s px', 'newsup'), 1200, 720),
             'section' => 'frontpage_main_banner_section_settings',
             'width' => 1200,
             'height' => 720,
@@ -294,12 +294,12 @@ $wp_customize->add_setting('newsup_select_slider_setting',
 );
 $wp_customize->add_control('newsup_select_slider_setting',
     array(
-        'label' => esc_html__('Select Slider Carousel Position', 'newsup'),
+        'label' => __('Select Slider Carousel Position', 'newsup'),
         'section' => 'frontpage_main_banner_section_settings',
         'type' => 'select',
         'choices' => array(
-            'left' => esc_html__("Left", 'newsup'),
-            'right' => esc_html__("Right", 'newsup'),
+            'left' => __("Left", 'newsup'),
+            'right' => __("Right", 'newsup'),
 
         ),
         'priority' => 60,
@@ -317,7 +317,7 @@ $wp_customize->add_control(
         $wp_customize,
         'main_slider_section_title',
         array(
-            'label' 			=> esc_html__( 'Slider Section ', 'newsup' ),
+            'label' 			=> __( 'Slider Section ', 'newsup' ),
             'section' 			=> 'frontpage_main_banner_section_settings',
             'priority' 			=> 70,
             'active_callback' => 'newsup_main_banner_section_status'
@@ -334,8 +334,8 @@ $wp_customize->add_setting('select_slider_news_category',
 );
 $wp_customize->add_control(new Newsup_Dropdown_Taxonomies_Control($wp_customize, 'select_slider_news_category',
     array(
-        'label' => esc_html__('Category', 'newsup'),
-        'description' => esc_html__('Posts to be shown on banner slider section', 'newsup'),
+        'label' => __('Category', 'newsup'),
+        'description' => __('Posts to be shown on banner slider section', 'newsup'),
         'section' => 'frontpage_main_banner_section_settings',
         'type' => 'dropdown-taxonomies',
         'taxonomy' => 'category',
@@ -354,7 +354,7 @@ $wp_customize->add_control(
         $wp_customize,
         'tabbed_section_title',
         array(
-            'label' 			=> esc_html__( 'Tabbed Section ', 'newsup' ),
+            'label' 			=> __( 'Tabbed Section ', 'newsup' ),
             'section' 			=> 'frontpage_main_banner_section_settings',
             'priority' 			=> 90,
             'active_callback' => 'newsup_main_banner_section_status'
@@ -371,7 +371,7 @@ $wp_customize->add_setting('latest_tab_title',
 );
 $wp_customize->add_control('latest_tab_title',
     array(
-        'label' => esc_html__('Latest Tab Title', 'newsup'),
+        'label' => __('Latest Tab Title', 'newsup'),
         'section' => 'frontpage_main_banner_section_settings',
         'type' => 'text',
         'priority' => 100,
@@ -388,7 +388,7 @@ $wp_customize->add_setting('popular_tab_title',
 );
 $wp_customize->add_control('popular_tab_title',
     array(
-        'label' => esc_html__('Popular Tab Title', 'newsup'),
+        'label' => __('Popular Tab Title', 'newsup'),
         'section' => 'frontpage_main_banner_section_settings',
         'type' => 'text',
         'priority' => 110,
@@ -405,7 +405,7 @@ $wp_customize->add_setting('trending_tab_title',
 );
 $wp_customize->add_control('trending_tab_title',
     array(
-        'label' => esc_html__('Trending Tab Title', 'newsup'),
+        'label' => __('Trending Tab Title', 'newsup'),
         'section' => 'frontpage_main_banner_section_settings',
         'type' => 'text',
         'priority' => 120,
@@ -422,8 +422,8 @@ $wp_customize->add_setting('select_trending_tab_news_category',
 );
 $wp_customize->add_control(new Newsup_Dropdown_Taxonomies_Control($wp_customize, 'select_trending_tab_news_category',
     array(
-        'label' => esc_html__('Category', 'newsup'),
-        'description' => esc_html__('Posts to be shown on trending tab', 'newsup'),
+        'label' => __('Category', 'newsup'),
+        'description' => __('Posts to be shown on trending tab', 'newsup'),
         'section' => 'frontpage_main_banner_section_settings',
         'type' => 'dropdown-taxonomies',
         'taxonomy' => 'category',

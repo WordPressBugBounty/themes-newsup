@@ -1,3 +1,6 @@
+= Version 5.3.3
+* Fixed Slider Banner Background Image.
+
 = Version 5.3.2
 * Fixed Latest Posts Refresh Issues.
 
