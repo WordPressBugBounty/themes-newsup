@@ -1,3 +1,6 @@
+= Version 5.3.4
+* Fixed Single Page Styling Issues.
+
 = Version 5.3.3
 * Fixed Slider Banner Background Image.
 

@@ -61,8 +61,8 @@ final class Newsup_Customize {
 				$manager,
 				'newsup_pro_upsell',
 				array(
-					'title'    => esc_html__( 'Newsup Pro Available!', 'newsup' ),
-					'pro_text' => esc_html__( 'Go Pro','newsup' ),
+					'title'    => __( 'Newsup Pro Available!', 'newsup' ),
+					'pro_text' => __( 'Go Pro','newsup' ),
 					'pro_url'  => 'https://themeansar.com/themes/newsup-pro/',
 					'priority'	=> 1
 				)
