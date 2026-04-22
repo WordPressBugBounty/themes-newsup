@@ -1,3 +1,6 @@
+= Version 5.3.5
+* Fixed Style Issues.
+
 = Version 5.3.4
 * Fixed Single Page Styling Issues.
 

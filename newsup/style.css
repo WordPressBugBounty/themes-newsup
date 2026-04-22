@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newsup/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://demo.themeansar.com/newsup and documentation at https://docs.themeansar.com/docs/newsup/
-Version: 5.3.4
+Version: 5.3.5
 Tested up to: 6.9
 Requires PHP: 7.4
 Requires at least: 6.7
@@ -1552,6 +1552,7 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	display: block;
 	display: -webkit-box;
 	max-height: 100%;
+	line-clamp: 2;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
@@ -1719,6 +1720,7 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	display: block;
 	display: -webkit-box;
 	max-height: 100%;
+	line-clamp: 3;
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
@@ -2245,6 +2247,7 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	display: block;
 	display: -webkit-box;
 	max-height: 100%;
+	line-clamp: 2;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
@@ -2489,6 +2492,7 @@ footer .widget_post_list .widget_post_list_inner {
 .small-post .title {
 	display: block;
 	display: -webkit-box;
+	line-clamp: 2;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
@@ -2648,6 +2652,7 @@ footer .widget_post_list .widget_post_list_inner {
 	display: block;
 	display: -webkit-box;
 	max-height: 100%;
+	line-clamp: 2;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
@@ -3655,7 +3660,6 @@ footer .mg-footer-copyright .info-right {
 }
 
 .mg-social li span.icon-soci {
-	display: inline-block;
 	float: left;
 	height: 35px;
 	line-height: 35px;
@@ -3988,7 +3992,6 @@ address i {
 .navigation.pagination .nav-links .page-numbers,
 .navigation.pagination .nav-links a {
 	cursor: pointer;
-	display: inline-block;
 	font-size: 18px;
 	line-height: 40px;
 	margin: 0 6px 10px;
@@ -4492,6 +4495,7 @@ pre {
 
 	.mg-posts-modul-6 .mg-sec-top-post .title {
 		max-height: 100%;
+		line-clamp: 5;
 		-webkit-line-clamp: 5;
 	}
 

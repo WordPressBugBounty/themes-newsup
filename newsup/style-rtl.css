@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newsup/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://demo.themeansar.com/newsup and documentation at https://docs.themeansar.com/docs/newsup/
-Version: 5.3.4
+Version: 5.3.5
 Tested up to: 6.9
 Requires PHP: 7.4
 Requires at least: 6.7
@@ -1413,6 +1413,7 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	width: 100%;
 	display: block;
 	display: -webkit-box;
+	line-clamp: 2;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
@@ -1586,6 +1587,7 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	display: block;
 	display: -webkit-box;
 	max-height: 100%;
+	line-clamp: 3;
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
@@ -2100,6 +2102,7 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	margin-bottom: 0.5rem;
 	display: block;
 	display: -webkit-box;
+	line-clamp: 2;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
@@ -2287,6 +2290,7 @@ footer .widget_post_list .widget_post_list_inner {
 .title_small_post {
 	display: block;
 	display: -webkit-box;
+	line-clamp: 2;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
@@ -2359,6 +2363,7 @@ footer .widget_post_list .widget_post_list_inner {
 .small-post .title {
 	display: block;
 	display: -webkit-box;
+	line-clamp: 2;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
@@ -2515,6 +2520,7 @@ footer .widget_post_list .widget_post_list_inner {
 	margin-bottom: 6px;
 	display: block;
 	display: -webkit-box;
+	line-clamp: 2;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
@@ -3413,7 +3419,6 @@ footer .mg-footer-copyright .info-right {
 }
 
 .mg-social li span.icon-soci {
-	display: inline-block;
 	float: left;
 	height: 35px;
 	line-height: 35px;
@@ -4406,6 +4411,7 @@ pre {
 
 	.mg-posts-modul-6 .mg-sec-top-post .title {
 		max-height: 100%;
+		line-clamp: 5;
 		-webkit-line-clamp: 5;
 	}
 
@@ -4540,7 +4546,6 @@ pre {
 	background-color: #fff;
 	color: #999;
 	cursor: pointer;
-	display: inline-block;
 	transition: all 0.3s ease 0s;
 	font-size: 18px;
 	line-height: 40px;
@@ -4652,6 +4657,7 @@ pre {
 .owl-stage-outer {
 	position: relative;
 	overflow: hidden;
+	transform: translate3d(0, 0, 0);
 	-webkit-transform: translate3d(0, 0, 0);
 	direction: ltr;
 }
