@@ -1,3 +1,6 @@
+= Version 5.3.6
+* Fixed Post Description.
+
 = Version 5.3.5
 * Fixed Style Issues.
 
