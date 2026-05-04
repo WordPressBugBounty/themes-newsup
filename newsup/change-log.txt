@@ -1,5 +1,9 @@
+= Version 5.3.7
+* Expanded localization with new translation files.
+* Added multi-language support for German, Russian, Spanish and Dutch.
+
 = Version 5.3.6
-* Fixed Post Description.
+* Fixed Post Author Description.
 
 = Version 5.3.5
 * Fixed Style Issues.
