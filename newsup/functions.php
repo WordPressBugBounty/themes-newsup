@@ -151,7 +151,7 @@ function newsup_setup() {
      *
      * @link https://developer.wordpress.org/themes/functionality/post-formats/
      */
-    add_theme_support( 'post-formats', array( 'image', 'video', 'gallery' ) );
+    add_theme_support( 'post-formats', array( 'image', 'video', 'audio', 'gallery' ) );
 
 	$args = array(
     	'default-color' => '#eee',

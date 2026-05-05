@@ -1,3 +1,6 @@
+= Version 5.3.8
+* Integrated support for audio post formats.
+
 = Version 5.3.7
 * Expanded localization with new translation files.
 * Added multi-language support for German, Russian, Spanish and Dutch.

@@ -249,13 +249,14 @@ function newsup_post_format_type($post_id){
     if(has_post_format( 'image' )) { 
       echo '<span class="post-form"><i class="fas fa-camera"></i></span>';   
     }
-
     elseif(has_post_format( 'video' )){ 
       echo '<span class="post-form"><i class="fas fa-video"></i></span>';   
     }
-
     elseif(has_post_format( 'gallery' )){
        echo '<span class="post-form"><i class="fas fa-photo-video"></i></span>';  
+    }
+    elseif(has_post_format( 'audio' )){
+        echo '<span class="post-form"><i class="fas fa-headset"></i></span>';
     }
     elseif( is_sticky() ){
         echo '<span class="post-form"><i class="fa-solid fa-thumbtack"></i></span>';  
