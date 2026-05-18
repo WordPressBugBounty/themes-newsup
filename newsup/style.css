@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newsup/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://demo.themeansar.com/newsup and documentation at https://docs.themeansar.com/docs/newsup/
-Version: 5.3.8
+Version: 5.3.9
 Tested up to: 6.9
 Requires PHP: 7.4
 Requires at least: 6.7
@@ -1112,11 +1112,9 @@ h6,
 	img.alignleft {
 		float: left;
 	}
-
 	img.alignright {
 		float: right;
 	}
-
 	/* Sidebar*/
 	.sidebar-sticky {
 		position: sticky;
@@ -3697,7 +3695,6 @@ footer .mg-widget .wp-block-social-links li {
 
 .wp-caption-text {
 	font-size: 13px;
-
 	font-style: italic;
 	line-height: 1.6;
 	margin: 0;
@@ -4210,7 +4207,6 @@ pre {
 	.mg-blog-post .bottom h4 {
 		overflow: hidden;
 	}
-
 	.mg-blog-inner h4 {
 		margin-bottom: 0.5rem;
 		line-height: 25px;
@@ -4221,7 +4217,6 @@ pre {
 	.mg-blog-post .bottom h4 {
 		overflow: hidden;
 	}
-
 	.mg-blog-inner h4 {
 		margin-bottom: 0.5rem;
 		line-height: 25px;
@@ -4232,11 +4227,9 @@ pre {
 	li.active.home {
 		display: none;
 	}
-
 	.mg-fea-area .mr-bot60 {
 		margin-bottom: 30px;
 	}
-
 	.m-header {
 		width: 100%;
 		padding-right: 15px;
@@ -4244,213 +4237,165 @@ pre {
 		display: flex;
 		justify-content: space-between;
 	}
-
 	.mobilehomebtn {
 		display: block;
 	}
-
 	.desk-header {
 		display: none;
 	}
-
 	.m-header .navbar-toggler {
 		margin-top: 0.5rem;
 		margin-bottom: 0.5rem;
 		padding: 0.5rem 0.75rem;
 		box-shadow: none;
 	}
-
 	.m-header .navbar-toggler:focus {
 		/* outline: none; */
 	}
-
 	.mg-fea-area .pd-r-10 {
 		padding-right: 0px;
 	}
-
 	.missed-inner .col-lg-3.col-sm-6:is(:nth-child(4), :nth-child(5)) .mg-blog-post-3.minh {
 		margin-bottom: 0;
 	}
 }
 
 @media screen and (min-width: 240px) and (max-width: 767px) {
-
 	/* Meida respondive for slider title and blog post title */
 	.mg-head-detail .info-right,
 	.mg-head-detail .info-left {
 		float: none;
 		text-align: center;
 	}
-
 	.navbar-brand {
 		margin-right: unset;
 	}
-
 	.mg-blog-post .bottom h1 {
 		font-size: 20px;
 	}
-
 	.mg-blog-post .bottom h1 {
 		max-height: 100px;
 	}
-
 	.mg-footer-bottom-area .site-branding-text {
 		/* margin: 0 auto; */
 		text-align: center;
 	}
-
 	.mg-fea-area .mg-blog-post.lg {
 		margin-bottom: 20px;
 	}
-
 	.mg-posts-sec {
 		margin-top: 20px;
 	}
-
 	.mg-sidebar .mg-posts-sec.double-category-widget {
 		margin: 0;
 	}
-
 	.mg-sidebar .mg-widget {
 		margin-bottom: 20px;
 	}
-
 	.col-md-3 .mg-sidebar .mg-widget:last-child {
 		margin-bottom: 0px;
 	}
-
 	.mg-posts-modul-6 .mg-post-thumb {
 		margin-right: 0;
 	}
-
 	.top-right-area .nav-tabs>li>a i {
 		display: inherit;
 	}
-
 	.top-right-area .nav-tabs>li>a {
 		display: block;
 	}
-
 	.mg-blog-post-box:has(.single-featured-image) .mg-header {
 		padding: 30px 20px;
 	}
-
 	.mg-blog-post-box .small.single {
 		padding: 20px 30px;
 	}
-
 	.mg-blog-post-box .post-share {
 		justify-content: center;
 	}
-
 	.mg-blog-post-box .mg-info-author-block {
 		padding: 30px 20px;
 	}
-
 	/*--------------- ti-slider ---------------*/
 	.navbar-wp .navbar-nav>li>a {
 		padding: 10px 16px;
 	}
-
 	.navbar-wp .navbar-nav>.active>a,
 	.navbar-wp .navbar-nav>.active>a:hover,
 	.navbar-wp .navbar-nav>.active>a:focus {
 		border-bottom: none;
 	}
-
 	.navbar-wp .navbar-nav>a,
 	.navbar-wp .navbar-nav>a:hover,
 	.navbar-wp .navbar-nav a:focus {
 		border-bottom: none;
 	}
-
 	.mg-headwidget .navbar-collapse.in {
 		margin-top: 50px;
 	}
-
 	.mg-headwidget .navbar-toggle {
 		margin: 10px auto;
 	}
-
 	.mg-headwidget .navbar-wp .navbar-nav>li>a {
 		padding: 12px 16px;
 	}
-
 	.mg-trhead.conte .navbar-wp .navbar-nav>li>a {
 		padding: 15px 16px;
 	}
-
 	#content.home {
 		padding: 0 15px;
 	}
-
 	.mg-sidebar {
 		margin: 20px 0 0 0;
 	}
-
 	.text-xs {
 		text-align: center !important;
 	}
-
 	.text-center-xs {
 		text-align: center;
 	}
-
 	.col-md-4 {
 		margin-bottom: 15px;
 	}
-
 	.mg-latest-news .mg-latest-news-slider {
 		left: 0;
 	}
-
 	.mg-latest-news .bn_title .title,
 	.mg-ppr-txnlst strong {
 		display: none;
 	}
-
 	.mg-blog-post.lg {
 		height: 300px;
 	}
-
 	#homemain {
 		padding-right: 0;
 		margin-bottom: 30px;
 	}
-
 	.mr-xs {
 		margin-bottom: 30px;
 	}
-
 	footer .mg-footer-bottom-area {
 		text-align: center;
 	}
-
 	footer .mg-footer-copyright p,
 	footer .mg-footer-copyright a {
 		line-height: 2;
 	}
-
 	footer .info-right {
 		float: unset;
 	}
-
 	.mg-footer-copyright .col-md-6.text-xs p {
 		margin-bottom: 16px;
 	}
-
 	li.active.home {
 		display: none;
 	}
-
 	blockquote::before {
 		margin: 6px 0;
 	}
-
 	.mg-blog-post.lg {
 		height: 395px;
 	}
-
 	.missed-inner .mg-blog-post-3.minh {
 		margin-bottom: 30px;
 	}
@@ -4461,23 +4406,18 @@ pre {
 		max-width: 100%;
 		height: auto;
 	}
-
 	.comment-list .children {
 		margin-left: 0.66666em;
 	}
-
 	.comment-content {
 		padding: 16px 0px 16px 0;
 	}
-
 	.widget_featured_post .widget_featured_post_inner {
 		grid-template-columns: repeat(1, minmax(0, 1fr));
 	}
-
 	.widget_post_list .widget_post_list_inner {
 		grid-template-columns: repeat(1, minmax(0, 1fr));
 	}
-
 	.mg-blog-post-box .small figure.alignwide,
 	.mg-blog-post-box .small figure.alignfull,
 	.alignwide.wp-block-cover,
@@ -4492,25 +4432,20 @@ pre {
 	.mg-blog-post .bottom h4 {
 		font-size: 24px;
 	}
-
 	.mg-posts-modul-6 .mg-sec-top-post .title {
 		max-height: 100%;
 		line-clamp: 5;
 		-webkit-line-clamp: 5;
 	}
-
 	.mg-nav-widget-area .header-ads {
 		padding-top: 10px;
 	}
-
 	.mg-blog-post-box .mg-header h1 {
 		font-size: 32px;
 	}
-
 	.missed-inner .col-lg-3.col-sm-6:nth-child(4) .mg-blog-post-3.minh {
 		margin-bottom: 30px;
 	}
-
 	.search-results-count {
 		text-align: center;
 		font-size: 16px;
@@ -4521,18 +4456,15 @@ pre {
 	.navbar-header {
 		float: none;
 	}
-
 	.mg-fea-area .mg-blog-post.lg {
 		margin-bottom: 30px;
 	}
-
 	.wp-block-search__button {
 		margin-left: 0
 	}
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-
 	/* Top Details*/
 	.mg-head-detail .info-left {
 		float: none;
@@ -4540,33 +4472,27 @@ pre {
 		margin: 0;
 		float: none;
 	}
-
 	.mg-head-detail .info-right {
 		float: none;
 		text-align: center;
 		margin: 0;
 		float: none;
 	}
-
 	/* logo*/
 	.navbar-default .navbar-brand {
 		margin: 0 auto;
 		text-align: center;
 	}
-
 	.navbar-wp .navbar-nav>li>a {
 		padding: 12px;
 	}
-
 	.navbar-wp .navbar-nav>li>a:hover,
 	.navbar-wp .navbar-nav>li>a:focus {
 		z-index: 8;
 	}
-
 	.navbar-wp .mg-search-box {
 		float: left;
 	}
-
 	.mg-search {
 		margin: 0 auto;
 	}
@@ -4584,7 +4510,6 @@ pre {
 		left: 0px;
 		width: 100%;
 	}
-
 	.alignfull {
 		left: auto;
 		width: 100%;
@@ -4596,15 +4521,12 @@ pre {
 	blockquote::before {
 		width: 10%;
 	}
-
 	blockquote p {
 		width: 90%;
 	}
-
 	.mg-nav-widget-area .site-title a {
 		font-size: 31px;
 	}
-
 	.mg-nav-widget-area .site-branding-text .site-title a {
 		font-size: 30px;
 	}
@@ -4616,12 +4538,10 @@ pre {
 		justify-content: center;
 		gap: 0;
 	}
-
 	.pulse.animated .mg-blog-meta .mg-blog-date {
 		font-size: 11px;
 		margin-right: 10px;
 	}
-
 	.pulse.animated .mg-blog-meta a {
 		font-size: 11px;
 	}
@@ -4639,7 +4559,6 @@ pre {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
-
 	.col-lg-3 .wp-block-search__button {
 		margin-left: 0;
 	}

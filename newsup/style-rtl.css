@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newsup/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://demo.themeansar.com/newsup and documentation at https://docs.themeansar.com/docs/newsup/
-Version: 5.3.8
+Version: 5.3.9
 Tested up to: 6.9
 Requires PHP: 7.4
 Requires at least: 6.7
@@ -1877,32 +1877,26 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 /* Meida respondive for slider title and blog post title */
 
 @media screen and (min-width: 240px) and (max-width: 767px) {
-
 	.mg-head-detail .info-right,
 	.mg-head-detail .info-left {
 		float: none;
 		text-align: center;
 	}
-
 	.navbar-brand {
 		margin-right: unset;
 		margin-left: unset;
 	}
-
 	.mg-blog-post .bottom h1 {
 		font-size: 20px;
 	}
-
 	.mg-blog-post .bottom h1 {
 		max-height: 100px;
 	}
-
 	.mg-posts-modul-6 .mg-sec-top-post .title {
 
 		font-size: 16px;
 		line-height: 25px;
 	}
-
 
 	.mg-footer-bottom-area .site-branding-text {
 		/* margin: 0 auto; */
@@ -4171,7 +4165,6 @@ pre {
 	.mg-blog-post .bottom h4 {
 		overflow: hidden;
 	}
-
 	.colmnthree .mg-blog-inner h4 {
 		margin: 0;
 	}
@@ -4192,7 +4185,6 @@ pre {
 		margin: 0;
 		float: none;
 	}
-
 	.mg-head-detail .info-right {
 		float: none;
 		text-align: center;
@@ -4205,20 +4197,16 @@ pre {
 		margin: 0 auto;
 		text-align: center;
 	}
-
 	.navbar-wp .navbar-nav>li>a {
 		padding: 12px;
 	}
-
 	.navbar-wp .navbar-nav>li>a:hover,
 	.navbar-wp .navbar-nav>li>a:focus {
 		z-index: 8;
 	}
-
 	.navbar-wp .mg-search-box {
 		float: left;
 	}
-
 	.mg-search {
 		margin: 0 auto;
 	}
@@ -4241,7 +4229,6 @@ pre {
 	li.active.home {
 		display: none;
 	}
-
 	.m-header {
 		width: 100%;
 		padding-right: 15px;
@@ -4249,30 +4236,24 @@ pre {
 		display: flex;
 		justify-content: space-between;
 	}
-
 	.desk-header {
 		display: none;
 	}
-
 	.m-header .navbar-toggler {
 		margin-top: 0.5rem;
 		margin-bottom: 0.5rem;
 		padding: 0.5rem 0.75rem;
 		box-shadow: none;
 	}
-
 	.m-header .navbar-toggler:focus {
 		/* outline: none; */
 	}
-
 	.mobilehomebtn {
 		display: block;
 	}
-
 	.navbar-nav .dropdown-menu li a {
 		text-align: start;
 	}
-
 	.missed-inner .col-lg-3.col-sm-6:is(:nth-child(4), :nth-child(5)) .mg-blog-post-3.minh {
 		margin-bottom: 0;
 	}
@@ -4282,23 +4263,18 @@ pre {
 	.mg-posts-modul-6 .mg-post-thumb {
 		margin-right: 0;
 	}
-
 	.top-right-area .nav-tabs>li>a i {
 		display: inherit;
 	}
-
 	.mg-blog-post-box:has(.single-featured-image) .mg-header {
 		padding: 30px 20px;
 	}
-
 	.mg-blog-post-box .small.single {
 		padding: 20px 30px;
 	}
-
 	.mg-blog-post-box .post-share {
 		justify-content: center;
 	}
-
 	.mg-blog-post-box .mg-info-author-block {
 		padding: 30px 20px;
 	}
@@ -4307,31 +4283,25 @@ pre {
 	.navbar-wp .navbar-nav>li>a {
 		padding: 10px 16px;
 	}
-
 	.navbar-wp .navbar-nav>.active>a,
 	.navbar-wp .navbar-nav>.active>a:hover,
 	.navbar-wp .navbar-nav>.active>a:focus {
 		border-bottom: none;
 	}
-
 	.navbar-wp .navbar-nav>a,
 	.navbar-wp .navbar-nav>a:hover,
 	.navbar-wp .navbar-nav a:focus {
 		border-bottom: none;
 	}
-
 	.mg-headwidget .navbar-collapse.in {
 		margin-top: 50px;
 	}
-
 	.mg-headwidget .navbar-toggle {
 		margin: 10px auto;
 	}
-
 	.mg-headwidget .navbar-wp .navbar-nav>li>a {
 		padding: 12px 16px;
 	}
-
 	.mg-trhead.conte .navbar-wp .navbar-nav>li>a {
 		padding: 15px 16px;
 	}
@@ -4339,19 +4309,15 @@ pre {
 	#content.home {
 		padding: 0 15px;
 	}
-
 	.mg-sidebar {
 		margin: 20px 0 0 0;
 	}
-
 	.text-xs {
 		text-align: center !important;
 	}
-
 	.text-center-xs {
 		text-align: center;
 	}
-
 	.col-md-4 {
 		margin-bottom: 15px;
 	}
@@ -4362,17 +4328,14 @@ pre {
 	.mg-latest-news .mg-latest-news-slider {
 		left: 0;
 	}
-
 	.mg-latest-news .bn_title .title,
 	.mg-ppr-txnlst strong {
 		display: none;
 		right: 0;
 	}
-
 	.mg-latest-news .mg-latest-news-slider {
 		right: 0;
 	}
-
 	.mg-blog-post.lg {
 		height: 300px;
 	}
@@ -4381,7 +4344,6 @@ pre {
 		padding-right: 0;
 		margin-bottom: 30px;
 	}
-
 	.mr-xs {
 		margin-bottom: 30px;
 	}
@@ -4398,7 +4360,6 @@ pre {
 	footer .info-right {
 		float: unset;
 	}
-
 	.missed-inner .mg-blog-post-3.minh {
 		margin-bottom: 30px;
 	}
@@ -4408,21 +4369,17 @@ pre {
 	.mg-blog-post .bottom h4 {
 		font-size: 24px;
 	}
-
 	.mg-posts-modul-6 .mg-sec-top-post .title {
 		max-height: 100%;
 		line-clamp: 5;
 		-webkit-line-clamp: 5;
 	}
-
 	.mg-blog-post-box .mg-header h1 {
 		font-size: 32px;
 	}
-
 	.missed-inner .col-lg-3.col-sm-6:nth-child(4) .mg-blog-post-3.minh {
 		margin-bottom: 30px;
 	}
-
 	.search-results-count {
 		text-align: center;
 		font-size: 16px;
@@ -4687,7 +4644,6 @@ pre {
 		left: 0px;
 		width: 100%;
 	}
-
 	.alignfull {
 		left: auto;
 		width: 100%;
@@ -4746,7 +4702,6 @@ textarea {
 	blockquote p {
 		width: 90%;
 	}
-
 	.mg-nav-widget-area .site-title a {
 		font-size: 31px;
 	}
@@ -4756,19 +4711,15 @@ textarea {
 	blockquote::before {
 		margin: 6px 0;
 	}
-
 	.mg-blog-post.lg {
 		height: 395px;
 	}
-
 	.mg-footer-copyright .col-md-6.text-xs p {
 		margin-bottom: 16px;
 	}
-
 	.col-md-4 {
 		margin-bottom: 15px;
 	}
-
 	.mg-posts-sec {
 		margin-top: 20px;
 	}
@@ -4780,20 +4731,16 @@ textarea {
 		justify-content: center;
 		gap: 0;
 	}
-
 	.pulse.animated .mg-blog-meta .mg-blog-date {
 		font-size: 11px;
 		margin-right: 10px;
 	}
-
 	.pulse.animated .mg-blog-meta a {
 		font-size: 11px;
 	}
-
 	.mg-fea-area .mg-blog-post.lg {
 		margin-bottom: 30px;
 	}
-
 	.wp-block-search__button {
 		margin-left: 0;
 		margin-right: 0;
@@ -4804,7 +4751,6 @@ textarea {
 	.mg-fea-area .mr-bot60 {
 		margin-bottom: 30px;
 	}
-
 	.mg-fea-area .pd-r-10 {
 		padding-right: 0px;
 	}
@@ -4826,11 +4772,9 @@ textarea {
 	.mg-fea-area .mg-blog-post.lg {
 		margin-bottom: 20px;
 	}
-
 	.mg-sidebar .mg-widget {
 		margin-bottom: 20px;
 	}
-
 	.mg-sidebar .mg-posts-sec.double-category-widget {
 		margin: 0;
 	}
@@ -4841,23 +4785,18 @@ textarea {
 		max-width: 100%;
 		height: auto;
 	}
-
 	.comment-list .children {
 		margin-right: 0.66666em;
 	}
-
 	.comment-content {
 		padding: 16px 0px 16px 0;
 	}
-
 	.widget_featured_post .widget_featured_post_inner {
 		grid-template-columns: repeat(1, minmax(0, 1fr));
 	}
-
 	.widget_post_list .widget_post_list_inner {
 		grid-template-columns: repeat(1, minmax(0, 1fr));
 	}
-
 	.mg-blog-post-box .small figure.alignwide,
 	.mg-blog-post-box .small figure.alignfull,
 	.alignwide.wp-block-cover,
@@ -4880,7 +4819,6 @@ textarea {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
-
 	.col-lg-3 .wp-block-search__button {
 		margin-left: 0;
 	}

@@ -1,3 +1,6 @@
+= Version 5.3.9
+* Fixed Page Builder Issue.
+
 = Version 5.3.8
 * Integrated support for audio post formats.
 

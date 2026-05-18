@@ -8,17 +8,14 @@
  */
 
 get_header(); ?>
-<main id="content">
-	<div id="content" class="pagebuilder-content clearfix">
-		<?php
-		while ( have_posts() ) : the_post();
+<main id="content" class="pagebuilder-content clearfix">
+	<?php
+	while ( have_posts() ) : the_post();
 
-			the_content();
+		the_content();
 
-		endwhile;
-		newsup_edit_link();
-		?>
-
-	</div><!-- #content -->
+	endwhile;
+	newsup_edit_link();
+	?>
 </main><!-- #primary -->
 <?php get_footer(); ?>
