@@ -104,3 +104,7 @@ li#customize-control-display_header_text, li#customize-control-newsup_center_log
   justify-content: center;
   gap: 5px;
 }
+.admin-bar .newsup-notice-buttons :is( .newsup-btn-get-started, .newsup-btn-get-started-customize) .dashicons{
+  line-height: 1.2;
+  color: inherit !important;
+}

@@ -1,3 +1,7 @@
+
+= Version 5.4.0
+* Performed compatibility and stability testing with WordPress 7.0.
+
 = Version 5.3.9
 * Fixed Page Builder Issue.
 
