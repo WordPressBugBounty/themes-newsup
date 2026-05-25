@@ -1,3 +1,5 @@
+= Version 5.4.1
+* Fixed Admin Notice.
 
 = Version 5.4.0
 * Performed compatibility and stability testing with WordPress 7.0.

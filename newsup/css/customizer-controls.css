@@ -92,11 +92,11 @@ li#customize-control-display_header_text, li#customize-control-newsup_center_log
 }
 .newsup-notice_text .notice p, .notice-title, div.updated p, div.error p, .form-table td .notice p  {padding-right: 25px; font-size: 15px;}
 .dashicons-external:before {
-  color: #2271b1;
+  color: var(--wp-admin-theme-color);
 }
 .newsup-notice-link{ 
   display:inline;
-  color: #2271b1;
+  color: var(--wp-admin-theme-color);
 }
 .admin-bar .newsup-btn-get-started, .admin-bar .newsup-btn-get-started-customize{
   display: flex;
