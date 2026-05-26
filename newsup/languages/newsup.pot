@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Newsup\n"
-"POT-Creation-Date: 2026-05-01 15:11+0530\n"
-"PO-Revision-Date: 2026-05-01 15:11+0530\n"
+"POT-Creation-Date: 2026-05-26 18:19+0530\n"
+"PO-Revision-Date: 2026-05-26 18:19+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -45,19 +45,23 @@ msgstr ""
 msgid "Go Back"
 msgstr ""
 
-#: admin/admin.php:32 admin/admin.php:33
+#: admin/admin.php:34 admin/admin.php:35 admin/admin.php:199
+msgid "Starter Sites"
+msgstr ""
+
+#: admin/admin.php:43 admin/admin.php:44
 msgid "Customize"
 msgstr ""
 
-#: admin/admin.php:39
+#: admin/admin.php:50
 msgid "Footer Builder"
 msgstr ""
 
-#: admin/admin.php:40
+#: admin/admin.php:51
 msgid "Upgrade Now &nbsp;➤"
 msgstr ""
 
-#: admin/admin.php:76
+#: admin/admin.php:149
 #, php-format
 msgid ""
 "Enjoyed <span class=\"newsup-footer-thankyou\"><strong>%s</strong>? Please "
@@ -65,312 +69,373 @@ msgid ""
 "target=\"_blank\">★★★★★</a></span> rating."
 msgstr ""
 
-#: admin/admin.php:85
+#: admin/admin.php:158
 msgid "Change log file not found."
 msgstr ""
 
-#: admin/admin.php:87
+#: admin/admin.php:160
 msgid "Change log file not readable."
 msgstr ""
 
-#: admin/admin.php:119
+#: admin/admin.php:192
 msgid "Dashboard"
 msgstr ""
 
-#: admin/admin.php:127 admin/admin.php:135
-msgid "Starter Sites"
-msgstr ""
-
-#: admin/admin.php:143
+#: admin/admin.php:206
 msgid "Useful Plugin"
 msgstr ""
 
-#: admin/admin.php:150
+#: admin/admin.php:213
 msgid "Free Vs Pro"
 msgstr ""
 
-#: admin/admin.php:157
+#: admin/admin.php:220
 msgid "Change Log"
 msgstr ""
 
-#: admin/admin.php:185
+#: admin/admin.php:248
 msgid "Welcome, "
 msgstr ""
 
-#: admin/admin.php:190
+#: admin/admin.php:253
 #, php-format
 msgid ""
 "Thank you for installing %s — your complete solution for creating modern, "
 "dynamic, engaging News, and Magazine websites."
 msgstr ""
 
-#: admin/admin.php:198 admin/admin.php:200
+#: admin/admin.php:261 admin/admin.php:263
 msgid "Start with Demo Sites"
 msgstr ""
 
-#: admin/admin.php:425
-#: inc/ansar/customizer-admin/newsup-admin-plugin-install.php:47
-msgid "Ansar Import"
-msgstr ""
-
-#: admin/admin.php:426
-msgid ""
-"Click View Demo Button to install a ready-made News & Magazine Demos — fast, "
-"simple, and customizable."
-msgstr ""
-
-#: admin/admin.php:429
-#: inc/ansar/customizer-admin/newsup-admin-plugin-install.php:65
-msgid "View Demos"
-msgstr ""
-
-#: admin/admin.php:474
+#: admin/admin.php:515
 msgid "Features"
 msgstr ""
 
-#: admin/admin.php:478
+#: admin/admin.php:519 admin/tabs/starter-sites.php:96
 msgid "Free"
 msgstr ""
 
-#: admin/admin.php:481
+#: admin/admin.php:522 admin/tabs/starter-sites.php:92
 msgid "Pro"
 msgstr ""
 
-#: admin/admin.php:489
+#: admin/admin.php:530
 msgid "Live editing in Customizer"
 msgstr ""
 
-#: admin/admin.php:504
+#: admin/admin.php:545
 msgid "Multiple Header Options"
 msgstr ""
 
-#: admin/admin.php:519
+#: admin/admin.php:560
 msgid "Full Width Page Options"
 msgstr ""
 
-#: admin/admin.php:532
+#: admin/admin.php:573
 msgid "Typography style and colors"
 msgstr ""
 
-#: admin/admin.php:547
+#: admin/admin.php:588
 msgid "Preloader"
 msgstr ""
 
-#: admin/admin.php:562
+#: admin/admin.php:603
 msgid "Animation Effects"
 msgstr ""
 
-#: admin/admin.php:577
+#: admin/admin.php:618
 msgid "Load More Posts"
 msgstr ""
 
-#: admin/admin.php:592
+#: admin/admin.php:633
 msgid "Infinity Scroll"
 msgstr ""
 
-#: admin/admin.php:607
+#: admin/admin.php:648
 msgid "Social Icon Repeater"
 msgstr ""
 
-#: admin/admin.php:622
+#: admin/admin.php:663
 msgid "Live Search / Ajax Search"
 msgstr ""
 
-#: admin/admin.php:637
+#: admin/admin.php:678
 msgid "Light Dark Mode"
 msgstr ""
 
-#: admin/admin.php:652
+#: admin/admin.php:693
 msgid "Posts Section Advertisements"
 msgstr ""
 
-#: admin/admin.php:667
+#: admin/admin.php:708
 msgid "Advanced Posts Section Advertisements"
 msgstr ""
 
-#: admin/admin.php:682
+#: admin/admin.php:723
 msgid "Basic Banner Featured Posts Controls"
 msgstr ""
 
-#: admin/admin.php:697
+#: admin/admin.php:738
 msgid "Advanced Banner Featured Posts Controls"
 msgstr ""
 
-#: admin/admin.php:712
+#: admin/admin.php:753
 msgid "Popup Advertisement"
 msgstr ""
 
-#: admin/admin.php:727
+#: admin/admin.php:768
 msgid "Custom Widgets"
 msgstr ""
 
-#: admin/admin.php:742
+#: admin/admin.php:783
 msgid "Advanced Custom Widgets"
 msgstr ""
 
-#: admin/admin.php:757
+#: admin/admin.php:798
 msgid "Archive Layout"
 msgstr ""
 
-#: admin/admin.php:772
+#: admin/admin.php:813
 msgid "Advanced Archive Layout"
 msgstr ""
 
-#: admin/admin.php:787
+#: admin/admin.php:828
 msgid "Instagram Slider"
 msgstr ""
 
-#: admin/admin.php:802
+#: admin/admin.php:843
 msgid "View Related Post"
 msgstr ""
 
-#: admin/admin.php:817
+#: admin/admin.php:858
 msgid "Advanced Footer Widgets"
 msgstr ""
 
-#: admin/admin.php:832
+#: admin/admin.php:873
 msgid "Hide Theme Credit Link"
 msgstr ""
 
-#: admin/admin.php:847
+#: admin/admin.php:888
 msgid "WooCommerce Compatibility"
 msgstr ""
 
-#: admin/admin.php:862
+#: admin/admin.php:903
 msgid "Responsive Layout"
 msgstr ""
 
-#: admin/admin.php:877
+#: admin/admin.php:918
 msgid "Translations Ready"
 msgstr ""
 
-#: admin/admin.php:892
+#: admin/admin.php:933
 msgid "Proper Documentation"
 msgstr ""
 
-#: admin/admin.php:907
+#: admin/admin.php:948
 msgid "Updates"
 msgstr ""
 
-#: admin/admin.php:922
+#: admin/admin.php:963
 #: inc/ansar/customizer-admin/newsup-admin-plugin-install.php:73
 msgid "Support"
 msgstr ""
 
-#: admin/admin.php:937
+#: admin/admin.php:978
 msgid "Priority Support"
 msgstr ""
 
-#: admin/admin.php:952
+#: admin/admin.php:993
 msgid "Prebuild Demos"
 msgstr ""
 
-#: admin/admin.php:967
+#: admin/admin.php:1008
 msgid "Advanced Prebuild Demos"
 msgstr ""
 
-#: admin/admin.php:982
+#: admin/admin.php:1023
 msgid "SEO"
 msgstr ""
 
-#: admin/admin.php:997
+#: admin/admin.php:1038
 msgid "Gradient Color Option"
 msgstr ""
 
-#: admin/admin.php:1012
+#: admin/admin.php:1053
 msgid "Breadcrumb Settings"
 msgstr ""
 
-#: admin/admin.php:1027
+#: admin/admin.php:1068
 msgid "Random Post"
 msgstr ""
 
-#: admin/admin.php:1042
+#: admin/admin.php:1083
 msgid "Header Layouts"
 msgstr ""
 
-#: admin/admin.php:1057
+#: admin/admin.php:1098
 msgid "Slider Layouts"
 msgstr ""
 
-#: admin/admin.php:1072
+#: admin/admin.php:1113
 msgid "Header Toggle Offcanvas"
 msgstr ""
 
-#: admin/admin.php:1087
+#: admin/admin.php:1128
 msgid "Maintenance Mode"
 msgstr ""
 
-#: admin/admin.php:1102
+#: admin/admin.php:1143
 msgid "Schema Markup"
 msgstr ""
 
-#: admin/admin.php:1117
+#: admin/admin.php:1158
 msgid "Cursor Dot"
 msgstr ""
 
-#: admin/admin.php:1132
+#: admin/admin.php:1173
 msgid "Post Like Setting"
 msgstr ""
 
-#: admin/admin.php:1147
+#: admin/admin.php:1188
 msgid "Single Post Layouts"
 msgstr ""
 
-#: admin/admin.php:1288
+#: admin/admin.php:1329
 msgid " Go Pro with Newsup – Elevate Your News Experience"
 msgstr ""
 
-#: admin/admin.php:1289
+#: admin/admin.php:1330
 msgid ""
 "Access exclusive features, widgets, premium ready-made homepages, custom "
 "sections, smart controls, and powerful tools to make your website look "
 "sharper and work smarter."
 msgstr ""
 
-#: admin/admin.php:1295
+#: admin/admin.php:1336
 msgid "Upgrade To Pro"
 msgstr ""
 
-#: admin/admin.php:1300
+#: admin/admin.php:1341
 msgid "We’re Here to Help"
 msgstr ""
 
-#: admin/admin.php:1301
+#: admin/admin.php:1342
 msgid ""
 "Need help or have feedback? Join our Support Forum for quick answers and "
 "friendly advice!"
 msgstr ""
 
-#: admin/admin.php:1302
+#: admin/admin.php:1343
 msgid "Ask for Help"
 msgstr ""
 
-#: admin/admin.php:1311
+#: admin/admin.php:1352
 msgid " Share your experience!"
 msgstr ""
 
-#: admin/admin.php:1316
+#: admin/admin.php:1357
 #, php-format
 msgid "Your feedback about %s — is greatly appreciated"
 msgstr ""
 
-#: admin/admin.php:1323
+#: admin/admin.php:1364
 msgid "Rate Us"
 msgstr ""
 
-#: admin/admin.php:1335
+#: admin/admin.php:1376
 msgid " Discover the Features"
 msgstr ""
 
-#: admin/admin.php:1336
+#: admin/admin.php:1377
 msgid ""
 "Struggling to figure it out? Let our detailed guides be your ultimate "
 "problem-solver!"
 msgstr ""
 
-#: admin/admin.php:1337
+#: admin/admin.php:1378
 msgid "Explore Now"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:16
+#: inc/ansar/customizer-admin/newsup-admin-plugin-install.php:47
+msgid "Ansar Import"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:17
+msgid ""
+"Click View Demo Button to install a ready-made News & Magazine Demos — fast, "
+"simple, and customizable."
+msgstr ""
+
+#: admin/tabs/starter-sites.php:20
+#: inc/ansar/customizer-admin/newsup-admin-plugin-install.php:65
+msgid "View Demos"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:101 admin/tabs/starter-sites.php:130
+msgid "Preview"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:102
+msgid "By Themeansar"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:123 admin/tabs/starter-sites.php:155
+msgid "Buy Now"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:128 admin/tabs/starter-sites.php:154
+msgid "Import"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:152 admin/tabs/starter-sites.php:227
+msgid "Close"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:153
+msgid "Live Preview"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:161 inc/ansar/hooks/hook-index-main.php:85
+#: inc/ansar/hooks/hook-index-main.php:156
+msgid "By"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:173 admin/tabs/starter-sites.php:178
+msgid "Collapse"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:178
+msgid "Enter desktop preview mode"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:181
+msgid "Enter tablet preview mode"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:184
+msgid "Enter mobile preview mode"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:201
+msgid "Confirmation"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:211
+msgid "Import Customize Settings"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:215
+msgid "Import Widgets"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:219
+msgid "Import Content"
+msgstr ""
+
+#: admin/tabs/starter-sites.php:228
+msgid "Confirm"
 msgstr ""
 
 #. translators: %s: post title
@@ -403,27 +468,27 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:127
+#: functions.php:118
 msgid "Primary menu"
 msgstr ""
 
-#: functions.php:128
+#: functions.php:119
 msgid "Footer menu"
 msgstr ""
 
-#: functions.php:244
+#: functions.php:235
 msgid "Sidebar Widget Area"
 msgstr ""
 
-#: functions.php:254
+#: functions.php:245
 msgid "Front-page Content Section"
 msgstr ""
 
-#: functions.php:264
+#: functions.php:255
 msgid "Front-page Sidebar Section"
 msgstr ""
 
-#: functions.php:274
+#: functions.php:265
 msgid "Footer Widget Area"
 msgstr ""
 
@@ -433,138 +498,6 @@ msgstr ""
 
 #: header.php:71
 msgid "Toggle navigation"
-msgstr ""
-
-#: inc/ansar/admin/class-getting-start-plugin-helper.php:93
-msgid "Install and activate"
-msgstr ""
-
-#: inc/ansar/admin/class-getting-start-plugin-helper.php:97
-msgid "Activate"
-msgstr ""
-
-#: inc/ansar/admin/class-getting-start-plugin-helper.php:112
-msgid "Deactivate"
-msgstr ""
-
-#. translators: %1$s %2$s: about
-#: inc/ansar/admin/getting-started.php:19
-#, php-format
-msgid "About %1$s %2$s"
-msgstr ""
-
-#. translators: %1$s: welcome page
-#: inc/ansar/admin/getting-started.php:21
-#: inc/ansar/customizer-admin/newsup-admin-plugin-install.php:36
-#, php-format
-msgid "Welcome to %1$s"
-msgstr ""
-
-#: inc/ansar/admin/getting-started.php:37
-msgid "Activating "
-msgstr ""
-
-#. translators: %1$s %2$s: welcome message
-#: inc/ansar/admin/getting-started.php:89
-#, php-format
-msgid "Welcome to %1$s - Version %2$s"
-msgstr ""
-
-#. Description of the plugin/theme
-#: inc/ansar/admin/getting-started.php:90
-msgid ""
-"Newsup is a fast, clean, modern-looking Best Responsive News Magazine "
-"WordPress theme. The theme is fully widgetized, so users can manage the "
-"content by using easy to use widgets. Newsup is suitable for dynamic news, "
-"newspapers, magazine, publishers, blogs, editors, online and gaming "
-"magazines, newsportals,personal blogs, newspaper, publishing or review "
-"siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, "
-"translation and RTL ready. Live preview : https://demo.themeansar.com/newsup "
-"and documentation at https://docs.themeansar.com/docs/newsup/"
-msgstr ""
-
-#: inc/ansar/admin/getting-started.php:100
-msgid "Getting Started"
-msgstr ""
-
-#: inc/ansar/admin/getting-started.php:105
-#: inc/ansar/admin/tabs/getting-started-panel.php:10
-#: inc/ansar/admin/tabs/getting-started-panel.php:11
-msgid "Demo Content"
-msgstr ""
-
-#: inc/ansar/admin/getting-started.php:113
-msgid "Useful Plugins"
-msgstr ""
-
-#: inc/ansar/admin/getting-started.php:125
-msgid "Newsup Theme Support"
-msgstr ""
-
-#: inc/ansar/admin/getting-started.php:126
-msgid "Get Support"
-msgstr ""
-
-#: inc/ansar/admin/getting-started.php:129
-msgid "Your feedback is valuable to us"
-msgstr ""
-
-#: inc/ansar/admin/getting-started.php:130
-msgid "Submit a review"
-msgstr ""
-
-#: inc/ansar/admin/getting-started.php:164
-#, php-format
-msgid "Congratulations, Welcome to %1$s Theme"
-msgstr ""
-
-#: inc/ansar/admin/getting-started.php:166
-#, php-format
-msgid ""
-"Thank you for choosing Newsup theme. To take full advantage of the complete "
-"features of the theme, you have to go to our %1$s welcome page %2$s."
-msgstr ""
-
-#: inc/ansar/admin/getting-started.php:168
-msgid "Get started with Newsup"
-msgstr ""
-
-#: inc/ansar/admin/tabs/getting-started-panel.php:14
-msgid "Newsup Documentation"
-msgstr ""
-
-#: inc/ansar/admin/tabs/getting-started-panel.php:15
-msgid "Newsup Support"
-msgstr ""
-
-#: inc/ansar/admin/tabs/getting-started-panel.php:15
-msgid "Documentation"
-msgstr ""
-
-#: inc/ansar/admin/tabs/getting-started-panel.php:18
-#: inc/ansar/admin/tabs/getting-started-panel.php:19
-msgid "Go to the Customizer"
-msgstr ""
-
-#: inc/ansar/admin/tabs/getting-started-panel.php:19
-msgid "Visit the Support"
-msgstr ""
-
-#: inc/ansar/admin/tabs/recommended-plugins-panel.php:28
-msgid "Ansar Demo Import"
-msgstr ""
-
-#: inc/ansar/admin/tabs/useful-plugin-panel.php:38
-msgid "To display the contact form, please install the Contact Form 7 plugin."
-msgstr ""
-
-#: inc/ansar/admin/tabs/useful-plugin-panel.php:42
-msgid ""
-"To display the Woocommerce layout, please install the Woocommerce plugin."
-msgstr ""
-
-#: inc/ansar/admin/tabs/useful-plugin-panel.php:46
-msgid "To use the Elementor layouts and pages, install the Elementor plugin."
 msgstr ""
 
 #: inc/ansar/customize-pro/class-customize.php:64
@@ -1018,6 +951,11 @@ msgstr ""
 msgid "Hello, "
 msgstr ""
 
+#: inc/ansar/customizer-admin/newsup-admin-plugin-install.php:36
+#, php-format
+msgid "Welcome to %1$s"
+msgstr ""
+
 #: inc/ansar/customizer-admin/newsup-admin-plugin-install.php:43
 #, php-format
 msgid ""
@@ -1087,11 +1025,6 @@ msgstr ""
 
 #: inc/ansar/hooks/hook-index-main.php:73
 msgid "Permalink to: "
-msgstr ""
-
-#: inc/ansar/hooks/hook-index-main.php:85
-#: inc/ansar/hooks/hook-index-main.php:156
-msgid "By"
 msgstr ""
 
 #: inc/ansar/hooks/hook-meta.php:9 inc/ansar/hooks/hook-meta.php:49
@@ -1364,6 +1297,18 @@ msgstr ""
 
 #. Theme URI of the plugin/theme
 msgid "https://themeansar.com/free-themes/newsup/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Newsup is a fast, clean, modern-looking Best Responsive News Magazine "
+"WordPress theme. The theme is fully widgetized, so users can manage the "
+"content by using easy to use widgets. Newsup is suitable for dynamic news, "
+"newspapers, magazine, publishers, blogs, editors, online and gaming "
+"magazines, newsportals,personal blogs, newspaper, publishing or review "
+"siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, "
+"translation and RTL ready. Live preview : https://demo.themeansar.com/newsup "
+"and documentation at https://docs.themeansar.com/docs/newsup/"
 msgstr ""
 
 #. Author of the plugin/theme

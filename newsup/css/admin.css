@@ -113,6 +113,7 @@ a.newsup-content-btn {
 }
 a.newsup-content-btn:hover {
     background: #202f5b;
+    color: #fff;
 }
 a.newsup-content-btn.newsup-btn-secondary{
     background: transparent;
@@ -1633,4 +1634,13 @@ input[id="radio-4"]:checked~.glider {
 .newsup-change-log-content{
     /* max-height: 500px;
     overflow: scroll; */
+}
+.ansar-modal-dialog ul.import-option-list li .ansar-checkbox:checked{
+    background: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23fff%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A") #26963e;
+}
+.newsup-ansar-importer.theme-browser .theme .theme-name{
+    border-top: none;
+}
+.newsup-ansar-importer.theme-browser .theme:not(.active) .theme-actions{
+    box-shadow: none;
 }

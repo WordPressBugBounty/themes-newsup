@@ -5,6 +5,8 @@ class NewsUp_Admin {
     public function __construct() {
         // Add admin page
         add_action('admin_menu', [$this, 'newsup_admin_page']);
+        
+        add_filter( 'submenu_file', [ $this, 'newsup_set_active_submenu' ] );
         // Remove all third party notices and enqueue style and script
         add_action('admin_enqueue_scripts', [$this, 'admin_script_n_style'], 9999);
 
@@ -29,6 +31,15 @@ class NewsUp_Admin {
 
         add_submenu_page(
             'newsup_admin_menu',
+            __('Starter Sites', 'newsup'),
+            __('Starter Sites', 'newsup'),
+            'manage_options',
+            'newsup_admin_menu&tab=starter-sites',
+            [ $this, 'render_starter_sites_tab' ]
+
+        );
+        add_submenu_page(
+            'newsup_admin_menu',
             __('Customize', 'newsup'),
             __('Customize', 'newsup'),
             'manage_options',
@@ -42,32 +53,94 @@ class NewsUp_Admin {
             esc_url('https://themeansar.com/themes/newsup-pro/')
         );
     }
+    public function newsup_set_active_submenu( $submenu_file ) {
 
+        if (
+            isset( $_GET['page'], $_GET['tab'] ) &&
+            $_GET['page'] === 'newsup_admin_menu' &&
+            $_GET['tab'] === 'starter-sites'
+        ) {
+
+            $submenu_file = 'newsup_admin_menu&tab=starter-sites';
+        }
+
+        return $submenu_file;
+    }
     public function admin_script_n_style() {
-      $screen = get_current_screen();
-      if (isset( $screen->base ) && $screen->base == 'toplevel_page_newsup_admin_menu') {
+        $screen = get_current_screen();
+        if (isset( $screen->base ) && $screen->base == 'toplevel_page_newsup_admin_menu') {
 
-        remove_all_actions('admin_notices');
+            remove_all_actions('admin_notices');
 
-        wp_enqueue_script('newsup-admin', NEWSUP_THEME_URI . 'js/admin.js', ['jquery'], NEWSUP_THEME_VERSION, true);
+            wp_enqueue_script('newsup-admin', NEWSUP_THEME_URI . 'js/admin.js', ['jquery'], NEWSUP_THEME_VERSION, true);
 
-        wp_localize_script('newsup-admin', 'newsup_ajax_obj', [
-            'ajax_url' => admin_url('admin-ajax.php'),
-            'nonce'    => wp_create_nonce('newsup_plugin_nonce'),
-        ]);
+            wp_localize_script('newsup-admin', 'newsup_ajax_obj', [
+                'ajax_url' => admin_url('admin-ajax.php'),
+                'nonce'    => wp_create_nonce('newsup_plugin_nonce'),
+            ]);
 
-        wp_enqueue_style('newsup-admin-styles', NEWSUP_THEME_URI . 'css/admin.css', array(), NEWSUP_THEME_VERSION);
+            wp_enqueue_style('newsup-admin-styles', NEWSUP_THEME_URI . 'css/admin.css', array(), NEWSUP_THEME_VERSION);
 
-        // Add Gooogle Font
-        wp_enqueue_style( 
-            'admin-google-fonts', 
-            'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap',
-            [], 
-            NEWSUP_THEME_VERSION
-        );
+            // Add Gooogle Font
+            wp_enqueue_style( 
+                'admin-google-fonts', 
+                'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap',
+                [], 
+                NEWSUP_THEME_VERSION
+            );
 
-        add_filter('admin_footer_text', [$this, 'newsup_admin_footer_text']);
-      }
+            add_filter('admin_footer_text', [$this, 'newsup_admin_footer_text']);
+        
+            if ( is_plugin_active( 'ansar-import/ansar-import.php' ) ) {
+            
+                wp_enqueue_style(
+                    'ansar-import-admin-css',
+                    plugins_url( 'admin/css/ansar-import-admin.css', WP_PLUGIN_DIR . '/ansar-import/ansar-import.php' ),
+                    array(),
+                    NEWSUP_THEME_VERSION
+                );
+                wp_enqueue_style(
+                    'ansar-import-uikit.min-css',
+                    plugins_url( 'admin/css/uikit.min.css', WP_PLUGIN_DIR . '/ansar-import/ansar-import.php' ),
+                    array(),
+                    NEWSUP_THEME_VERSION
+                );
+                wp_enqueue_script(
+                    'ansar-import-uikit-js',
+                    plugins_url( 'admin/js/uikit.min.js', WP_PLUGIN_DIR . '/ansar-import/ansar-import.php' ),
+                    array('jquery'),
+                    NEWSUP_THEME_VERSION
+                );
+                wp_enqueue_script(
+                    'ansar-import-admin-js',
+                    plugins_url( 'admin/js/ansar-import-admin.js', WP_PLUGIN_DIR . '/ansar-import/ansar-import.php' ),
+                    array('jquery'),
+                    NEWSUP_THEME_VERSION
+                );
+                $theme_data = wp_get_theme();
+                $theme_name = $theme_data->get('Name');
+                wp_localize_script(
+                    'ansar-import-admin-js',
+                    'my_ajax_object',
+                        array( 
+                            'ajax_url' => admin_url('admin-ajax.php'),
+                            'nonce' => wp_create_nonce('ansar_demo_import_nonce'),
+                            'theme_name' => $theme_name
+                        )
+                );
+                if ( isset( $_GET['page'], $_GET['tab'] ) && $_GET['page'] === 'newsup_admin_menu' && $_GET['tab'] === 'starter-sites') {
+                    $theme_data_api = wp_remote_get(esc_url_raw("https://api.themeansar.com/wp-json/wp/v2/demos/?search=%27" . urlencode($theme_name) . "%27&per_page=50"), [ 'timeout' => 15 ]);
+                    $theme_data_api_body = wp_remote_retrieve_body($theme_data_api);
+                    $all_demos = json_decode($theme_data_api_body, TRUE);
+            
+                    wp_localize_script(
+                        'ansar-import-admin-js',
+                        'ansar_theme_object', 
+                        $all_demos
+                    );
+                }
+            }
+        }
     }
 
     function newsup_admin_footer_text() {
@@ -120,23 +193,13 @@ class NewsUp_Admin {
                             </a>
                             </label>
                         </li>
-                        <?php if ( is_plugin_active( 'ansar-import/ansar-import.php' ) ) : ?>
-                            <li class="newsup-tab">
-                                <label for="tab2">
-                                <a href="<?php echo esc_url(admin_url( 'admin.php?page=ansar-demo-import' )); ?>">
-                                    <?php esc_attr_e('Starter Sites','newsup'); ?>
-                                </a>
-                                </label>
-                            </li>
-                        <?php else : ?>
-                            <li class="newsup-tab">
-                                <label for="tab2">
-                                <a href="<?php echo esc_url( add_query_arg( [ 'tab'   => 'starter-sites'] )); ?>">
-                                    <?php esc_attr_e('Starter Sites','newsup'); ?>
-                                </a>
-                                </label>
-                            </li>
-                        <?php endif; ?>
+                        <li class="newsup-tab">
+                            <label for="tab2">
+                            <a href="<?php echo esc_url( add_query_arg( [ 'tab'   => 'starter-sites'] )); ?>">
+                                <?php esc_attr_e('Starter Sites','newsup'); ?>
+                            </a>
+                            </label>
+                        </li>
                         <li class="newsup-tab">
                             <label for="tab3">
                             <a href="<?php echo esc_url( add_query_arg( [ 'tab'   => 'useful-plugin'] ) ); ?>">
@@ -195,7 +258,7 @@ class NewsUp_Admin {
                                                     ?>
                                                 </p>
                                             <?php if ( is_plugin_active( 'ansar-import/ansar-import.php' ) ) : ?>
-                                                <a href="<?php echo esc_url(admin_url( 'admin.php?page=ansar-demo-import' )); ?>" class="newsup-content-btn newsup-str-sites"><?php esc_html_e('Start with Demo Sites','newsup'); ?></a>
+                                                <a href="<?php echo esc_url(admin_url( 'admin.php?page=newsup_admin_menu&tab=starter-sites' )); ?>" class="newsup-content-btn newsup-str-sites"><?php esc_html_e('Start with Demo Sites','newsup'); ?></a>
                                             <?php else : ?>
                                                 <a href="#" class="newsup-content-btn newsup-str-sites load"><?php esc_html_e('Start with Demo Sites','newsup'); ?></a>
                                             <?php endif; ?>
@@ -398,12 +461,12 @@ class NewsUp_Admin {
                                             ); ?>
 
                                             <?php echo $this->plugin_box(
-                                                'blognews-for-elementor',
-                                                'blognews-for-elementor/blognews-for-elementor.php',
-                                                'Blog News Addons For Elementor (News, Magazine and Blog Addons)',
-                                                'Blog News for Elementor is a complete solution for bloggers, news portals, and magazine-style websites using Elementor.',
-                                                NEWSUP_THEME_URI . 'admin/images/bn-icon.png',
-                                                'https://wordpress.org/plugins/blognews-for-elementor/'
+                                                'ansar-elements',
+                                                'ansar-elements/ansar-elements.php',
+                                                'Post Query Loop for Blog, News & Magazine Sites – Ansar Elements',
+                                                'Ansar Elements for Elementor is a complete solution for bloggers, news portals, and magazine-style websites using Elementor.',
+                                                NEWSUP_THEME_URI . 'admin/images/an-icon.jpg',
+                                                'https://wordpress.org/plugins/ansar-elements/'
                                             ); ?>
                                         </div>
                                     </div>
@@ -411,29 +474,7 @@ class NewsUp_Admin {
                                 <?php echo $this->newsup_admin_right_sidebar() ?>                          
                             </div>
                         </div>
-                        <div class="newsup-tab-content starter-sites">
-                                <div class="newsup-modal-main">
-                                    <div class="newsup-modal-image overlay">
-                                        <img src="<?php echo esc_url(NEWSUP_THEME_URI) . 'admin/images/demos.jpg' ?>" alt="">
-                                    </div>
-                                    <div class="newsup-modal-popup">
-                                        <div class="newsup-modal-popup-content">
-                                            <div class="newsup-modal-icon">
-                                                <img src="<?php echo esc_url(NEWSUP_THEME_URI) . 'admin/images/ansar-import-logo.png' ?>" alt="">
-                                            </div>
-                                            <div>
-                                                <h4><?php esc_html_e("Ansar Import","newsup"); ?></h4>
-                                                <p><?php esc_html_e("Click View Demo Button to install a ready-made News & Magazine Demos — fast, simple, and customizable.","newsup"); ?></p>
-                                                <a href="#" class="newsup-btn-ins newsup-str-sites load" >
-                                                    <?php 
-                                                        esc_html_e( 'View Demos', 'newsup' );
-                                                    ?>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
+                        <?php $this->render_starter_sites_tab(); ?>
                         <div class="newsup-tab-content newsup-useful-plugin">
                             <div class="newsup-plugins-tab newsup-d-grid column6 gap-30">
 
@@ -450,12 +491,12 @@ class NewsUp_Admin {
                                             ); ?>
 
                                             <?php echo $this->plugin_box(
-                                                'blognews-for-elementor',
-                                                'blognews-for-elementor/blognews-for-elementor.php',
-                                                'Blog News Addons For Elementor (News, Magazine and Blog Addons)',
-                                                'Blog News for Elementor is a complete solution for bloggers, news portals, and magazine-style websites using Elementor.',
-                                                NEWSUP_THEME_URI . 'admin/images/bn-icon.png',
-                                                'https://wordpress.org/plugins/blognews-for-elementor/'
+                                                'ansar-elements',
+                                                'ansar-elements/ansar-elements.php',
+                                                'Ansar Elements- Post Query Loop for Blog, News & Magazine Sites',
+                                                'Ansar Elements for Elementor is a complete solution for bloggers, news portals, and magazine-style websites using Elementor.',
+                                                NEWSUP_THEME_URI . 'admin/images/an-icon.jpg',
+                                                'https://wordpress.org/plugins/ansar-elements/'
                                             ); ?>
                                         </div>
                                     </div>
@@ -1344,6 +1385,10 @@ class NewsUp_Admin {
     }
     private function newsup_upgrade_callback(){
         return ('<p class="newsup-feature-area-desc"><a href='. esc_url('https://themeansar.com/themes/newsup-pro/','newsup') . ' target="_blank">'. esc_html('Go to Pro','newsup') . '</a></p>');
+    }
+       
+    private function render_starter_sites_tab() {
+        include dirname(__FILE__) . '/tabs/starter-sites.php';
     }
 }
 

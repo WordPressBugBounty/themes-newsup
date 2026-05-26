@@ -23,14 +23,18 @@
 li#customize-control-display_header_text, li#customize-control-newsup_center_logo_title{font-weight: 700;}
 
 .customize-partial-edit-shortcut-newsup_content_layout svg{
-    fill: #00a63f;
+  fill: #00a63f;
 }
 #customize-controls .control-section > h3.accordion-section-title {
   display: flex;
 }
-#customize-controls li#accordion-section-newsup_pro_upsell .accordion-section-title{ 
+#customize-controls li#accordion-section-newsup_pro_upsell .accordion-section-title{
   justify-content: space-between;
   align-items: center;
+}
+#customize-controls li#accordion-section-newsup_pro_upsell .accordion-section-title .alignright{
+  color: #fff;
+  border-color: #fff;
 }
 #customize-controls li#accordion-section-newsup_pro_upsell .accordion-section-title::after{
   content: ''; 

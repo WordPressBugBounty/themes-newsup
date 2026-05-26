@@ -13,7 +13,7 @@
         security: newsup_ajax_object.install_nonce
       }, function (response) {
         if (response.success) {
-          window.location.href = 'admin.php?page=ansar-demo-import';
+          window.location.href = 'admin.php?page=newsup_admin_menu&tab=starter-sites';
         } else {
           alert(response.data?.message || 'Installation failed.');
           $btn.html('Try Again').removeClass('updating-message');
