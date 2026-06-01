@@ -69,7 +69,9 @@ if (!defined('ABSPATH')) exit;
                         foreach ($all_categories as $category) {
                             if (in_array($category['id'], $present_cat)) {
                                 ?>
-                                <li uk-filter-control="[data-color*='cat_<?php echo esc_html($category['id']); ?>']"><a href="#"><?php echo esc_attr($category['name']); ?></a></li>
+                                <li uk-filter-control="[data-color*='cat_<?php echo esc_html($category['id']); ?>']">
+                                    <a href="#"><?php echo esc_html($category['name']); ?></a>
+                                </li>
                                 <?php
                             }
                         }
@@ -89,20 +91,20 @@ if (!defined('ABSPATH')) exit;
                                     <div class="theme-screenshot">
                                         <?php if ($theme_name != $demo['theme_name']) { ?>
                                             <span class="ribbon pro">
-                                                <?php esc_html_e('Pro','ansar-import'); ?>
+                                                <?php esc_html_e('Pro','newsup'); ?>
                                             </span>
                                             <?php } else { ?>
                                             <span class="ribbon">
-                                                <?php esc_html_e('Free','ansar-import'); ?>
+                                                <?php esc_html_e('Free','newsup'); ?>
                                             </span>
                                         <?php } ?>
                                         <img src="<?php echo esc_url($demo['preview_url']); ?>" >
                                     </div>
-                                    <span class="more-details btn-preview" data-id="<?php echo absint($demo['id']); ?>" data-live="<?php  if(get_option( 'ansar_demo_installed' )== $demo['id']){ echo 1; }?>" data-toggle="modal" data-target="#AnsardemoPreview"><?php esc_html_e('Preview','ansar-import'); ?></span>
-                                    <div class="theme-author"><?php esc_html_e('By Themeansar','ansar-import'); ?> </div>
+                                    <span class="more-details btn-preview" data-id="<?php echo absint($demo['id']); ?>" data-live="<?php  if(get_option( 'ansar_demo_installed' )== $demo['id']){ echo 1; }?>" data-toggle="modal" data-target="#AnsardemoPreview"><?php esc_html_e('Preview','newsup'); ?></span>
+                                    <div class="theme-author"><?php esc_html_e('By Themeansar','newsup'); ?> </div>
                                     <div class="theme-id-container">
                                         <div class="theme-names-about">
-                                            <h2 class="theme-name" id=""><?php echo esc_attr($demo['title']['rendered']); ?></h2>
+                                            <h2 class="theme-name" id=""><?php echo esc_html($demo['title']['rendered']); ?></h2>
                                             <?php $lastcat = end($demo['categories']);
                                                 foreach ($demo['categories'] as $in_cat) {
                                                 if($c == 0){
@@ -120,14 +122,14 @@ if (!defined('ABSPATH')) exit;
                                             <?php if ($theme_name != $demo['theme_name']) {
                                                 ?>
                                                 <a class="button activate" target="_new" href="<?php echo esc_url($demo['pro_link']); ?>" >
-                                                    <?php esc_html_e('Buy Now','ansar-import'); ?></a>
+                                                    <?php esc_html_e('Buy Now','newsup'); ?></a>
                                             <?php } else {
                 
                                                 ?>
                                                 <a class="button activate live-btn-<?php echo absint($demo['id']); ?> <?php  if(get_option( 'ansar_demo_installed' )!= $demo['id']){ echo "uk-hidden"; }?> " target="_new" data-id="<?php echo absint($demo['id']); ?>"  href="<?php echo esc_url(home_url()); ?>">Live Preview</a>
-                                                <button type="button" class="<?php  if(get_option( 'ansar_demo_installed' )== $demo['id']){ echo "uk-hidden"; }?> button activate btn-import btn-import-<?php echo absint($demo['id']); ?>" href="#" data-id="<?php echo absint($demo['id']); ?>"><?php esc_html_e('Import','ansar-import'); ?></button>
+                                                <button type="button" class="<?php  if(get_option( 'ansar_demo_installed' )== $demo['id']){ echo "uk-hidden"; }?> button activate btn-import btn-import-<?php echo absint($demo['id']); ?>" href="#" data-id="<?php echo absint($demo['id']); ?>"><?php esc_html_e('Import','newsup'); ?></button>
                                                 <?php }  ?>
-                                            <a class="button button-primary load-customize hide-if-no-customize btn-preview" data-id="<?php echo absint($demo['id']); ?>" data-toggle="modal" data-target="#AnsardemoPreview" href="#"><?php esc_html_e('Preview','ansar-import'); ?></a>
+                                            <a class="button button-primary load-customize hide-if-no-customize btn-preview" data-id="<?php echo absint($demo['id']); ?>" data-toggle="modal" data-target="#AnsardemoPreview" href="#"><?php esc_html_e('Preview','newsup'); ?></a>
 
                                         </div>
                                     </div>    
@@ -149,16 +151,16 @@ if (!defined('ABSPATH')) exit;
                 <div class="wp-full-overlay-sidebar">
                     
                     <div class="wp-full-overlay-header">
-                        <button class="close-full-overlay"><span class="screen-reader-text"><?php esc_html_e('Close', 'ansar-import'); ?></span></button>
-                        <a class="button activate preview-live-btn uk-hidden" target="_new"  href="<?php echo esc_url(home_url()); ?>"> <?php esc_html_e('Live Preview','ansar-import'); ?></a>
-                        <button type="button" class="button button-primary import-priview activate btn-import" href="#" data-id="0"><?php esc_html_e('Import', 'ansar-import'); ?></button>
-                        <a class="button activate preview-buy uk-hidden" target="_new" href="#" ><?php esc_html_e('Buy Now', 'ansar-import'); ?></a>
+                        <button class="close-full-overlay"><span class="screen-reader-text"><?php esc_html_e('Close', 'newsup'); ?></span></button>
+                        <a class="button activate preview-live-btn uk-hidden" target="_new"  href="<?php echo esc_url(home_url()); ?>"> <?php esc_html_e('Live Preview','newsup'); ?></a>
+                        <button type="button" class="button button-primary import-priview activate btn-import" href="#" data-id="0"><?php esc_html_e('Import', 'newsup'); ?></button>
+                        <a class="button activate preview-buy uk-hidden" target="_new" href="#" ><?php esc_html_e('Buy Now', 'newsup'); ?></a>
                     </div>
 
                     <div class="wp-full-overlay-sidebar-content">
                         <div class="install-theme-info">
                             <h3 class="theme-name"> <?php echo esc_html($theme_data->get('Name')); ?> </h3>
-                            <span class="theme-by"><?php esc_html_e('By', 'ansar-import'); ?> <?php echo esc_attr($theme_data->get('Author')); ?> </span>
+                            <span class="theme-by"><?php esc_html_e('By', 'newsup'); ?> <?php echo esc_attr($theme_data->get('Author')); ?> </span>
                             <img class="theme-screenshot" src="" alt="">
                             <div class="theme-details">
                                 <div class="theme-version"><?php echo esc_html($theme_data->get('Version')); ?></div>
@@ -170,18 +172,18 @@ if (!defined('ABSPATH')) exit;
 
                         <button type="button" class="collapse-sidebar button" aria-expanded="true" aria-label="Collapse Sidebar">
                             <span class="collapse-sidebar-arrow"></span>
-                            <span class="collapse-sidebar-label"><?php esc_html_e('Collapse', 'ansar-import'); ?></span>
+                            <span class="collapse-sidebar-label"><?php esc_html_e('Collapse', 'newsup'); ?></span>
                         </button>
                         <div class="devices-wrapper">
                             <div class="devices">
                                 <button type="button" class="preview-desktop active" aria-pressed="true" data-device="desktop">
-                                    <span class="screen-reader-text"><?php esc_html_e('Enter desktop preview mode', 'ansar-import'); ?><?php esc_html_e('Collapse', 'ansar-import'); ?></span>
+                                    <span class="screen-reader-text"><?php esc_html_e('Enter desktop preview mode', 'newsup'); ?><?php esc_html_e('Collapse', 'newsup'); ?></span>
                                 </button>
                                 <button type="button" class="preview-tablet" aria-pressed="false" data-device="tablet">
-                                    <span class="screen-reader-text"><?php esc_html_e('Enter tablet preview mode', 'ansar-import'); ?></span>
+                                    <span class="screen-reader-text"><?php esc_html_e('Enter tablet preview mode', 'newsup'); ?></span>
                                 </button>
                                 <button type="button" class="preview-mobile" aria-pressed="false" data-device="mobile">
-                                    <span class="screen-reader-text"><?php esc_html_e('Enter mobile preview mode', 'ansar-import'); ?></span>
+                                    <span class="screen-reader-text"><?php esc_html_e('Enter mobile preview mode', 'newsup'); ?></span>
                                 </button>
                             </div>
                         </div>
@@ -198,25 +200,25 @@ if (!defined('ABSPATH')) exit;
             <div class="ansar-modal-dialog ansar-import-options" id="ansar-import-options">
                 <button class="ansar-modal-close-default" type="button" id="closeConfirm">&times;</button>
                 <div class="ansar-modal-header">
-                    <h2 class="ansar-modal-title"><?php esc_html_e('Confirmation', 'ansar-import'); ?></h2>
+                    <h2 class="ansar-modal-title"><?php esc_html_e('Confirmation', 'newsup'); ?></h2>
                 </div>
 
                 <div class="ansar-modal-body">
-                    <div class="demo-import-confirm-message"><?php echo sprintf('Importing demo data will ensure that your site will look similar as theme demo. It makes you easy to modify the content instead of creating them from scratch. Also, consider before importing the demo: <ol><li>Importing the demo on the site if you have already added the content is highly discouraged.</li> <li>You need to import demo on fresh WordPress install to exactly replicate the theme demo.</li> <li>It will install the required plugins as well as activate them for installing the required theme demo within your site.</li> <li>Copyright images will get replaced with other placeholder images.</li> <li>None of the posts, pages, attachments or any other data already existing in your site will be deleted or modified.</li> <li>It will take some time to import the theme demo.</li></ol>', 'ansar-import'); ?></div>
+                    <div class="demo-import-confirm-message"><?php echo sprintf('Importing demo data will ensure that your site will look similar as theme demo. It makes you easy to modify the content instead of creating them from scratch. Also, consider before importing the demo: <ol><li>Importing the demo on the site if you have already added the content is highly discouraged.</li> <li>You need to import demo on fresh WordPress install to exactly replicate the theme demo.</li> <li>It will install the required plugins as well as activate them for installing the required theme demo within your site.</li> <li>Copyright images will get replaced with other placeholder images.</li> <li>None of the posts, pages, attachments or any other data already existing in your site will be deleted or modified.</li> <li>It will take some time to import the theme demo.</li></ol>', 'newsup'); ?></div>
                 </div>
 
                 <ul class="import-option-list">
                     <li class="active">
                         <input class="ansar-checkbox" type="checkbox" id="import-customizer" name="import-customizer" checked="checked">
-                        <label for="import-customizer"><?php esc_html_e('Import Customize Settings', 'ansar-import'); ?></label>
+                        <label for="import-customizer"><?php esc_html_e('Import Customize Settings', 'newsup'); ?></label>
                     </li>
                     <li class="active">
                         <input class="ansar-checkbox" type="checkbox" id="import-widgets" name="import-widgets" checked="checked">
-                        <label for="import-widgets"><?php esc_html_e('Import Widgets', 'ansar-import'); ?></label>
+                        <label for="import-widgets"><?php esc_html_e('Import Widgets', 'newsup'); ?></label>
                     </li>
                     <li>
                         <input class="ansar-checkbox" type="checkbox" id="import-content" name="import-content" checked="checked">
-                        <label for="import-content"><?php esc_html_e('Import Content', 'ansar-import'); ?></label>
+                        <label for="import-content"><?php esc_html_e('Import Content', 'newsup'); ?></label>
                     </li>
                 </ul>
 
@@ -224,8 +226,8 @@ if (!defined('ABSPATH')) exit;
                     <form method="post" class="import">
                         <input type="hidden" name="theme_id" id="theme_id" value="0">
                         <?php wp_nonce_field('ansar_demo_import_nonce'); ?>
-                        <button type="button" class="ansar-button ansar-button-default" id="cancelModal"><?php esc_html_e('Close', 'ansar-import'); ?></button>
-                        <button type="button" class="ansar-button ansar-button-primary" id="import_data" ><?php esc_html_e('Confirm', 'ansar-import'); ?></button>
+                        <button type="button" class="ansar-button ansar-button-default" id="cancelModal"><?php esc_html_e('Close', 'newsup'); ?></button>
+                        <button type="button" class="ansar-button ansar-button-primary" id="import_data" ><?php esc_html_e('Confirm', 'newsup'); ?></button>
                     </form>
                 </div>
 
