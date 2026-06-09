@@ -1,3 +1,9 @@
+= Version 5.4.4
+* Inhanced WP Color Variables in Customizer
+
+= Version 5.4.3
+* Fixed text domain issue.
+
 = Version 5.4.2
 * Remove old admin notice.
 * Added Starter sites Demo link.
