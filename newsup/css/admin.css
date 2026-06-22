@@ -1622,7 +1622,7 @@ input[id="radio-4"]:checked~.glider {
     font-weight: 500;
 }
 .newsup-admin-tb-tittle:nth-of-type(odd){
-  background-color: #fff;
+  background-color: #fbfaff;
 }
 .newsup-tab-content.newsup-compare .newsup-table-main, .newsup-tab-content .newsup-change-log-main .newsup-change-log-content{
     align-items: center;

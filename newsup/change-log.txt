@@ -1,3 +1,6 @@
+= Version 5.4.5
+* Fixed Dashboard Right Sidebar.
+
 = Version 5.4.4
 * Inhanced WP Color Variables in Customizer
 
