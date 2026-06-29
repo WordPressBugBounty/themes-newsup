@@ -1,7 +1,10 @@
 :root{
 	--pri-color: #1151d3;
 }
-/*==================== Site Titel =======================*/
+/*==================== Site Title =======================*/
+.site-title a, .site-description{
+	color:#fff;
+}
 body .site-title-footer a, body .site-description-footer {
 	color: #fff;
 }
@@ -242,7 +245,7 @@ blockquote::after {
     color: #fff;
     background: var(--pri-color);
 }
-.mg-latest-news .bn_title span{
+.mg-latest-news .bn_title .effect-ripple{
   border-left-color: var(--pri-color);
   border-color: transparent transparent transparent var(--pri-color); 
 }

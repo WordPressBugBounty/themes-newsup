@@ -137,14 +137,8 @@ if (!function_exists('newsup_footer_bottom_area')) :
                         <div class="site-logo">
                             <?php if(get_theme_mod('custom_logo') !== ""){ the_custom_logo(); } ?>
                         </div>
-                        <?php if (display_header_text()) : ?>
-                        <div class="site-branding-text">
-                            <p class="site-title-footer"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html(get_bloginfo( 'name' )); ?></a></p>
-                            <p class="site-description-footer"><?php echo esc_html(get_bloginfo( 'description' )); ?></p>
-                        </div>
-                        <?php endif; ?>
-                    </div>
-                    
+                        <?php do_action('newsup_action_footer_site_title_tagline'); ?>
+                    </div>                    
                     <div class="col-md-6 text-right text-xs">
                         <ul class="mg-social">
                             <?php do_action('newsup_action_footer_social_icon'); ?> 

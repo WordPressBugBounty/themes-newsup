@@ -24,7 +24,7 @@ if (!function_exists('newsup_banner_trending_posts')):
                             <div class="bn_title">
                                 <h2 class="title">
                                     <?php if (!empty($newsup_ticker_news_title)): ?>
-                                        <?php echo esc_html($newsup_ticker_news_title); ?><span></span>
+                                        <?php echo esc_html($newsup_ticker_news_title); ?><span class="effect-ripple"></span>
                                     <?php endif; ?>
                                 </h2>
                             </div>

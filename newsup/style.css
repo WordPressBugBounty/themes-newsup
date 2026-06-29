@@ -3,8 +3,8 @@ Theme Name: Newsup
 Theme URI: https://themeansar.com/free-themes/newsup/
 Author: Themeansar
 Author URI: https://themeansar.com
-Description: Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://demo.themeansar.com/newsup and documentation at https://docs.themeansar.com/docs/newsup/
-Version: 5.4.5
+Description: Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://newsup.themeansar.com/lite and documentation at https://docs.themeansar.com/docs/newsup/
+Version: 5.4.6
 Tested up to: 7.0
 Requires PHP: 7.4
 Requires at least: 6.7
@@ -1339,7 +1339,7 @@ button.mfp-close:focus {
 	font-size: 18px;
 	line-height: 40px;
 	font-weight: 600;
-	padding: 0 8px 0 15px;
+	padding: 0 15px 0 15px;
 	position: relative;
 	width: auto;
 	min-height: 40px;
@@ -1390,6 +1390,7 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	height: 42px;
 	content: "";
 	clip-path: polygon(0 0, 0% 100%, 100% 100%);
+	display: none;
 }
 
 .wp-block-search .wp-block-search__label::after,
@@ -2077,7 +2078,7 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	box-sizing: border-box;
 }
 
-.mg-latest-news .bn_title span {
+.mg-latest-news .bn_title .effect-ripple {
 	width: 0;
 	position: absolute;
 	right: -29px;
@@ -2132,7 +2133,83 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	padding: 0;
 	margin: 0;
 }
+/* Animation */
+.mg-latest-news .bn_title .title {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding-right: 8px;
+}
+div.mg-latest-news .bn_title .effect-ripple {
+    border: none;
+    top: unset;
+    right: unset;
+}
+/* The icon */
+.bn_title .title::before {
+    content: "\e0b7";   /* Font Awesome unicode */
+    font-family: "Font Awesome 6 Free"; /* Or your FA font */
+    font-weight: 900;
+    font-size: 16px;
+    position: relative;
+    z-index: 2;
+}
+/* Ripple animation container (behind icon) */
+.bn_title .title::after {
+    content: "";
+    position: absolute;
+    left: 26px;       /* adjust position relative to icon */
+    top: 50%;
+    transform: translateY(-50%) translateX(0);
+    width: 35px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    opacity: 0;
+    animation: zoom 2s linear infinite;
+    z-index: 1;
+}
+/* Additional ripples */
+.bn_title .title .effect-ripple::before,
+.bn_title .title .effect-ripple::after {
+    content: "";
+    position: absolute;
+    right: -41px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 1;
+}
 
+.bn_title .title .effect-ripple::before {
+    animation: zoom 2s linear 0.5s infinite;
+}
+
+.bn_title .title .effect-ripple::after {
+    animation: zoom 2s linear 1s infinite;
+}
+.mg-latest-news .mg-latest-news-slider {
+    left: 185px;
+}
+@keyframes zoom {
+    0% {
+        transform: translate(-50%, -50%) scale(0.2);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+/*  */
 .top-right-area .nav-tabs {
 	border-bottom: none;
 }
@@ -2298,7 +2375,7 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	margin: 0px;
 	font-weight: 700;
 	line-height: 2.2;
-	padding: 0 7px 0 15px;
+	padding: 0 15px 0 15px;
 	width: auto;
 	height: auto;
 	min-height: 40px;
@@ -2315,6 +2392,7 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	content: "";
 	width: 30px;
 	height: 41px;
+	display: none;
 }
 
 .featured-post-1 {
@@ -3029,7 +3107,7 @@ body.search {
 	line-height: 40px;
 	font-weight: 600;
 	margin: 0;
-	padding: 0 8px 0 15px;
+	padding: 0 15px 0 15px;
 	position: relative;
 	text-transform: capitalize;
 	width: auto;
@@ -3046,6 +3124,7 @@ body.search {
 	border-style: solid;
 	clip-path: polygon(0 0, 0% 100%, 100% 100%);
 	content: "";
+	display: none;
 }
 
 .mg-sidebar .mg-widget ul li {

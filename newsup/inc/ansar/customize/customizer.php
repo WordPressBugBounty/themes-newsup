@@ -58,11 +58,6 @@ function newsup_customize_register($wp_customize) {
     // Load customize sanitize.
 	require get_template_directory().'/inc/ansar/customize/customizer-sanitize.php';
 
-	$wp_customize->get_setting('custom_logo')->sanitize_callback  = 'esc_url_raw';
-	$wp_customize->get_setting('custom_logo')->transport  = 'postMessage';
-	$wp_customize->get_setting('blogname')->transport         = 'postMessage';
-	$wp_customize->get_setting('blogdescription')->transport  = 'postMessage';
-	$wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
 
 	if (isset($wp_customize->selective_refresh)) {	
 
@@ -392,6 +387,9 @@ function newsup_customize_register($wp_customize) {
 	/*theme option panel info*/
 	require get_template_directory().'/inc/ansar/customize/theme-options.php';
 
+	/*Theme Site Identity*/
+	require get_template_directory().'/inc/ansar/customize/globel/site-identity.php';
+
 }
 add_action('customize_register', 'newsup_customize_register');
 
@@ -527,48 +525,9 @@ function newsup_rt_post_callback ( $control )
 }
 
 /************************* Theme Customizer with Sanitize function *********************************/
-function newsup_theme_option( $wp_customize )
-{
+function newsup_theme_option( $wp_customize ) {
     function newsup_sanitize_text( $input ) {
         return wp_kses_post( force_balance_tags( $input ) );
     }
-
-	/*--- Site title Font size **/
-    $wp_customize->add_setting('newsup_title_font_size',
-        array(
-            'default'           => 34,
-            'capability'        => 'edit_theme_options',
-            'transport'        	=> 'postMessage',
-            'sanitize_callback' => 'absint',
-        )
-    );
-    $wp_customize->add_control('newsup_title_font_size',
-        array(
-            'label'    => esc_html__('Site Title Size', 'newsup'),
-            'section'  => 'title_tagline',
-            'type'     => 'number',
-            'priority' => 50,
-        )
-    );
-
-    $wp_customize->add_setting('newsup_center_logo_title',
-		array(
-			'default' => false,
-			'transport' => 'postMessage',
-			'sanitize_callback' => 'newsup_sanitize_checkbox',
-		)
-	);
-	$wp_customize->add_control('newsup_center_logo_title',
-	    array(
-	        'label' => esc_html__('Display Center Site Title and Tagline', 'newsup'),
-	        'section' => 'title_tagline',
-	        'type' => 'checkbox',
-	        'priority' => 55,
-
-	    )
-	);
-
-/*--- Get Site info control ---*/
-$wp_customize->get_control( 'header_textcolor')->section = 'title_tagline';
 }
 add_action('customize_register','newsup_theme_option');

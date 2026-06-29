@@ -4,15 +4,15 @@ Author: Themeansar
 Requires at least: WordPress 6.7
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 5.4.5
-Version: 5.4.5
+Stable tag: 5.4.6
+Version: 5.4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
 
 == Description ==
 
-Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://demo.themeansar.com/newsup and documentation at https://docs.themeansar.com/docs/newsup/ 
+Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://newsup.themeansar.com/lite/ and documentation at https://docs.themeansar.com/docs/newsup/ 
 
 == Installation ==
 
@@ -1340,3 +1340,7 @@ Fixed Sidebar Comments Styling.
 
 = Version 5.4.5
 * Fixed Dashboard Right Sidebar.
+
+= Version 5.4.6
+* Added Site Title and Tagline visibility options.
+* Update Screenshot.

@@ -20,7 +20,7 @@
 
 .newsup-notice-content p{display: inline-block;}
 .newsup-notice_text h3{font-size: 16px; padding-bottom: 10px;}
-li#customize-control-display_header_text, li#customize-control-newsup_center_logo_title{font-weight: 700;}
+li#customize-control-display_header_text, li#customize-control-newsup_center_logo_title, #customize-control-display_header_tagline{font-weight: 700;}
 
 .customize-partial-edit-shortcut-newsup_content_layout svg{
   fill: #00a63f;

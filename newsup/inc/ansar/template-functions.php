@@ -380,17 +380,7 @@ function newsup_header_color() {
 
     ?>
     <style type="text/css">
-    <?php
-        if ( ! display_header_text() ) :
-    ?>
-        .site-title,
-        .site-description {
-            position: absolute;
-            clip: rect(1px, 1px, 1px, 1px);
-        }
-    <?php
-        else :
-    ?>
+  
         body .site-title a,
         body .site-description {
             color: #<?php echo esc_attr( $newsup_logo_text_color ); ?>;
@@ -413,8 +403,6 @@ function newsup_header_color() {
 
                 }
             }
-
-    <?php endif; ?>
     </style>
     <?php
 }
@@ -588,6 +576,59 @@ if ( ! function_exists( 'newsup_footer_social_icon' ) ) :
     }
 endif;
 add_action('newsup_action_footer_social_icon','newsup_footer_social_icon');
+
+
+if ( ! function_exists( 'newsup_header_site_title_tagline' ) ) :
+
+   function newsup_header_site_title_tagline() {
+    $title   = display_header_text();
+    $tagline = get_theme_mod( 'display_header_tagline', false );
+
+    $hideTitle = ( ! $title  ) ? ' d-none' : '';
+    $hideTagline = ( ! $tagline ) ? ' d-none' : '';
+    ?>
+    
+    <div class="site-branding-text">
+            <?php if ( is_front_page() || is_home() ) : ?>
+                <h1 class="site-title<?php echo esc_attr( $hideTitle ); ?>">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                        <?php echo esc_html( get_bloginfo( 'name' ) ); ?>
+                    </a>
+                </h1>
+            <?php else : ?>
+                <p class="site-title<?php echo esc_attr( $hideTitle ); ?>">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                        <?php echo esc_html( get_bloginfo( 'name' ) ); ?>
+                    </a>
+                </p>
+            <?php endif; ?>
+            <p class="site-description<?php echo esc_attr( $hideTagline ); ?>">
+                <?php echo esc_html( get_bloginfo( 'description' ) ); ?>
+            </p>
+    </div>
+
+    <?php
+}
+endif;
+add_action('newsup_action_header_site_title_tagline','newsup_header_site_title_tagline');
+
+if ( ! function_exists( 'newsup_footer_site_title_tagline' ) ) :
+
+   function newsup_footer_site_title_tagline() {
+    $title   = display_header_text();
+    $tagline = get_theme_mod( 'display_header_tagline', false );
+  
+    $hideTitle = ( ! $title  ) ? ' d-none' : '';
+    $hideTagline = ( ! $tagline ) ? ' d-none' : '';
+    ?>    
+    <div class="site-branding-text">
+        <p class="site-title-footer<?php echo esc_attr( $hideTitle ); ?>"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html(get_bloginfo( 'name' )); ?></a></p>
+        <p class="site-description-footer<?php echo esc_attr( $hideTagline ); ?>"><?php echo esc_html(get_bloginfo( 'description' )); ?></p>
+    </div>
+    <?php
+}
+endif;
+add_action('newsup_action_footer_site_title_tagline','newsup_footer_site_title_tagline');
 
 if ( class_exists( 'WooCommerce' ) ) {
 
