@@ -13,7 +13,7 @@ class Newsup_Customize_Section_Pro extends WP_Customize_Section {
 	 * @access public
 	 * @var    string
 	 */
-	public $type = 'newsup';
+	public $type = 'newsup-section-pro';
 	/**
 	 * Custom button text to output.
 	 *

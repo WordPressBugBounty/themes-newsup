@@ -9,6 +9,7 @@ function newsup_register_custom_controls( $wp_customize ) {
     require_once get_template_directory() . '/inc/ansar/custom-control/customizer-alpha-color-picker/class-newsup-customize-alpha-color-control.php';
 
     $wp_customize->register_control_type( 'Newsup_Toggle_Control' );
+    $wp_customize->register_control_type( 'Newsup_Info_Box_Control' );
 
 }
 endif;

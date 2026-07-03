@@ -19,7 +19,7 @@ class Newsup_Section_Title extends WP_Customize_Control {
     public $description = '';
 
     public function enqueue(){
-        wp_enqueue_style('newsup-custom-controls-css', trailingslashit(get_template_directory_uri()) . '/inc/ansar/customize/css/customizer.css', array(), '1.0', 'all');
+        wp_enqueue_style('newsup-custom-controls-css', trailingslashit(get_template_directory_uri()) . '/inc/ansar/customize/assets/css/customizer.css', array(), '1.0', 'all');
     }
 
     public function render_content() { ?>
@@ -174,6 +174,72 @@ class Newsup_Radio_Image_Control extends WP_Customize_Control {
             <?php endforeach; ?>
         </div>
         <script>jQuery(document).ready(function($) { $( '[id="input_<?php echo $this->id; ?>"]' ).buttonset(); });</script>
+        <?php
+    }
+}
+
+/**
+ * Newsup Info Box Control
+ */
+
+class Newsup_Info_Box_Control extends WP_Customize_Control {
+    /**
+     * The type of control being rendered.
+     */
+    public $type = 'newsup-info-box';
+
+    /**
+     * Custom properties
+     */
+    public $features = array();
+    public $url = '';
+    public $btn_text = '';
+
+    /**
+     * Pass data from PHP to JS template
+     */
+    public function to_json() {
+        parent::to_json();
+        $this->json['features']        = $this->features ?? array();
+        $this->json['url']         = $this->url ?? '';
+        $this->json['btn_text'] = $this->btn_text ?: __( 'Upgrade to Pro ☆', 'newsup' );
+    }
+
+    protected function content_template() {
+        ?>
+        <div class="newsup-info-box-container">
+            <div class="info-box-icon">
+                <span class="dashicons dashicons-info-outline"></span>
+            </div>
+            
+            <# if ( data.label ) { #>
+                <h3 class="info-box-title">{{ data.label }}</h3>
+            <# } #>
+            <# if ( data.description ) { #>
+                <p class="info-box-description">{{ data.description }}</p>
+            <# } #>
+                
+            <# if ( data.features ) { #>
+            <ul class="info-box-features">
+                <# _.each( data.features, function( feature ) { #>
+                    <li>
+                        <span class="dashicons dashicons-yes"></span>
+                        {{{ feature }}}
+                    </li>
+                <# } ); #>
+            </ul>
+            <# } #>
+
+            <# if ( data.btn_text ) { #>
+            <div class="info-box-buttons">
+                <# if ( data.url ) { #>
+                    <a href="{{ data.url }}" class="button button-info-box-primary button-secondary" target="_blank">
+                        {{ data.btn_text }}
+                    </a>
+                <# } #>
+            </div>
+            <# } #>
+        </div>
         <?php
     }
 }

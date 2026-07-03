@@ -18,7 +18,7 @@
 	
 	wp_enqueue_style('smartmenus',get_template_directory_uri().'/css/jquery.smartmenus.bootstrap.css');
 
-	wp_enqueue_style('newsup-custom-css', get_template_directory_uri() . '/inc/ansar/customize/css/customizer.css', array(), '1.0', 'all');
+	wp_enqueue_style('newsup-custom-css', get_template_directory_uri() . '/inc/ansar/customize/assets/css/customizer.css', array(), '1.0', 'all');
 
 	if (class_exists('WooCommerce')) {
 		wp_enqueue_style('newsup-woocommerce-style', get_template_directory_uri() . '/css/woocommerce.css');

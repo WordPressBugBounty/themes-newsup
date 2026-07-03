@@ -1,6 +1,75 @@
+/*---------------------------------------
+	Section Pro        
+-----------------------------------------*/
 body #accordion-section-newsup_pro_upsell h3 {
     background-image: linear-gradient(-200deg,#1151d3 0%,#202f5b 100%) !important;
     border-left: 0 !important;
     color: #fff !important;
     padding: 20px 20px 20px 20px;
+}
+#customize-controls li#accordion-section-newsup_pro_upsell .accordion-section-title{
+  justify-content: space-between;
+  align-items: center;
+}
+#customize-controls li#accordion-section-newsup_pro_upsell .accordion-section-title .alignright{
+  color: #fff;
+  border-color: #fff;
+}
+#customize-controls li#accordion-section-newsup_pro_upsell .accordion-section-title::after{
+  content: ''; 
+}
+
+/*---------------------------------------
+	Info Box       
+-----------------------------------------*/
+.newsup-info-box-container {
+    padding: 20px 15px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+.info-box-icon .dashicons {
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+    color: var(--wp-admin-theme-color);
+    margin-bottom: 5px;
+}
+.info-box-title {
+    margin: 10px 0 20px 0;
+    line-height: 1.4;
+    text-align: center;
+}
+.info-box-features {
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 0;
+    list-style: none;
+}
+.info-box-features li {
+    font-size: 13px;
+    color: #222;
+    margin-bottom: 10px;
+    display: flex;
+    font-weight: 500;
+    gap: 4px;
+    align-items: center;
+    text-transform: capitalize;
+}
+.info-box-features li .dashicons {
+    color: #00a0d2;
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+.info-box-buttons .button-info-box-primary {
+    display: block;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+.info-box-buttons .button-info-box-primary:hover {
+    background: var(--wp-admin-theme-color);
+    color: #fff;
 }

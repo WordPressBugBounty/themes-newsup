@@ -28,17 +28,7 @@ li#customize-control-display_header_text, li#customize-control-newsup_center_log
 #customize-controls .control-section > h3.accordion-section-title {
   display: flex;
 }
-#customize-controls li#accordion-section-newsup_pro_upsell .accordion-section-title{
-  justify-content: space-between;
-  align-items: center;
-}
-#customize-controls li#accordion-section-newsup_pro_upsell .accordion-section-title .alignright{
-  color: #fff;
-  border-color: #fff;
-}
-#customize-controls li#accordion-section-newsup_pro_upsell .accordion-section-title::after{
-  content: ''; 
-}
+
 
 .newsup-notice {
   position: relative;

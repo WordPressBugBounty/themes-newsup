@@ -1,3 +1,7 @@
+= Version 5.4.7
+* Fixed RTL Styling Issues.
+* Added About Theme Option in Customize
+
 = Version 5.4.6
 * Added Site Title and Tagline visibility options.
 * Update Screenshot.

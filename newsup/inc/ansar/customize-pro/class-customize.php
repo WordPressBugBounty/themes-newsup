@@ -39,8 +39,13 @@ final class Newsup_Customize {
 	private function setup_actions() {
 		// Register panels, sections, settings, controls, and partials.
 		add_action( 'customize_register', array( $this, 'sections' ) );
+
+		add_action( 'customize_register', array( $this, 'customize_controls' ), 10 );
+
+		add_action( 'customize_register', array( $this, 'customize_options' ) );
+
 		// Register scripts and styles for the controls.
-		add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_control_scripts' ), 0 );
+		add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_control_scripts' ) );
 	}
 	/**
 	 * Sets up the customizer sections.
@@ -69,6 +74,23 @@ final class Newsup_Customize {
 			)
 		);
 	}
+
+	/**
+	 * Sets up the customizer Controls.
+	*/
+	public function customize_controls( $wp_customize ) {
+		// Load customize controls.
+		require get_template_directory().'/inc/ansar/customize/customizer-control.php';
+    }
+
+	/**
+	 * Sets up the customizer options.
+	*/
+	public function customize_options( $wp_customize ) {
+        // Settings and Sections 
+		require get_template_directory().'/inc/ansar/customize/settings/globel/site-identity.php';
+		require get_template_directory().'/inc/ansar/customize/settings/about-theme.php"';
+    }
 	/**
 	 * Loads theme customizer CSS.
 	 *
@@ -77,8 +99,11 @@ final class Newsup_Customize {
 	 * @return void
 	 */
 	public function enqueue_control_scripts() {
-		wp_enqueue_script( 'newsup-customize-controls', trailingslashit( get_template_directory_uri() ) . 'inc/ansar/customize-pro/customize-controls.js', array( 'customize-controls' ) );
-		wp_enqueue_style( 'newsup-customize-controls', trailingslashit( get_template_directory_uri() ) . 'inc/ansar/customize-pro/customize-controls.css' );
+		// Styles
+		wp_enqueue_style( 'newsup-customize-controls', get_template_directory_uri() . '/inc/ansar/customize-pro/customize-controls.css' );
+		
+		// Scripts
+		wp_enqueue_script( 'newsup-customize-controls', get_template_directory_uri() . '/inc/ansar/customize/assets/js/customize-control.js', array( 'customize-controls' ), '1.0', true );
 	}
 }
 // Doing this customizer thang!

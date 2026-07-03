@@ -52,8 +52,6 @@ require get_template_directory().'/inc/ansar/customize/customizer-default.php';
  */
 function newsup_customize_register($wp_customize) {
 
-	// Load customize controls.
-	require get_template_directory().'/inc/ansar/customize/customizer-control.php';
 
     // Load customize sanitize.
 	require get_template_directory().'/inc/ansar/customize/customizer-sanitize.php';
@@ -387,9 +385,6 @@ function newsup_customize_register($wp_customize) {
 	/*theme option panel info*/
 	require get_template_directory().'/inc/ansar/customize/theme-options.php';
 
-	/*Theme Site Identity*/
-	require get_template_directory().'/inc/ansar/customize/globel/site-identity.php';
-
 }
 add_action('customize_register', 'newsup_customize_register');
 
@@ -505,11 +500,6 @@ function newsup_customize_preview_js() {
 	wp_enqueue_script('newsup-customizer', get_template_directory_uri().'/js/customizer.js', array('customize-preview'), '20151215', true);
 }
 add_action('customize_preview_init', 'newsup_customize_preview_js');
-
-function newsup_customizer_css() {
-    wp_enqueue_script( 'newsup-customize-controls', get_template_directory_uri() . '/assets/customizer-admin.js', array( 'customize-controls' ) );
-}
-add_action( 'customize_controls_enqueue_scripts', 'newsup_customizer_css',0 );
 
 
 /************************* Related Post Callback function *********************************/
