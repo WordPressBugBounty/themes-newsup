@@ -33,5 +33,19 @@ $wp_customize->add_panel( 'header_option_panel' , array(
             'panel' => 'header_option_panel',
         )
     );
+    // Advertisement Section.
+    $wp_customize->add_section('header_search_section',
+        array(
+            'title' => __('Search', 'newsup'),
+            'panel' => 'header_option_panel',
+        )
+    );
+    // Advertisement Section.
+    $wp_customize->add_section('header_subscribe_section',
+        array(
+            'title' => __('Subscribe', 'newsup'),
+            'panel' => 'header_option_panel',
+        )
+    );
     // Header Image
     $wp_customize->get_section('header_image')->panel = 'header_option_panel';

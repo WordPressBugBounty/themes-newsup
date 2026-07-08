@@ -118,6 +118,8 @@ final class Newsup_Customize {
 		require get_template_directory().'/inc/ansar/customize/settings/header/social-icons.php';
 		require get_template_directory().'/inc/ansar/customize/settings/header/banner-ads.php';
 		require get_template_directory().'/inc/ansar/customize/settings/header/header-image.php';
+		require get_template_directory().'/inc/ansar/customize/settings/header/search.php';
+		require get_template_directory().'/inc/ansar/customize/settings/header/subscribe.php';
     }
 	/**
 	 * Loads theme customizer CSS & JS.
