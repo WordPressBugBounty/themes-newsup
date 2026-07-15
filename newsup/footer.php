@@ -28,9 +28,8 @@
     <!--/footer-->
   </div>
     <!--/wrapper-->
-    <!--Scroll To Top-->
-        <a href="#" class="ta_upscr bounceInup animated"><i class="fas fa-angle-up"></i></a>
-    <!-- /Scroll To Top -->
+   <?php do_action('newsup_action_footer_scroller'); ?>
+</div>
 <?php wp_footer(); ?>
 </body>
 </html>

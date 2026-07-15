@@ -108,10 +108,17 @@ final class Newsup_Customize {
 	public function customize_options( $wp_customize ) {
         // Panels and Sections 
 		require get_template_directory().'/inc/ansar/customize/settings/panels-and-sections.php';
-
-		// Settings
+		
+		/*------------------- Settings -------------------*/
+		// About Theme
 		require get_template_directory().'/inc/ansar/customize/settings/globel/site-identity.php';
 		require get_template_directory().'/inc/ansar/customize/settings/about-theme.php';
+		
+		// Global
+		require get_template_directory().'/inc/ansar/customize/settings/globel/site-identity.php';
+		require get_template_directory().'/inc/ansar/customize/settings/globel/scroller.php';
+		require get_template_directory().'/inc/ansar/customize/settings/globel/post-featured-image.php';
+		require get_template_directory().'/inc/ansar/customize/settings/globel/post-meta.php';
 		
 		// Header Settings
 		require get_template_directory().'/inc/ansar/customize/settings/header/date-time.php';
@@ -120,6 +127,16 @@ final class Newsup_Customize {
 		require get_template_directory().'/inc/ansar/customize/settings/header/header-image.php';
 		require get_template_directory().'/inc/ansar/customize/settings/header/search.php';
 		require get_template_directory().'/inc/ansar/customize/settings/header/subscribe.php';
+
+		// Page Settings
+		require get_template_directory().'/inc/ansar/customize/settings/page/blog-archive.php';
+		require get_template_directory().'/inc/ansar/customize/settings/page/single-post.php';
+		require get_template_directory().'/inc/ansar/customize/settings/page/page.php';
+
+		// Footer Settings
+		require get_template_directory().'/inc/ansar/customize/settings/footer/footer-options.php';
+		require get_template_directory().'/inc/ansar/customize/settings/footer/social-icons.php';
+		require get_template_directory().'/inc/ansar/customize/settings/footer/menus.php';
     }
 	/**
 	 * Loads theme customizer CSS & JS.

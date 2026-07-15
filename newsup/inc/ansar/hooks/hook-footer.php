@@ -153,3 +153,20 @@ if (!function_exists('newsup_footer_bottom_area')) :
     <?php }
 endif;
 add_action('newsup_action_footer_bottom_area', 'newsup_footer_bottom_area');
+
+if (!function_exists('newsup_footer_scroller')) :
+    /**
+     *  Footer Scroller
+     *
+     * @since Newsup
+     *
+     */
+    function newsup_footer_scroller() { 
+        if(get_theme_mod('scroller_enable',true) == true) { ?>
+            <!--Scroll To Top-->
+                <a href="#" class="ta_upscr bounceInup animated"><i class="fas fa-angle-up"></i></a>
+            <!-- /Scroll To Top -->
+        <?php } 
+    }
+endif;
+add_action('newsup_action_footer_scroller', 'newsup_footer_scroller');

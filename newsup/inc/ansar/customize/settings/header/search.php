@@ -25,7 +25,7 @@ $wp_customize->add_setting('header_search_enable',
 );
 $wp_customize->add_control(new Newsup_Toggle_Control( $wp_customize, 'header_search_enable', 
     array(
-        'label' => esc_html__('Hide / Show Search', 'newsup'),
+        'label' => esc_html__('Hide/Show', 'newsup'),
         'type' => 'toggle',
         'section' => 'header_search_section',
     )

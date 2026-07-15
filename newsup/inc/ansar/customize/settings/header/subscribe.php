@@ -25,7 +25,7 @@ $wp_customize->add_setting('header_subsc_enable',
 );
 $wp_customize->add_control(new Newsup_Toggle_Control( $wp_customize, 'header_subsc_enable', 
     array(
-        'label' => esc_html__('Hide / Show', 'newsup'),
+        'label' => esc_html__('Hide/Show', 'newsup'),
         'type' => 'toggle',
         'section' => 'header_subscribe_section',
     )

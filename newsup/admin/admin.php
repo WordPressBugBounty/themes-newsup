@@ -270,16 +270,16 @@ class NewsUp_Admin {
                                     <div class="newsup-wrapper second">
                                         <div class="newsup-feature-area newsup-d-grid column3 align-start">
                                             <div class="newsup-feature-box">
-                                                <h3 class="newsup-feature-area-title">Theme Option</h3>
-                                                <p class="newsup-feature-area-desc"><a href="<?php echo esc_url('customize.php?autofocus[panel]=theme_option_panel') ?>" target="_blank">Go to Customizer</a></p>
+                                                <h3 class="newsup-feature-area-title">Global</h3>
+                                                <p class="newsup-feature-area-desc"><a href="<?php echo esc_url('customize.php?autofocus[panel]=global_panel') ?>" target="_blank">Go to Customizer</a></p>
                                             </div>
                                             <div class="newsup-feature-box">
                                                 <h3 class="newsup-feature-area-title">Header Option</h3>
-                                                <p class="newsup-feature-area-desc"><a href="<?php echo esc_url('customize.php?autofocus[panel]=theme_option_panel') ?>" target="_blank">Go to Customizer</a></p>
+                                                <p class="newsup-feature-area-desc"><a href="<?php echo esc_url('customize.php?autofocus[panel]=header_option_panel') ?>" target="_blank">Go to Customizer</a></p>
                                             </div>
                                             <div class="newsup-feature-box">
                                                 <h3 class="newsup-feature-area-title">Footer Option</h3>
-                                                <p class="newsup-feature-area-desc"><a href="<?php echo esc_url('customize.php?autofocus[panel]=theme_option_panel') ?>" target="_blank">Go to Customizer</a></p>
+                                                <p class="newsup-feature-area-desc"><a href="<?php echo esc_url('customize.php?autofocus[panel]=footer_options') ?>" target="_blank">Go to Customizer</a></p>
                                             </div>
                                             <div class="newsup-feature-box">
                                                 <h3 class="newsup-feature-area-title">Site Identity</h3>
@@ -287,7 +287,7 @@ class NewsUp_Admin {
                                             </div>
                                             <div class="newsup-feature-box">
                                                 <h3 class="newsup-feature-area-title">Banner Advertisement</h3>
-                                                <p class="newsup-feature-area-desc"><a href="<?php echo esc_url('customize.php?autofocus[panel]=frontpage_option_panel') ?>" target="_blank">Go to Customizer</a></p>
+                                                <p class="newsup-feature-area-desc"><a href="<?php echo esc_url('customize.php?autofocus[panel]=header_option_panel') ?>" target="_blank">Go to Customizer</a></p>
                                             </div>
                                             <div class="newsup-feature-box">
                                                 <h3 class="newsup-feature-area-title">Top Tags</h3>
@@ -302,16 +302,16 @@ class NewsUp_Admin {
                                                 <p class="newsup-feature-area-desc"><a href="<?php echo esc_url('customize.php?autofocus[panel]=frontpage_option_panel') ?>" target="_blank">Go to Customizer</a></p>
                                             </div>
                                             <div class="newsup-feature-box">
-                                                <h3 class="newsup-feature-area-title">Content Layout Settings</h3>
-                                                <p class="newsup-feature-area-desc"><a href="<?php echo esc_url('customize.php?autofocus[panel]=theme_option_panel') ?>" target="_blank">Go to Customizer</a></p>
+                                                <h3 class="newsup-feature-area-title">Blog/Archive Settings</h3>
+                                                <p class="newsup-feature-area-desc"><a href="<?php echo esc_url('customize.php?autofocus[panel]=page_option_panel') ?>" target="_blank">Go to Customizer</a></p>
                                             </div>
                                             <div class="newsup-feature-box">
                                                 <h3 class="newsup-feature-area-title">Single Post Settings</h3>
-                                                <p class="newsup-feature-area-desc"><a href="<?php echo esc_url('customize.php?autofocus[panel]=theme_option_panel') ?>" target="_blank">Go to Customizer</a></p>
+                                                <p class="newsup-feature-area-desc"><a href="<?php echo esc_url('customize.php?autofocus[panel]=page_option_panel') ?>" target="_blank">Go to Customizer</a></p>
                                             </div>
                                             <div class="newsup-feature-box">
                                                 <h3 class="newsup-feature-area-title">You Missed Section</h3>
-                                                <p class="newsup-feature-area-desc"><a href="<?php echo esc_url('customize.php?autofocus[panel]=theme_option_panel') ?>" target="_blank">Go to Customizer</a></p>
+                                                <p class="newsup-feature-area-desc"><a href="<?php echo esc_url('customize.php?autofocus[panel]=global_panel') ?>" target="_blank">Go to Customizer</a></p>
                                             </div>
                                             <div class="newsup-feature-box">
                                                 <h3 class="newsup-feature-area-title">Widgets Settings</h3>

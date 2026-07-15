@@ -22,3 +22,18 @@
     });
 
 })(jQuery, wp);
+
+// Radio Check Box
+jQuery(function ($) {
+
+	$('.newsup-radio-image').buttonset();
+
+	wp.customize.bind('ready', function () {
+		$('.newsup-radio-image').buttonset();
+	});
+
+	$(document).on('widget-added widget-updated', function () {
+		$('.newsup-radio-image').buttonset();
+	});
+
+});

@@ -14,16 +14,6 @@ $newsup_default = newsup_get_default_theme_options();
  * @package newsup
  */
 
-
-// Add Frontpage Options Panel.
-$wp_customize->add_panel('frontpage_option_panel',
-    array(
-        'title' => __('Frontpage Options', 'newsup'),
-        'priority' => 40,
-        'capability' => 'edit_theme_options',
-    )
-);
-
 //=================================
 //Top tags Section.
 //=================================
