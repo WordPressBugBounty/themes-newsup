@@ -178,3 +178,16 @@ function checkWindowSize() {
 
 checkWindowSize();
 window.addEventListener('resize', checkWindowSize);
+
+/* =================================
+===        PRELOADER       ====
+=================================== */
+const loader = document.getElementById("preloader");
+
+if (loader) {
+    document.body.style.overflow = "hidden";
+    window.addEventListener("load", () => {
+      loader.style.display = "none";
+      document.body.style.overflow = "";
+    });
+}

@@ -1360,3 +1360,7 @@ Fixed Sidebar Comments Styling.
 = Version 5.5
 * Inhanced the Customizer setting for Theme options and Post section.
 * Fixed styling glitch.
+
+= Version 5.5.1
+* Added Typography Control.
+* Inhanced the Customizer setting.

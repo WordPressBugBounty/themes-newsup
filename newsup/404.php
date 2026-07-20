@@ -5,26 +5,11 @@
  * @package Newsup
  */
 get_header(); ?>
-<div class="mg-breadcrumb-section">
-  <div class="overlay">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12 col-sm-12">
-          <div class="mg-breadcrumb-title">
-            <h1><?php esc_html_e('404','newsup'); ?></h1>
-          </div>
-          <ul class="mg-page-breadcrumb">
-              <li><a href="<?php echo esc_url(home_url());?>"><?php esc_html_e('Home','newsup'); ?></a></li>
-              <li class="active"><?php echo esc_url(home_url());?><?php esc_html_e('404','newsup'); ?></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<!--==================== Newsup breadcrumb section ====================-->
+<?php get_template_part('index','banner'); ?>
   <!--==================== main content section ====================-->
   <!--container-->
-  <div id="content" class="container-fluid home">
+  <div id="content" class="container-fluid home 404">
     <!--row-->
       <!--container-->
       <div class="col-md-12 text-center mg-section-404"> 

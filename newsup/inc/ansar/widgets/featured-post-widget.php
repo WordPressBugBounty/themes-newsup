@@ -1,4 +1,5 @@
-<?php class Newsup_horizontal_vertical_posts extends WP_Widget {
+<?php 
+class Newsup_horizontal_vertical_posts extends WP_Widget {
 
 	function __construct() {
 		$widget_ops = array(

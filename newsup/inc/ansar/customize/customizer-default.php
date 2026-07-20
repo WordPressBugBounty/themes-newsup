@@ -18,7 +18,17 @@ function newsup_get_default_theme_options() {
 
     $defaults = array();
 
+    // Preloader
+    $defaults['preloader_enable'] = false;
+    $defaults['preloader_image'] = '';
     
+    // Typography Section.
+    $defaults['heading_fontfamily'] = 'Montserrat';
+    $defaults['heading_fontweight'] =  '700';
+
+    // Meus
+    $defaults['menu_fontfamily'] = 'Montserrat';
+
     // Header options section
     $defaults['banner_advertisement_section'] = '';
     $defaults['banner_advertisement_section_url'] = '#';

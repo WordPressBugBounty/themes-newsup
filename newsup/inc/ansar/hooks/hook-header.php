@@ -77,3 +77,34 @@ if (!function_exists('newsup_header_subscribe')) :
     }
 endif;
 add_action('newsup_action_header_subscribe', 'newsup_header_subscribe');
+
+if (!function_exists('newsup_header_preloader')) :
+    /**
+     *  Header preloader
+     *
+     * @since Newsup
+     *
+     */
+    function newsup_header_preloader() {
+
+		$preloader_enable = newsup_get_option( 'preloader_enable' );
+		$preloader_image  = newsup_get_option( 'preloader_image' );
+
+		if ( $preloader_enable ) :
+			?>
+			<!-- Preloader -->
+			<div class="preloader" id="preloader">
+				<?php if ( ! empty( $preloader_image ) ) : ?>
+					<img src="<?php echo esc_url( $preloader_image ); ?>" alt="<?php echo esc_attr__( 'Preloader', 'newsup' ); ?>">
+				<?php else : ?>
+					<div class="preloader-icon">
+						<i class="fas fa-spinner fa-spin-pulse" aria-hidden="true"></i>
+					</div>
+				<?php endif; ?>
+			</div>
+			<!-- /Preloader -->
+			<?php
+		endif;
+    }
+endif;
+add_action('wp_body_open', 'newsup_header_preloader');

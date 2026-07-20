@@ -3,7 +3,7 @@
 $wp_customize->add_section('theme_info_panel',
     array(
         'title' => __('About Theme', 'newsup'),
-        'priority' => 19,
+        'priority' => 5,
     )
 );
 
@@ -11,9 +11,23 @@ $wp_customize->add_section('theme_info_panel',
 $wp_customize->add_panel('global_panel',
     array(
         'title' => esc_html__('Global', 'newsup'),
-        'priority' => 20,
+        'priority' => 10,
     )
 ); 
+    //Preloader Settings
+    $wp_customize->add_section('newsup_preloader_settings',
+        array(
+            'title' => esc_html__('Preloader', 'newsup'),
+            'panel' => 'global_panel',
+        )
+    );
+    //Breadcrumb Settings
+    $wp_customize->add_section('breadcrumb_settings',
+        array(
+            'title' => esc_html__('Breadcrumb', 'newsup'),
+            'panel' => 'global_panel',
+        )
+    );
     // Header Image
     $wp_customize->get_section('title_tagline')->panel = 'global_panel';
 
@@ -43,6 +57,11 @@ $wp_customize->add_panel('global_panel',
             'panel' => 'global_panel',
         )
     );
+// Section Typography
+$wp_customize->add_section( 'newsup_typography_setting' , array(
+    'title' => __('Typography', 'newsup'),
+    'priority' => 15,
+) );
 // Panel Header Options
 $wp_customize->add_panel( 'header_option_panel' , array(
     'title' => __('Header Options', 'newsup'),
@@ -90,14 +109,14 @@ $wp_customize->add_panel( 'header_option_panel' , array(
 $wp_customize->add_panel('frontpage_option_panel',
     array(
         'title' => __('Frontpage Options', 'newsup'),
-        'priority' => 20,
+        'priority' => 25,
         'capability' => 'edit_theme_options',
     )
 );
 // Panel page Options
 $wp_customize->add_panel( 'page_option_panel' , array(
     'title' => __('Templates', 'newsup'),
-    'priority' => 20,
+    'priority' => 30,
 ) );
     // blog-archive.
     $wp_customize->add_section('blog_section', array(
@@ -118,7 +137,7 @@ $wp_customize->add_panel( 'page_option_panel' , array(
 // Panel footer Options
 $wp_customize->add_panel( 'footer_option_panel' , array(
     'title' => __('Footer Options', 'newsup'),
-    'priority' => 20,
+    'priority' => 35,
 ) );
     // Footer Section.
     $wp_customize->add_section('footer_options', array(

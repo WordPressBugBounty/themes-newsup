@@ -1,4 +1,5 @@
-<?php function newsup_scripts() {
+<?php 
+function newsup_scripts() {
 
 	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css');
 
@@ -19,6 +20,8 @@
 	wp_enqueue_style('smartmenus',get_template_directory_uri().'/css/jquery.smartmenus.bootstrap.css');
 
 	wp_enqueue_style('newsup-custom-css', get_template_directory_uri() . '/inc/ansar/customize/assets/css/customizer.css', array(), '1.0', 'all');
+
+	wp_enqueue_style('newsup-common-css', get_template_directory_uri() . '/css/common.css');
 
 	if (class_exists('WooCommerce')) {
 		wp_enqueue_style('newsup-woocommerce-style', get_template_directory_uri() . '/css/woocommerce.css');
@@ -43,6 +46,7 @@
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	newsup_customize_options();
 }
 add_action('wp_enqueue_scripts', 'newsup_scripts');
 

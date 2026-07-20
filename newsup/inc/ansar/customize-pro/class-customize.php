@@ -119,6 +119,11 @@ final class Newsup_Customize {
 		require get_template_directory().'/inc/ansar/customize/settings/globel/scroller.php';
 		require get_template_directory().'/inc/ansar/customize/settings/globel/post-featured-image.php';
 		require get_template_directory().'/inc/ansar/customize/settings/globel/post-meta.php';
+		require get_template_directory().'/inc/ansar/customize/settings/globel/preloader.php';
+		require get_template_directory().'/inc/ansar/customize/settings/globel/breadcrumb.php';
+
+		// Typography Settings
+		require get_template_directory().'/inc/ansar/customize/settings/typography.php';
 		
 		// Header Settings
 		require get_template_directory().'/inc/ansar/customize/settings/header/date-time.php';

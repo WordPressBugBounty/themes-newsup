@@ -1,0 +1,19 @@
+/*---------------------------------------
+	Preloader           
+-----------------------------------------*/
+.preloader{
+	position: fixed;
+	background-color: #fff;
+	width: 100%;
+	height: 100vh;
+	z-index: 99999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	left: 0;
+	top: 0;
+}
+.preloader-icon{
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  color: var(--pri-color);
+}

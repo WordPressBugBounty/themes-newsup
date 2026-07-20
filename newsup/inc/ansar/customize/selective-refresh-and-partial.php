@@ -275,6 +275,9 @@ function newsup_selective_refresh( $wp_customize ) {
 		$wp_customize->selective_refresh->add_partial('you_missed_enable', array(
 			'selector'        => '.missed-section.mg-posts-sec-inner',
 			'render_callback' => 'newsup_customize_partial_you_missed',
+		));		
+		$wp_customize->selective_refresh->add_partial('bcrumb_section_enable', array(
+			'selector'        => '.mg-breadcrumb-title',
 		));
 	}
 }
