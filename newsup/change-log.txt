@@ -1,3 +1,6 @@
+= Version 5.5.2
+* Fixed a sidebar styling glitch.
+
 = Version 5.5.1
 * Added Typography Control.
 * Inhanced the Customizer setting.
