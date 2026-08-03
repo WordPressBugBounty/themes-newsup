@@ -68,8 +68,9 @@ if (!function_exists('newsup_footer_copyright')) :
                     </a>
                     <span class="sep"> | </span>
                     <?php
+                    $themeName = !empty(NEWSUP_THEMEURI) ? '<a href="' . esc_url( NEWSUP_THEMEURI ) . '" rel="theme-name">' . esc_html( NEWSUP_THEME_NAME ) . '</a>': esc_html( NEWSUP_THEME_NAME );
                     /* translators: placeholder replaced with string */
-                    printf( __( 'Theme: %1$s by %2$s.', 'newsup' ), 'Newsup', '<a href="' . esc_url( __( 'https://themeansar.com/', 'newsup' ) ) . '" rel="designer">Themeansar</a>' );
+                    printf( __( 'Theme: %1$s by %2$s.', 'newsup' ), $themeName, '<a href="' . esc_url( __( 'https://themeansar.com/', 'newsup' ) ) . '" rel="designer">Themeansar</a>' );
                     ?>
                     </p>
                 </div>

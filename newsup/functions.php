@@ -32,9 +32,11 @@
 	if ( ! defined( 'NEWSUP_THEME_VERSION' ) ) {
 		define( 'NEWSUP_THEME_VERSION', $newsup_theme->get( 'Version' ) );
 	}
-
 	if ( ! defined( 'NEWSUP_THEME_NAME' ) ) {
 		define( 'NEWSUP_THEME_NAME', $newsup_theme->get( 'Name' ) );
+	}
+	if ( ! defined( 'NEWSUP_THEMEURI' ) ) {
+		define( 'NEWSUP_THEMEURI', $newsup_theme->get( 'ThemeURI' ) );
 	}
 
 	/*-----------------------------------------------------------------------------------*/

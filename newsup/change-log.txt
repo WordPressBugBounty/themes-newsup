@@ -1,3 +1,7 @@
+= Version 5.5.3 =
+* Added theme URI support.
+* Improved theme information retrieval.
+
 = Version 5.5.2
 * Fixed a sidebar styling glitch.
 
