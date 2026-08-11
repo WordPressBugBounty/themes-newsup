@@ -1,3 +1,7 @@
+= Version 5.5.4 =
+* Fixed RTL Styling Issue.
+* Remove Unnecessary Space.
+
 = Version 5.5.3 =
 * Added theme URI support.
 * Improved theme information retrieval.

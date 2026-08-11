@@ -29,7 +29,6 @@ li#customize-control-display_header_text, li#customize-control-newsup_center_log
   display: flex;
 }
 
-
 .newsup-notice {
   position: relative;
   padding: 8px;
@@ -65,24 +64,24 @@ li#customize-control-display_header_text, li#customize-control-newsup_center_log
   line-height: 1.4;
 }
 .newsup-notice_text .panel-column-6{
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
 .panel-column-6 .newsup-notice-buttons{
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
 }
 .panel-column-6 .newsup-notice-links {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .newsup-notice_text .notice p, .notice-title, div.updated p, div.error p, .form-table td .notice p  {padding-right: 25px; font-size: 15px;}
 .dashicons-external:before {
