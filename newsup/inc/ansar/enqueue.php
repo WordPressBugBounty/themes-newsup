@@ -11,9 +11,19 @@ function newsup_scripts() {
 
 	wp_enqueue_style('newsup-default', get_template_directory_uri() . '/css/colors/default.css');
 
-	wp_enqueue_style('font-awesome-5-all',get_template_directory_uri().'/css/font-awesome/css/all.min.css');
+	wp_enqueue_style(
+        'font-awesome-5-all',
+        get_template_directory_uri() . '/css/font-awesome/css/all.min.css',
+        array(),
+        defined( 'NEWSUP_THEME_VERSION' ) ? NEWSUP_THEME_VERSION : null
+    );
 
-	wp_enqueue_style('font-awesome-4-shim',get_template_directory_uri().'/css/font-awesome/css/v4-shims.min.css');
+	wp_enqueue_style(
+        'font-awesome-4-shim',
+        get_template_directory_uri() . '/css/font-awesome/css/v4-shims.min.css',
+        array( 'font-awesome-5-all' ),
+        defined( 'NEWSUP_THEME_VERSION' ) ? NEWSUP_THEME_VERSION : null
+    );
 
 	wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css');
 	
@@ -53,18 +63,27 @@ add_action('wp_enqueue_scripts', 'newsup_scripts');
 //Custom js for time
 function newsup_custom_js() {
 
- wp_enqueue_script('newsup-custom', get_template_directory_uri() . '/js/custom.js' , array('jquery')); 
+	wp_enqueue_script(	'newsup-custom', get_template_directory_uri() . '/js/custom.js', array( 'jquery', 'bootstrap', 'owl-carousel-min', 'newsup-marquee-js' ),
+		defined( 'NEWSUP_THEME_VERSION' ) ? NEWSUP_THEME_VERSION : null,
+		true
+	);
 
- $header_time_enable = get_theme_mod('header_time_enable','true'); 
- if($header_time_enable == 'true') { 
- 
- $newsup_date_time_show_type = get_theme_mod('newsup_date_time_show_type','newsup_default'); 
+	if ( function_exists( 'wp_script_add_data' ) ) {
+		wp_script_add_data( 'newsup-custom', 'strategy', 'defer' );
+	}
 
- if($newsup_date_time_show_type == 'newsup_default'){
+	$header_time_enable = get_theme_mod('header_time_enable',true); 
+	if($header_time_enable == 'true') { 
+	
+		$newsup_date_time_show_type = get_theme_mod('newsup_date_time_show_type','newsup_default'); 
 
-	 wp_enqueue_script('newsup-custom-time', get_template_directory_uri() . '/js/custom-time.js' , array('jquery')); 
+		if($newsup_date_time_show_type == 'newsup_default'){
 
-} } } 
+			wp_enqueue_script('newsup-custom-time', get_template_directory_uri() . '/js/custom-time.js' , array('jquery')); 
+
+		}
+	}
+} 
 add_action('wp_footer','newsup_custom_js');
 
 /**
@@ -127,3 +146,17 @@ function newsup_admin_scripts() {
 }
 endif;
 add_action( 'admin_enqueue_scripts', 'newsup_admin_scripts' );
+
+/**
+ * Newsup Performance Edition: lightweight presentation CSS.
+ * Does not replace existing styles or widgets.
+ */
+add_action( 'wp_enqueue_scripts', 'newsup_enqueue_performance_styles', 99 );
+function newsup_enqueue_performance_styles() {
+    wp_enqueue_style(
+        'newsup-performance',
+        get_template_directory_uri() . '/css/newsup-performance.css',
+        array(),
+        defined( 'NEWSUP_THEME_VERSION' ) ? NEWSUP_THEME_VERSION : '1.0.0'
+    );
+}

@@ -1,0 +1,21 @@
+/*
+ * Newsup Performance Edition
+ * Safe presentation-only optimizations.
+ */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img[width][height] {
+    height: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

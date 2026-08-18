@@ -147,7 +147,18 @@ if (!function_exists('newsup_render_posts')):
                         <div class="img-small-post">
                             <a href="<?php the_permalink(); ?>">
                             <?php if (!empty($url)): ?>
-                                <img src="<?php echo esc_url($url); ?>" alt="<?php the_title(); ?>">
+                                <?php
+                                echo wp_get_attachment_image(
+                                    get_post_thumbnail_id( get_the_ID() ),
+                                    'medium',
+                                    false,
+                                    array(
+                                        'alt'      => get_the_title(),
+                                        'loading'  => 'lazy',
+                                        'decoding' => 'async',
+                                    )
+                                );
+                                ?>
                             <?php endif; ?>
                             </a>
                         </div>

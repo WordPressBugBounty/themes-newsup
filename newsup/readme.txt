@@ -1375,3 +1375,12 @@ Fixed Sidebar Comments Styling.
 = Version 5.5.4 =
 * Fixed RTL Styling Issue.
 * Remove Unnecessary Space.
+
+= Version 5.5.5 =
+* Performance Edition
+* Font Awesome font-display changed from block to swap.
+* Added conservative post-thumbnail fetchpriority/eager loading for the singular main-query thumbnail when no loading priority is already set.
+* Added lightweight performance CSS.
+* Added asset versioning support for Font Awesome CSS.
+* Retained the Font Awesome v4 shim for backward compatibility.
+* Did not change existing menu locations, widget IDs, Customizer settings, header/footer architecture, or registered content types.

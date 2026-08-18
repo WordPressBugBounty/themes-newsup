@@ -1,4 +1,6 @@
-<?php 
+<?php
+require_once get_template_directory() . '/inc/ansar/performance.php';
+ 
 /**
  * Newsup functions and definitions
  *
