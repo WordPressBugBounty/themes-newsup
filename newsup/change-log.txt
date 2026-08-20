@@ -1,3 +1,6 @@
+= Version 5.5.6 =
+* Added Gradient Color CSS Variable.
+
 = Version 5.5.5 =
 * Performance Edition
 * Font Awesome font-display changed from block to swap.
