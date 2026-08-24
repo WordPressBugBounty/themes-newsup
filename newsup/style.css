@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newsup/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://newsup.themeansar.com/lite and documentation at https://docs.themeansar.com/docs/newsup/
-Version: 5.5.6
+Version: 5.5.7
 Tested up to: 7.0
 Requires PHP: 7.4
 Requires at least: 6.7
@@ -20,7 +20,11 @@ Text Domain: newsup
 -----------------------------------------*/
 :root {
 	--headFont: 'Montserrat', sans-serif;
+	--headWeight: 700;
 	--bodyFont: 'Inter', sans-serif;
+	--bodyWeight: 400;
+	--weight2: 600;
+	--catWeight: 700;
 }
 
 /* navbar toggle */
@@ -83,7 +87,7 @@ Text Domain: newsup
 .site-title {
 	font-size: 34px;
 	margin-bottom: 0;
-	font-weight: 700;
+	font-weight: var(--headWeight);
 	font-family: var(--headFont);
 	letter-spacing: -0.05em;
 	line-height: 1.3;
@@ -133,7 +137,7 @@ Text Domain: newsup
 	padding: 2px 4px;
 	border-radius: 2px;
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: var(--weight2);
 	line-height: 35px;
 }
 
@@ -276,7 +280,7 @@ Text Domain: newsup
 	-moz-transition: all .25s ease-out;
 	transition: all .25s ease-out;
 	margin-bottom: 0px;
-	font-weight: 600;
+	font-weight: var(--headWeight);
 	text-transform: capitalize;
 	display: block;
 }
@@ -339,7 +343,7 @@ Text Domain: newsup
 	font-family: var(--bodyFont);
 	display: block;
 	transition: .3s;
-	font-weight: normal;
+	font-weight: var(--bodyWeight);
 	text-transform: uppercase;
 }
 
@@ -396,7 +400,6 @@ Text Domain: newsup
 -----------------------------------------*/
 .navbar-brand span.site-description {
 	font-size: 12px;
-	font-weight: normal;
 	line-height: 0;
 }
 
@@ -424,100 +427,6 @@ Text Domain: newsup
 	text-align: center;
 	line-height: 30px;
 	height: 30px;
-}
-
-.newsup-button {
-	font-size: 18px;
-	line-height: 0;
-	margin-right: -15px;
-	margin-left: 5px;
-	display: flex;
-}
-
-.newsup-button-inner-left:empty {
-	margin-left: -0.625em
-}
-
-.newsup-button-inner-left:before,
-.newsup-button-inner-left:after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	-webkit-transition: 0.4s ease-in-out;
-	-moz-transition: 0.4s ease-in-out;
-	-o-transition: 0.4s ease-in-out;
-	transition: 0.4s ease-in-out;
-	outline: none
-}
-
-.newsup-button .newsup-button-inner,
-.newsup-button .newsup-button-inner-left {
-	display: inline-block;
-	font-size: 0.875em;
-	position: relative;
-	padding: 0em;
-	line-height: 1em;
-	cursor: pointer;
-	color: var(--pri-color);
-	font-weight: normal
-}
-
-.newsup-button .newsup-button-inner-left:before {
-	content: '';
-	display: block;
-	position: absolute;
-	z-index: 1;
-	line-height: 2.125em;
-	text-indent: 2.5em;
-	height: 1em;
-	width: 1em;
-	margin: 0.25em;
-	-webkit-border-radius: 100%;
-	-moz-border-radius: 100%;
-	border-radius: 100%;
-	right: 1.625em;
-	bottom: 0em;
-	background: var(--pri-color);
-	transform: rotate(-45deg);
-}
-
-.newsup-button .newsup-button-inner-left:after {
-	content: "";
-	display: inline-block;
-	width: 2.5em;
-	height: 1.5em;
-	-webkit-border-radius: 1em;
-	-moz-border-radius: 1em;
-	border-radius: 1em;
-	background: #FFF;
-	vertical-align: middle;
-	margin: 0 0.625em;
-}
-
-.newsup-button.active .newsup-button-inner-left:before {
-	right: 1.0625em;
-	box-shadow: 0.3125em 0.3125em 0 0 #eee;
-	background: transparent
-}
-
-.newsup-button.active .newsup-button-inner-left:after {
-	background: rgba(0, 0, 0, 0.15);
-	border: 0.125em solid white
-}
-
-.newsup-button .newsup-button-inner-left {
-	color: var(--pri-color);
-	font-weight: bold
-}
-
-.newsup-button.active .newsup-button-inner-left {
-	color: var(--pri-color);
-	font-weight: normal
-}
-
-.newsup-button.active .newsup-button-inner-left+.newsup-button-inner {
-	color: var(--pri-color);
-	font-weight: bold
 }
 
 .btn-bell {
@@ -636,7 +545,7 @@ body {
 	font-family: var(--bodyFont);
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
-	font-weight: 400;
+	font-weight: var(--bodyWeight);
 	line-height: 30px;
 	word-wrap: break-word;
 }
@@ -671,7 +580,6 @@ select {
 	border-radius: 0;
 	color: #444;
 	display: block;
-	font-weight: 400;
 	overflow: hidden;
 	padding: 6px 12px;
 	position: relative;
@@ -710,7 +618,7 @@ button {
 	padding: 5px 35px;
 	line-height: 30px;
 	border-radius: 4px;
-	font-weight: bold;
+	font-weight: var(--headWeight);
 	font-size: 14px;
 	border-width: 1px;
 	border-style: solid;
@@ -739,7 +647,7 @@ button {
 	padding: 5px 35px;
 	line-height: 30px;
 	border-radius: 4px;
-	font-weight: bold;
+	font-weight: var(--weight2);
 	font-size: 14px;
 	height: 55px;
 	border-width: 1px;
@@ -788,7 +696,6 @@ input[type="checkbox"] {
 
 input[type="radio"]+label,
 input[type="checkbox"]+label {
-	font-weight: 400;
 	display: inline-block;
 }
 
@@ -1035,55 +942,32 @@ pre.wp-block-code a {
 /*---------------------------------------
 	2.2.Typography        
 -----------------------------------------*/
-h1,
-.h1 {
+h1, .h1 {
 	font-size: 34px;
-	line-height: 1.3;
 }
 
-h2,
-.h2 {
+h2, .h2 {
 	font-size: 32px;
-	line-height: 1.3;
 }
 
-h3,
-.h3 {
+h3, .h3 {
 	font-size: 28px;
-	line-height: 1.3;
 }
 
-h4,
-.h4 {
+h4, .h4 {
 	font-size: 24px;
-	line-height: 1.3;
 }
 
-h5,
-.h5 {
+h5, .h5 {
 	font-size: 20px;
-	line-height: 1.3;
 }
 
-h6,
-.h6 {
+h6, .h6 {
 	font-size: 16px;
-	line-height: 1.3;
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-	font-weight: 700;
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	font-weight: var(--headWeight);
 	font-family: var(--headFont);
 	letter-spacing: -0.05em;
 	line-height: 1.3;
@@ -1146,7 +1030,7 @@ blockquote p {
 	font-style: italic;
 	width: 94%;
 	display: table;
-	font-weight: bold;
+	font-weight: var(--headWeight);
 	line-height: 1.5;
 	margin-bottom: 0;
 }
@@ -1203,7 +1087,7 @@ td {
 	color: #01012f;
 	padding: 8px 11.2px;
 	text-align: left;
-	font-weight: 700;
+	font-weight: var(--headWeight);
 }
 
 .mg-content td,
@@ -1230,7 +1114,7 @@ td {
 	overflow: hidden;
 	position: relative;
 	border-radius: 4px;
-	font-weight: bold;
+	font-weight: var(--headWeight);
 	display: inline-block;
 	transition: all 0.2s ease 0s;
 	border-width: 2px;
@@ -1332,14 +1216,13 @@ button.mfp-close:focus {
 	margin-bottom: 0;
 }
 
-.wp-block-search .wp-block-search__label,
-.mg-widget .wp-block-group h2 {
+.wp-block-search .wp-block-search__label, .mg-widget .wp-block-group h2 {
 	border-width: 0 0 2px 0;
 	border-style: solid;
 	margin: 0px -20px 20px -20px;
 	font-size: 18px;
 	line-height: 40px;
-	font-weight: 600;
+	font-weight: var(--headWeight);
 	padding: 0 15px 0 15px;
 	position: relative;
 	width: auto;
@@ -1411,6 +1294,7 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	left: 0;
 	bottom: -1px;
 }
+
 /*---------------------------------------
 =========================================
 	content-Home-Sections
@@ -1450,7 +1334,7 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	padding: 2px 4px;
 	border-radius: 2px;
 	font-size: 12px;
-	font-weight: 600;
+	font-weight: var(--weight2);
 }
 
 .mg-fea-area {
@@ -1547,8 +1431,6 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 .mg-blog-post .bottom h4 {
 	float: left;
 	font-size: 32px;
-	font-weight: 700;
-	line-height: 120%;
 	-webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 	-moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 	-ms-text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
@@ -1609,7 +1491,6 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 .mg-blog-post-box .small {
 	font-size: 16px;
 	line-height: 25px;
-	font-weight: 400;
 	padding: 20px;
 }
 
@@ -1721,7 +1602,6 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	font-size: 22px;
 	line-height: 1.2;
 	position: relative;
-	font-weight: 700;
 	margin-bottom: 10px;
 	letter-spacing: -0.05em;
 	display: block;
@@ -1754,7 +1634,7 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	padding: 4px 6px;
 	line-height: 10px;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: var(--catWeight);
 	cursor: pointer;
 	border-radius: 3px;
 	margin-right: 0px;
@@ -1835,7 +1715,6 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 
 .mg-blog-post-box .mg-header h4 {
 	font-size: 14px;
-	font-weight: 700;
 	border-bottom: 1px solid #ccc;
 	margin-bottom: 0;
 }
@@ -1871,7 +1750,6 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 
 .mg-info-author-block h4 {
 	font-size: 24px;
-	font-weight: 700;
 	margin-bottom: 0;
 }
 
@@ -1948,7 +1826,6 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 
 .mg-comments h4 {
 	font-size: 14px;
-	font-weight: 500;
 	margin-top: 0;
 }
 
@@ -2044,7 +1921,7 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	color: #01012f;
 	text-align: left;
 	caption-side: top;
-	font-weight: 700;
+	font-weight: var(--headWeight);
 }
 
 .wp-block-calendar table.wp-calendar-table td,
@@ -2108,7 +1985,7 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 .mg-latest-news .mg-latest-news-slider a {
 	text-decoration: none;
 	font-size: 14px;
-	font-weight: 700;
+	font-weight: var(--headWeight);
 	padding-left: 20px;
 }
 
@@ -2271,7 +2148,6 @@ div.mg-latest-news .bn_title .effect-ripple {
 .mg-blog-inner h1 {
 	margin: 0;
 	padding: 8px 0 0 0;
-	font-weight: 700;
 	font-size: 24px;
 	line-height: 28px;
 }
@@ -2365,7 +2241,7 @@ div.mg-latest-news .bn_title .effect-ripple {
 }
 
 .mg-sec-title {
-	font-weight: bold;
+	font-weight: var(--headWeight);
 	padding-bottom: 0;
 	border-width: 0 0 2px 0;
 	border-style: solid;
@@ -2375,7 +2251,6 @@ div.mg-latest-news .bn_title .effect-ripple {
 
 .mg-sec-title h4 {
 	margin: 0px;
-	font-weight: 700;
 	line-height: 2.2;
 	padding: 0 15px 0 15px;
 	width: auto;
@@ -2560,7 +2435,6 @@ footer .widget_post_list .widget_post_list_inner {
 .small-list-post h5,
 .small-post .title {
 	margin: 0px;
-	font-weight: 700;
 	font-size: 16px;
 	padding-right: 8px;
 }
@@ -2786,7 +2660,6 @@ footer .widget_post_list .widget_post_list_inner {
 
 .mg-post-box .title {
 	margin-bottom: 16px;
-	font-weight: 600;
 	line-height: 1.2;
 }
 
@@ -2805,7 +2678,7 @@ footer .widget_post_list .widget_post_list_inner {
 
 .mg-post-box .latest-meta .latest-date {
 	font-size: 13px;
-	font-weight: 600;
+	font-weight: var(--weight2);
 }
 
 .mg-post-box .latest-content {
@@ -2928,7 +2801,7 @@ footer .widget_post_list .widget_post_list_inner {
 	padding: 4px 6px;
 	line-height: 10px;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: var(--headWeight);
 	cursor: pointer;
 	border-radius: 3px;
 }
@@ -3006,7 +2879,7 @@ body.search {
 .mg-breadcrumb-title h1,
 .mg-breadcrumb-title .title {
 	font-size: 30px;
-	font-weight: 700;
+	font-weight: var(--headWeight);
 	margin: 0;
 	line-height: 30px;
 	padding-bottom: 0px;
@@ -3095,7 +2968,7 @@ body.search {
 }
 
 .mg-wid-title {
-	font-weight: bold;
+	font-weight: var(--headWeight);
 	border-width: 0 0 2px 0;
 	border-style: solid;
 	margin: -10px -20px 20px -20px;
@@ -3106,7 +2979,6 @@ body.search {
 .mg-sidebar .mg-widget .wtitle {
 	font-size: 18px;
 	line-height: 40px;
-	font-weight: 600;
 	margin: 0;
 	padding: 0 15px 0 15px;
 	position: relative;
@@ -3182,7 +3054,7 @@ body.search {
 	cursor: pointer;
 	display: inline-block;
 	font-size: 14px !important;
-	font-weight: 400;
+	font-weight: var(--bodyWeight);
 	line-height: 20px;
 	margin: 0 5px 9px 0;
 	padding: 3px 6px;
@@ -3320,7 +3192,7 @@ th {
 	cursor: pointer;
 	display: inline-block;
 	font-size: 12px !important;
-	font-weight: bold;
+	font-weight: var(--headWeight);
 	line-height: 20px;
 	margin: 0 5px 9px 0;
 	padding: 6px 12px;
@@ -3355,7 +3227,7 @@ th {
 }
 
 .wp-block-latest-posts__list .wp-block-latest-posts__featured-image+.wp-block-latest-posts__post-title {
-	font-weight: 600;
+	font-weight: var(--weight2);
 	font-family: var(--headFont);
 }
 
@@ -3370,7 +3242,7 @@ th {
 }
 
 .mg-sidebar :is(ul.wp-block-categories-list.wp-block-categories li.current-cat, ul.wp-block-archives-list.wp-block-archives li:has([aria-current="page"])) {
-	font-weight: 600;
+	font-weight: var(--weight2);
 }
 
 /* --------------------------------------
@@ -3454,7 +3326,6 @@ footer .mg-widget.widget_search .btn:focus {
 footer .mg-widget h6 {
 	font-size: 18px;
 	line-height: 40px;
-	font-weight: 600;
 	margin: 0;
 	padding: 0 15px 0 15px;
 	position: relative;
@@ -3552,7 +3423,7 @@ footer .mg-widget .tagcloud a {
 	cursor: pointer;
 	display: inline-block;
 	font-size: 14px !important;
-	font-weight: 400;
+	font-weight: var(--bodyWeight);
 	line-height: 20px;
 	margin: 0 5px 9px 0;
 	padding: 3px 6px;
@@ -3573,7 +3444,7 @@ footer .mg-widget .tagcloud a:hover {
 	background-color: #e9e9e9;
 	text-align: center;
 	padding: 5px 12px;
-	font-weight: 600;
+	font-weight: var(--weight2);
 	color: #222;
 	font-size: 16px;
 	font-weight: 500;
@@ -3701,7 +3572,7 @@ footer .mg-footer-copyright a {
 footer .site-title-footer {
 	font-size: 34px;
 	margin-bottom: 0;
-	font-weight: 700;
+	font-weight: var(--headWeight);
 	font-family: var(--headFont);
 	letter-spacing: -0.05em;
 	line-height: 1.3;
@@ -4031,7 +3902,7 @@ address i {
 .screen-reader-text:focus {
 	color: #21759b;
 	font-size: 14px;
-	font-weight: bold;
+	font-weight: var(--weight2);
 	/* Above WP toolbar. */
 }
 
@@ -4128,7 +3999,7 @@ address i {
 .nav-links a,
 .single-nav-links a {
 	font-size: 1.2rem;
-	font-weight: 700;
+	font-weight: var(--headWeight);
 	letter-spacing: -.02em;
 	line-height: 1.2;
 	width: 100%;
@@ -4173,10 +4044,12 @@ address i {
 .post-navigation a span:empty{
 	display: none;
 }
+
 .post-navigation {
 	overflow: visible;
 	padding: 10px 0;
 }
+
 .alignwide,
 .alignfull {
 	margin-left: 0px;
@@ -4187,6 +4060,7 @@ address i {
 	width: calc(100% + 40px);
 	max-width: calc(100% + 40px);
 }
+
 div.wpforms-container-full .wpforms-form button[type=submit] {
 	border: 1px solid #ddd;
 	font-size: 1em;
@@ -4267,7 +4141,7 @@ pre {
 	margin-left: .255em;
 	font-size: 10px;
 	vertical-align: .255em;
-	font-weight: 900;
+	font-weight: var(--headWeight);
 }
 
 .mg-posts-sec.mg-posts-modul-6 .mg-posts-sec-inner .customize-partial-edit-shortcut-button {

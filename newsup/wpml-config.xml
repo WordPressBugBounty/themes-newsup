@@ -1,0 +1,13 @@
+<wpml-config>
+    <admin-texts>
+        <key name="theme_mods_newsup">
+            <key name="show_popular_tags_title" />
+            <key name="flash_news_title" />
+            <key name="latest_tab_title" />
+            <key name="popular_tab_title">
+            <key name="trending_tab_title">
+            <key name="you_missed_title">
+            <key name="newsup_related_post_title">
+        </key>
+    </admin-texts>   
+</wpml-config>
