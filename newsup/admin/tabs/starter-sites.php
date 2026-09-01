@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) exit;
     <?php if ( ! is_plugin_active( 'ansar-import/ansar-import.php' ) ) { ?>
     <div class="newsup-modal-main">
         <div class="newsup-modal-image overlay">
-            <img src="<?php echo esc_url(NEWSUP_THEME_URI) . 'admin/images/demos.jpg' ?>" alt="">
+            <img src="<?php echo esc_url(NEWSUP_THEME_URI) . 'admin/images/demos.avif' ?>" alt="Demo Placeholder">
         </div>
         <div class="newsup-modal-popup">
             <div class="newsup-modal-popup-content">

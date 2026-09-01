@@ -9,8 +9,8 @@ function newsup_fonts_url() {
 	$menu_font_family    = newsup_get_option( 'menu_fontfamily' );
 
 	$font_families = array(
-		$heading_font_family . ':' . $heading_font_weight,
-		$menu_font_family . ':700' ,
+		$heading_font_family . ':' . $heading_font_weight.',800',
+		$menu_font_family . ':700',
 		'Inter:300,400,500,600,700,800,900',
 	);
 
