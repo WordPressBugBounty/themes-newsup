@@ -1,3 +1,6 @@
+= Version 5.5.9
+* Fixed Dashboard Compare Table.
+
 = Version 5.5.8 =
 * Remove unused fontawesome icon.
 
