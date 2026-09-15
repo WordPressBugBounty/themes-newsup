@@ -26,7 +26,7 @@
 	border-radius: 0;
 	display: block;
 	font-size: 13px;
-	font-weight: normal;
+	font-weight: var(--bodyWeight);;
 	line-height: 25px;
 	margin: 4px !important;
 	min-height: 10px;
@@ -95,7 +95,7 @@
 	border-radius: 4px;
 	margin: 10px;
 	border: none;
-	font-weight: bold;
+	font-weight: var(--headWeight);;
 	font-size: 12px;
 	margin: 0 auto !important;
 }
@@ -106,7 +106,7 @@
 	position: relative;
 	display: inline-block;
 	margin-bottom: 30px;
-	font-weight: bold;
+	font-weight: var(--headWeight);;
 	font-size: 12px;
 	line-height: 25px;
 	float: none;
@@ -132,7 +132,7 @@
 }
 .woocommerce-page .products a .price ins {
 	display: inline-block;
-	font-weight: bold;
+	font-weight: var(--headWeight);;
 	background: none;
 	line-height: 20px;
 	margin-left: 10px;
@@ -421,4 +421,25 @@ footer .mg-widget .woocommerce ul.product_list_widget li img {
 }
 .woocommerce-product-gallery:hover .flex-direction-nav .flex-next {
 	right: 10px;
+}
+/* product single gallery */
+.woocommerce div.product div.images .flex-control-thumbs{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.woocommerce div.product div.images.woocommerce-product-gallery--columns-5 .flex-control-thumbs li {
+    width: 20%;
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%;
+}
+.woocommerce div.product div.images .flex-control-thumbs li img {
+    opacity: 1;
+    padding: 2px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    display: block;
+}
+.woocommerce div.product div.images .flex-control-thumbs {
+    margin-top: 4px;
+    margin-inline: -2px;
 }
