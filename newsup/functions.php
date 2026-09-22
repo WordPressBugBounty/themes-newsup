@@ -8,8 +8,12 @@ require_once get_template_directory() . '/inc/ansar/performance.php';
  */
 
     // Global variables define
-    define( 'NEWSUP_THEME_DIR', get_template_directory() . '/' );
-	define( 'NEWSUP_THEME_URI', get_template_directory_uri() . '/' );
+	if ( ! defined( 'NEWSUP_THEME_DIR' ) ) {
+		define( 'NEWSUP_THEME_DIR', get_template_directory() . '/' );
+	}
+	if ( ! defined( 'NEWSUP_THEME_URI' ) ) {
+		define( 'NEWSUP_THEME_URI', get_template_directory_uri() . '/' );
+	}
 	define( 'NEWS_THEME_SETTINGS', 'newsup-settings' );
 
 	if ( is_admin() ) {

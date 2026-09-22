@@ -1,3 +1,9 @@
+= Version 5.6.1
+* Update CSS and JavaScript asset versioning.
+
+= Version 5.6.0
+* Fixed WooCommerce Styling Issues.
+
 = Version 5.5.9
 * Fixed Dashboard Compare Table.
 

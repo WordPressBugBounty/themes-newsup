@@ -1,7 +1,7 @@
 <?php 
 function newsup_scripts() {
 
-	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css');
+	wp_enqueue_style('bootstrap', NEWSUP_THEME_URI . 'css/bootstrap.css', array(), NEWSUP_THEME_VERSION );
 
 	wp_style_add_data( 'bootstrap', 'rtl', 'replace' );
 
@@ -9,49 +9,49 @@ function newsup_scripts() {
 
 	wp_style_add_data( 'newsup-style', 'rtl', 'replace' );
 
-	wp_enqueue_style('newsup-default', get_template_directory_uri() . '/css/colors/default.css');
+	wp_enqueue_style('newsup-default', NEWSUP_THEME_URI . 'css/colors/default.css', array(), NEWSUP_THEME_VERSION);
 
 	wp_enqueue_style(
         'font-awesome-5-all',
-        get_template_directory_uri() . '/css/font-awesome/css/all.min.css',
+        NEWSUP_THEME_URI . 'css/font-awesome/css/all.min.css',
         array(),
         defined( 'NEWSUP_THEME_VERSION' ) ? NEWSUP_THEME_VERSION : null
     );
 
 	wp_enqueue_style(
         'font-awesome-4-shim',
-        get_template_directory_uri() . '/css/font-awesome/css/v4-shims.min.css',
+        NEWSUP_THEME_URI . 'css/font-awesome/css/v4-shims.min.css',
         array( 'font-awesome-5-all' ),
         defined( 'NEWSUP_THEME_VERSION' ) ? NEWSUP_THEME_VERSION : null
     );
 
-	wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css');
+	wp_enqueue_style('owl-carousel', NEWSUP_THEME_URI . 'css/owl.carousel.css', array(), NEWSUP_THEME_VERSION);
 	
-	wp_enqueue_style('smartmenus',get_template_directory_uri().'/css/jquery.smartmenus.bootstrap.css');
+	wp_enqueue_style('smartmenus',NEWSUP_THEME_URI.'css/jquery.smartmenus.bootstrap.css', array(), NEWSUP_THEME_VERSION);
 
-	wp_enqueue_style('newsup-custom-css', get_template_directory_uri() . '/inc/ansar/customize/assets/css/customizer.css', array(), '1.0', 'all');
+	wp_enqueue_style('newsup-custom-css', NEWSUP_THEME_URI . 'inc/ansar/customize/assets/css/customizer.css', array(), NEWSUP_THEME_VERSION, '1.0', 'all');
 
-	wp_enqueue_style('newsup-common-css', get_template_directory_uri() . '/css/common.css');
+	wp_enqueue_style('newsup-common-css', NEWSUP_THEME_URI . 'css/common.css', array(), NEWSUP_THEME_VERSION);
 
 	if (class_exists('WooCommerce')) {
-		wp_enqueue_style('newsup-woocommerce-style', get_template_directory_uri() . '/css/woocommerce.css');
+		wp_enqueue_style('newsup-woocommerce-style', NEWSUP_THEME_URI . 'css/woocommerce.css', array(), NEWSUP_THEME_VERSION);
 	}
 
 	/* Js script */
 
-	wp_enqueue_script( 'newsup-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'));
+	wp_enqueue_script( 'newsup-navigation', NEWSUP_THEME_URI . 'js/navigation.js', array('jquery'), NEWSUP_THEME_VERSION);
 
-	wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'));
+	wp_enqueue_script('bootstrap', NEWSUP_THEME_URI . 'js/bootstrap.js', array('jquery'), NEWSUP_THEME_VERSION);
 
-	wp_enqueue_script('owl-carousel-min', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'));
+	wp_enqueue_script('owl-carousel-min', NEWSUP_THEME_URI . 'js/owl.carousel.min.js', array('jquery'), NEWSUP_THEME_VERSION);
 
-	wp_enqueue_script('smartmenus-js', get_template_directory_uri() . '/js/jquery.smartmenus.js' , array('jquery'));
+	wp_enqueue_script('smartmenus-js', NEWSUP_THEME_URI . 'js/jquery.smartmenus.js' , array('jquery'), NEWSUP_THEME_VERSION);
 
-	wp_enqueue_script('bootstrap-smartmenus-js', get_template_directory_uri() . '/js/jquery.smartmenus.bootstrap.js' , array('jquery'));
+	wp_enqueue_script('bootstrap-smartmenus-js', NEWSUP_THEME_URI . 'js/jquery.smartmenus.bootstrap.js' , array('jquery'), NEWSUP_THEME_VERSION);
 
-	wp_enqueue_script('newsup-marquee-js', get_template_directory_uri() . '/js/jquery.marquee.js' , array('jquery'));
+	wp_enqueue_script('newsup-marquee-js', NEWSUP_THEME_URI . 'js/jquery.marquee.js' , array('jquery'), NEWSUP_THEME_VERSION);
 	
-	wp_enqueue_script('newsup-main-js', get_template_directory_uri() . '/js/main.js' , array('jquery'));
+	wp_enqueue_script('newsup-main-js', NEWSUP_THEME_URI . 'js/main.js' , array('jquery'), NEWSUP_THEME_VERSION);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -63,7 +63,7 @@ add_action('wp_enqueue_scripts', 'newsup_scripts');
 //Custom js for time
 function newsup_custom_js() {
 
-	wp_enqueue_script(	'newsup-custom', get_template_directory_uri() . '/js/custom.js', array( 'jquery', 'bootstrap', 'owl-carousel-min', 'newsup-marquee-js' ),
+	wp_enqueue_script(	'newsup-custom', NEWSUP_THEME_URI . 'js/custom.js', array( 'jquery', 'bootstrap', 'owl-carousel-min', 'newsup-marquee-js' ),
 		defined( 'NEWSUP_THEME_VERSION' ) ? NEWSUP_THEME_VERSION : null,
 		true
 	);
@@ -79,7 +79,7 @@ function newsup_custom_js() {
 
 		if($newsup_date_time_show_type == 'newsup_default'){
 
-			wp_enqueue_script('newsup-custom-time', get_template_directory_uri() . '/js/custom-time.js' , array('jquery')); 
+			wp_enqueue_script('newsup-custom-time', NEWSUP_THEME_URI . 'js/custom-time.js' , array('jquery'), NEWSUP_THEME_VERSION); 
 
 		}
 	}
@@ -127,8 +127,8 @@ if ( ! function_exists( 'newsup_admin_scripts' ) ) :
 function newsup_admin_scripts() {
     wp_enqueue_script(
         'newsup-admin-script',
-        get_template_directory_uri() . '/inc/ansar/customizer-admin/js/newsup-admin-script.js',
-        array( 'jquery' ),
+        NEWSUP_THEME_URI . 'inc/ansar/customizer-admin/js/newsup-admin-script.js',
+        array( 'jquery' ), NEWSUP_THEME_VERSION,
         '',
         true
     );
@@ -142,7 +142,7 @@ function newsup_admin_scripts() {
         )
     );
 
-    wp_enqueue_style( 'newsup-admin-style-css', get_template_directory_uri() . '/css/customizer-controls.css' );
+    wp_enqueue_style( 'newsup-admin-style-css', NEWSUP_THEME_URI . 'css/customizer-controls.css', array(), NEWSUP_THEME_VERSION);
 }
 endif;
 add_action( 'admin_enqueue_scripts', 'newsup_admin_scripts' );
@@ -155,7 +155,7 @@ add_action( 'wp_enqueue_scripts', 'newsup_enqueue_performance_styles', 99 );
 function newsup_enqueue_performance_styles() {
     wp_enqueue_style(
         'newsup-performance',
-        get_template_directory_uri() . '/css/newsup-performance.css',
+        NEWSUP_THEME_URI . 'css/newsup-performance.css',
         array(),
         defined( 'NEWSUP_THEME_VERSION' ) ? NEWSUP_THEME_VERSION : '1.0.0'
     );
