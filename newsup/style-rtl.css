@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newsup/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://newsup.themeansar.com/lite/ and documentation at https://docs.themeansar.com/docs/newsup/
-Version: 5.6.1
+Version: 5.6.2
 Tested up to: 7.0
 Requires PHP: 7.4
 Requires at least: 6.7
@@ -1385,6 +1385,12 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	left: 0;
 	right: 0;
 	bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
 .mg-blog-post .bottom h4 {
@@ -1525,26 +1531,6 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	padding: 2px 7px 0px 5px;
 }
 
-.mg-blog-date {
-	padding: 0;
-	font-size: 12px;
-	margin-left: 14px;
-	margin-right: unset;
-	font-weight: 500;
-	text-transform: uppercase;
-}
-.mg-blog-date a{
-	direction: ltr;
-    unicode-bidi: isolate;
-}
-.mg-blog-date span {
-	font-size: 16px;
-}
-
-.mg-blog-date .h3 {
-	line-height: 28px;
-}
-
 .mg-blog-author {
 	font-size: 16px;
 	font-weight: 800;
@@ -1613,38 +1599,31 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 
 .mg-blog-meta {
 	padding: 0;
-	margin-bottom: 8px;
+	margin-block: 5px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 0.2rem;
+    column-gap: 0.8rem;
+    transition: 0.25s;
+	a, span {
+		display: inline-flex;
+		align-items: center;
+		gap: 7px;
+		font-weight: 600;
+		font-size: 14px;
+		padding: 0;
+		line-height: 1.3;
+		text-transform: capitalize;
+		letter-spacing: 0;
+	}
+}
+.post-edit-link{
 	display: inline-flex;
 	align-items: center;
-	flex-wrap: wrap;
+	gap: 7px;
+	font-weight: 600;
 }
-
-.mg-blog-meta a {
-	display: inline;
-	font-weight: 500;
-	font-size: 12px;
-	padding: 0;
-	line-height: 16px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-.mg-blog-meta a img {
-	width: 25px;
-	height: 25px;
-	border-radius: 50px;
-	margin-right: 5px;
-}
-
-.mg-blog-meta .comments-link {
-	margin-right: 14px;
-}
-
-.mg-blog-meta i {
-	padding-left: 4px;
-	padding-right: unset;
-}
-
 .btn-more {
 	padding: 10px 20px;
 	border-radius: 30px;
@@ -1693,13 +1672,27 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 	margin: 0;
 	padding: 10px 0;
 }
-
+.mg-header{
+	.media-body{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.media-heading{
+		padding-block-end: 4px;
+	}
+	.mg-blog-meta{
+		margin-block-end: 0;
+	}
+}
 .mg-info-author-block {
 	margin-bottom: 30px;
 	margin-top: -20px;
 	padding: 20px 40px;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 	align-items: center;
+	gap: 25px;
 }
 
 .mg-info-author-block .row {
@@ -1721,7 +1714,7 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 }
 
 .mg-info-author-block .mg-author-pic img {
-	margin: 0 0 0px 25px;
+	margin: 0;
 	float: left;
 	border-radius: 50%;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -1748,15 +1741,6 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 
 .mg-info-author-block a {
 	display: inline-block;
-}
-
-.post-edit-link i {
-	margin-right: 4px;
-	margin-left: unset;
-}
-
-.post-edit-link {
-	margin-right: 8px;
 }
 
 .comment_section .comment-reply-link {
@@ -2572,11 +2556,6 @@ footer .widget_post_list .widget_post_list_inner {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-
-.mg-posts-modul-6 .mg-sec-top-post .mg-blog-meta {
-	margin-bottom: 0px;
-}
-
 .missed-inner {
 	background: #fff;
 	padding: 15px;

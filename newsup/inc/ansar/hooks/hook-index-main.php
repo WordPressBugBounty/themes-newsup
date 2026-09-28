@@ -83,27 +83,26 @@ if (!function_exists('newsup_single_head_content')) :
                             <div class="media-body">
                             <?php if($newsup_single_post_admin_details == true){ ?>
                                 <h4 class="media-heading"><span><?php esc_html_e('By','newsup'); ?></span><a href="<?php echo esc_url(get_author_posts_url( get_the_author_meta( 'ID' ) ));?>"><?php the_author(); ?></a></h4>
-                            <?php } if($newsup_single_post_date == true){ ?>
-                                <span class="mg-blog-date"><i class="fas fa-clock"></i> 
-                                    <?php echo esc_html(get_the_date('M')); ?> <?php echo esc_html(get_the_date('j,')); ?> <?php echo esc_html(get_the_date('Y')); ?>
-                                </span>
                             <?php }
+                            echo '<div class="mg-blog-meta">';
+                            if($newsup_single_post_date == true){ newsup_date_content(); }
                             if($newsup_single_post_tag == true){
                                 $tag_list = get_the_tag_list();
                                 if($tag_list){ ?>
-                                    <span class="newsup-tags"><i class="fas fa-tag"></i>
+                                    <span class="newsup-tags"><i class="fas fa-tags"></i>
                                     <?php $keys = array_keys($tags);
                                         foreach ($tags as $key => $tag) {
                                             $tag_link = get_tag_link($tag->term_id);
                                             if ($key === end($keys)) {
                                                 echo '<a href="'.esc_url($tag_link).'">#'.esc_html($tag->name).'</a>';
                                             } else {
-                                                echo ' <a href="'.esc_url($tag_link).'">#'.esc_html($tag->name).'</a>, ';
+                                                echo ' <a href="'.esc_url($tag_link).'">#'.esc_html($tag->name).',</a>';
                                             }
                                         } ?>
                                     </span>
                                 <?php } 
                             } ?>
+                            </div>
                             </div>
                         </div>
                         <?php }  ?>
@@ -213,13 +212,8 @@ if (!function_exists('newsup_single_related_box')) :
                                 <h4 class="title"> <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array('before' => 'Permalink to: ','after'  => '') ); ?>">
                                   <?php the_title(); ?></a>
                                  </h4>
-                                <div class="mg-blog-meta"> 
-                                    <?php if($newsup_enable_single_post_date == true){ ?>
-                                    <span class="mg-blog-date">
-                                        <i class="fas fa-clock"></i>
-                                        <?php echo esc_html(get_the_date('M')); ?> <?php echo esc_html(get_the_date('j,')); ?> <?php echo esc_html(get_the_date('Y')); ?>
-                                    </span>
-                                    <?php } 
+                                <div class="mg-blog-meta">
+                                    <?php if($newsup_enable_single_post_date == true){ newsup_date_content(); } 
                                     if($newsup_enable_single_post_admin == true) { newsup_author_content(); } newsup_edit_link(); ?> 
                                 </div>   
                             </div>

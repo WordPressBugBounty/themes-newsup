@@ -187,7 +187,7 @@ if (!function_exists('newsup_edit_link')) :
                 ),
                 get_the_title()
             ),
-            '<span class="edit-link"><i class="fas fa-edit"></i>',
+            '<span class="edit-link"><i class="fa-regular fa-pen-to-square"></i>',
             '</span>'
         );
     } 

@@ -62,7 +62,7 @@ endif;
 
 if ( ! function_exists( 'newsup_date_content' ) ) :
     function newsup_date_content() { ?>
-        <span class="mg-blog-date"><i class="fas fa-clock"></i>
+        <span class="mg-blog-date"><i class="far fa-clock"></i>
             <a href="<?php echo esc_url(get_month_link(get_post_time('Y'),get_post_time('m'))); ?>">
                 <?php echo esc_html(get_the_date(get_option('date_format', 'M j, Y'))); ?>
             </a>
@@ -73,20 +73,20 @@ endif;
 if ( ! function_exists( 'newsup_author_content' ) ) :
     function newsup_author_content() { ?>
         <a class="auth" href="<?php echo esc_url(get_author_posts_url( get_the_author_meta( 'ID' ) ));?>">
-            <i class="fas fa-user-circle"></i><?php the_author(); ?>
+            <i class="far fa-user-circle"></i><?php the_author(); ?>
         </a>
     <?php }
 endif;
 
 if ( ! function_exists( 'newsup_edit_link' ) ) :
     function newsup_edit_link() { 
-        edit_post_link( __( 'Edit', 'newsup' ), '<span class="post-edit-link"><i class="fas fa-edit"></i>', '</span>' );
+        edit_post_link( __( 'Edit', 'newsup' ), '<span class="post-edit-link"><i class="far fa-pen-to-square"></i>', '</span>' );
     }
 endif;
 
 if ( ! function_exists( 'newsup_post_comment' ) ) :
     function newsup_post_comment() { ?>
-        <span class="comments-link"><i class="fas fa-comments"></i>
+        <span class="comments-link"><i class="far fa-comments"></i>
             <a href="<?php the_permalink(); ?>">
                 <?php
                 if ( get_comments_number() == 0 ) {
