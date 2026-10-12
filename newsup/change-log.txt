@@ -1,3 +1,6 @@
+= Version 5.6.4
+* Fixed RTL Styling Issues.
+
 = Version 5.6.3
 * Fixed styling issue.
 

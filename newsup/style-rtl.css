@@ -4,8 +4,8 @@ Theme URI: https://themeansar.com/free-themes/newsup/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newsup is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsup is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsup is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://newsup.themeansar.com/lite/ and documentation at https://docs.themeansar.com/docs/newsup/
-Version: 5.6.3
-Tested up to: 7.0
+Version: 5.6.4
+Tested up to: 7.1
 Requires PHP: 7.4
 Requires at least: 6.7
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -84,19 +84,6 @@ Text Domain: newsup
 	transform: rotate(-45deg);
 }
 
-.navbar-nav {
-	padding-right: 0;
-	padding-left: inherit;
-}
-
-.nav {
-	padding-right: 0;
-}
-
-.text-right {
-	text-align: left !important;
-}
-
 .site-title {
 	font-size: 34px;
 	margin-bottom: 0;
@@ -104,10 +91,6 @@ Text Domain: newsup
 	font-family: var(--headFont);
 	letter-spacing: -0.05em;
 	line-height: 1.3;
-}
-
-.navbar-header .site-title {
-	margin-bottom: 0;
 }
 
 .navbar-header .site-description {
@@ -120,19 +103,12 @@ Text Domain: newsup
 	border-style: solid;
 }
 
-.show .navbar-nav.sm-collapsible .sub-arrow {
-	left: 0;
-	right: unset;
-	margin: -0.7em 0 0 0.5em;
-}
-
-.navbar-nav:not(.sm-collapsible) .nav-link .sub-arrow {
-	margin-left: unset;
-	margin-right: .255em;
-}
-
 .site-home-icon a {
 	font-size: 24px;
+}
+
+.m-header {
+	display: none;
 }
 
 /*---------------------------------------
@@ -154,7 +130,6 @@ Text Domain: newsup
 	margin-left: 15px;
 	padding: 0;
 	line-height: 35px;
-	align-items: center;
 }
 
 .mg-head-detail .info-left li span.time {
@@ -196,20 +171,6 @@ Text Domain: newsup
 	padding-right: 10px;
 }
 
-.mg-nav-widget-area .site-branding-text .site-title {
-	margin-bottom: 5px;
-}
-
-.mg-nav-widget-area .header-ads {
-	display: flex;
-	justify-content: flex-end;
-}
-
-.mg-nav-widget-area .mx-auto>.header-ads {
-	margin-top: 15px;
-	justify-content: center;
-}
-
 /*---------------------------------------
 	1.2.Header Widget      
 -----------------------------------------*/
@@ -221,8 +182,22 @@ Text Domain: newsup
 	padding-bottom: 0px;
 }
 
+.mg-nav-widget-area .site-branding-text .site-title {
+	margin-bottom: 5px;
+}
+
 .mg-menu-full {
 	position: relative;
+}
+
+.mg-nav-widget-area .header-ads {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.mg-nav-widget-area .mx-auto>.header-ads {
+	margin-top: 15px;
+	justify-content: center;
 }
 
 .mg-headwidget .navbar-wp {
@@ -239,9 +214,9 @@ Text Domain: newsup
 .mg-headwidget .navbar-wp .navbar-nav>li>a {
 	padding: 10px 22px;
 	font-size: 14px;
-	line-height: 2.3;
 	text-transform: uppercase;
 	font-family: var(--headFont);
+	line-height: 2.3;
 }
 
 .navbar-wp .navbar-nav>li>a.homebtn {}
@@ -255,36 +230,10 @@ Text Domain: newsup
 	margin-left: 5px;
 }
 
-.btn-bell {
-	padding: 5px;
-	line-height: 1;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.wp-block-latest-comments li {
-	border-width: 0 0 1px 0;
-	border-style: solid;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
-}
-
-.wp-block-latest-comments li:last-child {
-	border: none;
-	padding-bottom: 0;
-	margin-bottom: 0;
-}
-
-.m-header {
-	display: none;
-}
-
 /*---------------------------------------
 	1.2.Theme Menu   
 -----------------------------------------*/
 .mg-nav-widget-area-back {
-	background-image: url(images/head-back.jpg);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -375,7 +324,7 @@ Text Domain: newsup
 }
 
 .navbar-wp .dropdown-menu {
-	min-width: 200px;
+	min-width: 250px;
 	padding: 0;
 	border: none;
 	border-radius: 0;
@@ -401,7 +350,7 @@ Text Domain: newsup
 }
 
 .navbar-wp .dropdown-menu>li>a:focus {
-	outline: 1px;
+	outline: 1px solid;
 }
 
 .navbar-wp .dropdown-menu>.dropdown-menu {
@@ -448,24 +397,6 @@ Text Domain: newsup
 	transition: all 0.25s ease-out 0s;
 }
 
-.nav.navbar-nav.sm-collapsible .has-submenu {
-	padding-left: 3em;
-	padding-right: 15px;
-}
-
-.navbar-collapse .navbar-nav:not(.sm-collapsible) .dropdown-item .sub-arrow {
-	right: unset;
-	left: 0;
-	margin-left: 1em;
-	border-right: .3em solid;
-	border-left: 0;
-}
-
-.navbar-collapse .navbar-nav:not(.sm-collapsible) .dropdown-item.has-submenu {
-	padding-left: 2rem;
-	padding-right: 15px;
-}
-
 /*---------------------------------------
 	1.3.Theme Menu Center 
 -----------------------------------------*/
@@ -498,6 +429,53 @@ Text Domain: newsup
 	text-align: center;
 	line-height: 30px;
 	height: 30px;
+}
+
+.btn-bell {
+	padding: 5px;
+	line-height: 1;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wp-block-latest-comments li {
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.wp-block-latest-comments li:last-child {
+	border: none;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+/*----Menu Link Description----*/
+.menu-link-description {
+	font-size: 10px;
+	padding: 2px 4px;
+	background: #fff;
+	color: #000;
+	position: absolute;
+	line-height: normal;
+	top: 0;
+	margin: 0 3px;
+	display: inline-table;
+	word-break: keep-all;
+	overflow-wrap: unset;
+	width: max-content;
+}
+
+.menu-link-description:after {
+	border-left: 0 solid transparent;
+	border-right: 6px solid transparent;
+	position: absolute;
+	bottom: -4px;
+	content: '';
+	border-top: 5px solid #fff;
+	left: 3px;
 }
 
 /* --------------------------------------
@@ -558,13 +536,6 @@ html {
 
 .search-class .mg-posts-sec-post.type-product .post-form {
 	display: none;
-}
-
-/* Sidebar*/
-.sidebar-sticky {
-	position: sticky;
-	align-self: flex-start;
-	top: 24px;
 }
 
 /*---------------------------------------
@@ -666,6 +637,44 @@ button {
 	border-style: solid;
 	transition: all 0.4s ease-in-out 0s;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) {
+	border: none;
+}
+
+.wp-block-search__inside-wrapper {
+	display: flex;
+	gap: 10px;
+}
+
+.wp-block-search .wp-block-search__input:focus-visible {
+	outline: none;
+}
+
+.wp-block-search .wp-block-search__input {
+	border: 2px solid #eef3fb;
+}
+
+.wp-block-search .wp-block-search__button {
+	padding: 5px 35px;
+	line-height: 30px;
+	border-radius: 4px;
+	font-weight: var(--weight2);
+	font-size: 14px;
+	height: 55px;
+	border-width: 1px;
+	border-style: solid;
+	transition: all 0.4s ease-in-out 0s;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	align-items: center;
+}
+
+.wp-block-button .wp-block-button__link:hover,
+.wp-block-button .wp-block-button__link:focus {
+	background: transparent;
+	border: 2px solid #32373c;
+	color: #32373c;
 }
 
 input:not([type]):hover,
@@ -771,9 +780,32 @@ object {
 	left: 0;
 }
 
-/* .widget_search {
-	padding: 20px !important;
-} */
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+.page-content a,
+.entry-content a,
+.entry-summary a,
+.page-content-single p a,
+.widget_text a:not(.more-link):not(.button),
+.comment-content a,
+.theme-custom-block a,
+.comment-detail .edit-link a,
+.comment-detail .reply a,
+pre.wp-block-code a {
+	text-decoration: underline;
+}
+
 /*--------------- ti-slider-Control ---------------*/
 .owl-carousel .owl-controls {
 	margin-top: -30px;
@@ -978,9 +1010,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	img.alignleft {
 		float: left;
 	}
-
 	img.alignright {
 		float: right;
+	}
+	/* Sidebar*/
+	.sidebar-sticky {
+		position: sticky;
+		align-self: flex-start;
+		top: 24px;
 	}
 }
 
@@ -996,10 +1033,10 @@ blockquote::before {
 	display: table;
 	float: right;
 	font-family: "Font Awesome 5 Free";
-	font-weight: 900;
 	font-size: 28px;
 	margin-top: 0px;
 	width: 6%;
+	font-weight: 900;
 }
 
 blockquote p {
@@ -1396,15 +1433,16 @@ footer .mg-posts-sec-inner .small-list-post .small-post {
 .mg-blog-post .bottom h4 {
 	float: left;
 	font-size: 32px;
-	line-height: 120%;
 	-webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 	-moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 	-ms-text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 	-o-text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 	width: 100%;
+	margin-bottom: 0;
 	display: block;
 	display: -webkit-box;
+	max-height: 100%;
 	line-clamp: 2;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
@@ -3660,7 +3698,7 @@ footer .mg-widget .wp-block-social-links li {
 	word-wrap: break-word;
 	border-radius: 3px;
 	z-index: 0;
-	margin-bottom: 1rem;
+	margin-bottom: 0rem;
 }
 
 .comments-area .comment-list>.comment>.comment-body {
