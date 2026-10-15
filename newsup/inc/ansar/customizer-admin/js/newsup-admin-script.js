@@ -26,9 +26,10 @@
   });
 $(document).on('click', '.notice-get-started-class .notice-dismiss', function () {
   var type = $(this).closest('.notice-get-started-class').data('notice');
-  $.post(ajaxurl, {
+  $.post(newsup_ajax_object.ajax_url, {
     action: 'newsup_dismissed_notice_handler',
     type: type,
+    security: newsup_ajax_object.notice_nonce,
   });
 });
 })(jQuery);

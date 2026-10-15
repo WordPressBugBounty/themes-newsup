@@ -55,6 +55,7 @@ class NewsUp_Admin {
     }
     public function newsup_set_active_submenu( $submenu_file ) {
 
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended
         if (
             isset( $_GET['page'], $_GET['tab'] ) &&
             $_GET['page'] === 'newsup_admin_menu' &&
@@ -128,6 +129,7 @@ class NewsUp_Admin {
                             'theme_name' => $theme_name
                         )
                 );
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended
                 if ( isset( $_GET['page'], $_GET['tab'] ) && $_GET['page'] === 'newsup_admin_menu' && $_GET['tab'] === 'starter-sites') {
                     $theme_data_api = wp_remote_get(esc_url_raw("https://api.themeansar.com/wp-json/wp/v2/demos/?search=%27" . urlencode($theme_name) . "%27&per_page=50"), [ 'timeout' => 15 ]);
                     $theme_data_api_body = wp_remote_retrieve_body($theme_data_api);
@@ -533,7 +535,21 @@ class NewsUp_Admin {
             wp_send_json_error(['msg' => 'Not allowed']);
         }
 
-        $slug = sanitize_text_field($_POST['slug']);
+        if ( ! isset( $_POST['slug'] ) ) {
+            wp_send_json_error(['msg' => 'Missing slug']);
+        }
+
+        $slug = sanitize_key( wp_unslash( $_POST['slug'] ) );
+
+        $allowed_plugins = [
+            'ansar-import',
+            'ansar-elements',
+            'blognews-for-elementor',
+        ];
+
+        if ( ! in_array( $slug, $allowed_plugins, true ) ) {
+            wp_send_json_error(['msg' => 'Invalid plugin requested']);
+        }
 
         include_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
         include_once ABSPATH . 'wp-admin/includes/plugin-install.php';
@@ -572,7 +588,21 @@ class NewsUp_Admin {
             wp_send_json_error(['msg' => 'Not allowed']);
         }
 
-        $plugin_file = sanitize_text_field($_POST['plugin_file']);
+        if ( ! isset( $_POST['plugin_file'] ) ) {
+            wp_send_json_error(['msg' => 'Missing plugin file']);
+        }
+
+        $plugin_file = sanitize_text_field( wp_unslash( $_POST['plugin_file'] ) );
+
+        $allowed_files = [
+            'ansar-import/ansar-import.php',
+            'ansar-elements/ansar-elements.php',
+            'blognews-for-elementor/blognews-for-elementor.php',
+        ];
+
+        if ( ! in_array( $plugin_file, $allowed_files, true ) ) {
+            wp_send_json_error(['msg' => 'Invalid plugin file']);
+        }
 
         $result = activate_plugin($plugin_file);
 
@@ -603,8 +633,7 @@ class NewsUp_Admin {
 
         <div class="bottom-item" data-status="<?php echo esc_attr($status); ?>"
              data-slug="<?php echo esc_attr($slug); ?>"
-             data-plugin="<?php echo esc_attr($plugin_file); ?> 
-             ">
+             data-plugin="<?php echo esc_attr($plugin_file); ?>">
 
             <div class="head-item">
                 <div class="details-image">

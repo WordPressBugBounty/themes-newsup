@@ -4,6 +4,7 @@ if (!function_exists('newsup_taxonomy_add_new_meta_field')) :
     function newsup_taxonomy_add_new_meta_field()
     {
         // this will add the custom meta field to the add new term page
+        wp_nonce_field( 'newsup_taxonomy_color_action', 'newsup_taxonomy_color_nonce' );
 
         $cat_color = array(
             'category-color-1' => __('Category Color 1', 'newsup'),
@@ -45,6 +46,7 @@ if (!function_exists('newsup_taxonomy_edit_meta_field')) :
                         for="term_meta[color_class_term_meta]"><?php esc_html_e('Color Class', 'newsup'); ?></label></th>
             <td>
                 <?php
+                wp_nonce_field( 'newsup_taxonomy_color_action', 'newsup_taxonomy_color_nonce' );
                 $cat_color = array(
                     'category-color-1' => __('Category Color 1', 'newsup'),
                     'category-color-2' => __('Category Color 2', 'newsup'),
@@ -72,17 +74,38 @@ if (!function_exists('newsup_save_taxonomy_color_class_meta')) :
 // Save extra taxonomy fields callback function.
     function newsup_save_taxonomy_color_class_meta($term_id)
     {
-        if (isset($_POST['term_meta'])) {
-            $t_id = $term_id;
-            $term_meta = get_option("category_color_$t_id");
-            $cat_keys = array_keys($_POST['term_meta']);
-            foreach ($cat_keys as $key) {
-                if (isset ($_POST['term_meta'][$key])) {
-                    $term_meta[$key] = $_POST['term_meta'][$key];
+        if ( ! current_user_can( 'edit_term', $term_id ) ) {
+            return;
+        }
+
+        if ( ! isset( $_POST['newsup_taxonomy_color_nonce'] ) || ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['newsup_taxonomy_color_nonce'] ) ), 'newsup_taxonomy_color_action' ) ) {
+            return;
+        }
+
+        if ( isset( $_POST['term_meta'] ) && is_array( $_POST['term_meta'] ) ) {
+            $t_id      = absint( $term_id );
+            $term_meta = get_option( "category_color_$t_id", array() );
+            if ( ! is_array( $term_meta ) ) {
+                $term_meta = array();
+            }
+
+            $allowed_colors = array(
+                'category-color-1',
+                'category-color-2',
+                'category-color-3',
+                'category-color-4',
+            );
+
+            $raw_term_meta = wp_unslash( $_POST['term_meta'] );
+            if ( isset( $raw_term_meta['color_class_term_meta'] ) ) {
+                $color_class = sanitize_html_class( $raw_term_meta['color_class_term_meta'] );
+                if ( in_array( $color_class, $allowed_colors, true ) ) {
+                    $term_meta['color_class_term_meta'] = $color_class;
                 }
             }
+
             // Save the option array.
-            update_option("category_color_$t_id", $term_meta);
+            update_option( "category_color_$t_id", $term_meta );
         }
     }
 

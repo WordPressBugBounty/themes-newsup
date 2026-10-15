@@ -3,12 +3,23 @@
  * AJAX handler to store the state of dismissible notices.
  */
 function newsup_ajax_notice_handler() {
-    if ( isset( $_POST['type'] ) ) {
-        // Pick up the notice "type" - passed via jQuery (the "data-notice" attribute on the notice)
-        $type = sanitize_text_field( wp_unslash( $_POST['type'] ) );
-        // Store it in the options table
-        update_option( 'dismissed-' . $type, TRUE );
+    check_ajax_referer( 'newsup_notice_dismiss_nonce', 'security' );
+
+    if ( ! current_user_can( 'edit_theme_options' ) ) {
+        wp_send_json_error( array( 'message' => esc_html__( 'Sorry, you are not allowed to access this page.', 'newsup' ) ), 403 );
     }
+
+    if ( isset( $_POST['type'] ) ) {
+        $allowed_notices = array( 'get_started' );
+        $type = sanitize_key( wp_unslash( $_POST['type'] ) );
+
+        if ( in_array( $type, $allowed_notices, true ) ) {
+            update_option( 'dismissed-' . $type, true );
+            wp_send_json_success();
+        }
+    }
+
+    wp_send_json_error( array( 'message' => esc_html__( 'Invalid notice type.', 'newsup' ) ) );
 }
 
 add_action( 'wp_ajax_newsup_dismissed_notice_handler', 'newsup_ajax_notice_handler' );

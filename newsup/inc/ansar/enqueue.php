@@ -138,6 +138,7 @@ function newsup_admin_scripts() {
         array(
             'ajax_url'      => admin_url( 'admin-ajax.php' ),
             'install_nonce' => wp_create_nonce( 'newsup_install_plugin_nonce' ),
+            'notice_nonce'  => wp_create_nonce( 'newsup_notice_dismiss_nonce' ),
             'can_install'   => current_user_can( 'install_plugins' ),
         )
     );
