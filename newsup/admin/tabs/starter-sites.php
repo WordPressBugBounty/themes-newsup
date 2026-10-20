@@ -5,12 +5,12 @@ if (!defined('ABSPATH')) exit;
     <?php if ( ! is_plugin_active( 'ansar-import/ansar-import.php' ) ) { ?>
     <div class="newsup-modal-main">
         <div class="newsup-modal-image overlay">
-            <img src="<?php echo esc_url(NEWSUP_THEME_URI) . 'admin/images/demos.avif' ?>" alt="Demo Placeholder">
+            <img src="<?php echo esc_url( NEWSUP_THEME_URI . 'admin/images/demos.avif' ); ?>" alt="<?php esc_attr_e( 'Demo Placeholder', 'newsup' ); ?>">
         </div>
         <div class="newsup-modal-popup">
             <div class="newsup-modal-popup-content">
                 <div class="newsup-modal-icon">
-                    <img src="<?php echo esc_url(NEWSUP_THEME_URI) . 'admin/images/ansar-import-logo.png' ?>" alt="">
+                    <img src="<?php echo esc_url( NEWSUP_THEME_URI . 'admin/images/ansar-import-logo.png' ); ?>" alt="<?php esc_attr_e( 'Ansar Import Logo', 'newsup' ); ?>">
                 </div>
                 <div>
                     <h4><?php esc_html_e("Ansar Import","newsup"); ?></h4>

@@ -136,9 +136,9 @@ if (!function_exists('newsup_banner_advertisement')):
                 $newsup_banner_advertisement_url = isset($newsup_banner_advertisement_url) ? esc_url($newsup_banner_advertisement_url) : '#';
                 $newsup_open_on_new_tab = get_theme_mod('newsup_open_on_new_tab',true); ?>
                 <div class="header-ads">
-                    <a class="pull-right" <?php echo esc_url($newsup_banner_advertisement_url); ?> href="<?php echo $newsup_banner_advertisement_url; ?>"
-                        <?php if($newsup_open_on_new_tab) { ?>target="_blank" <?php } ?> >
-                        <?php echo $newsup_banner_advertisement; ?>
+                    <a class="pull-right" href="<?php echo esc_url( $newsup_banner_advertisement_url ); ?>"
+                        <?php if ( $newsup_open_on_new_tab ) { ?>target="_blank" rel="noopener noreferrer" <?php } ?> >
+                        <?php echo wp_kses_post( $newsup_banner_advertisement ); ?>
                     </a>
                 </div>
             </div>
@@ -175,7 +175,7 @@ if (!function_exists('newsup_front_page_banner_section')) :
                 <?php  } ?>
                     <div class="overlay">
                         <div class="container-fluid">
-                            <div class="row<?php echo $newsup_select_slider_setting ?>">
+                            <div class="row <?php echo esc_attr( $newsup_select_slider_setting ); ?>">
                                 <div class="col-md-8">
                                     <div id="homemain"class="homemain owl-carousel"> 
                                         <?php newsup_get_block('list', 'banner'); ?>

@@ -68,11 +68,11 @@ if (!function_exists('newsup_header_subscribe')) :
      */
     function newsup_header_subscribe() { 
        
-        $header_subsc_enable = get_theme_mod('header_subsc_enable','true');
-        $subsc_target = get_theme_mod('newsup_subsc_link_target','true') == 'true' ? 'target="_blank"':'';
-        $newsup_subsc_link = get_theme_mod('newsup_subsc_link','#');
-        if($header_subsc_enable == true) { ?>
-          <a href="<?php echo esc_url($newsup_subsc_link); ?>" <?php echo $subsc_target ?> class="btn-bell btn-theme mx-2"><i class="fa fa-bell"></i></a>
+        $header_subsc_enable      = get_theme_mod( 'header_subsc_enable', true );
+        $newsup_subsc_link_target = get_theme_mod( 'newsup_subsc_link_target', true );
+        $newsup_subsc_link        = get_theme_mod( 'newsup_subsc_link', '#' );
+        if ( $header_subsc_enable ) { ?>
+          <a href="<?php echo esc_url( $newsup_subsc_link ); ?>" <?php if ( $newsup_subsc_link_target ) { ?>target="_blank" rel="noopener noreferrer"<?php } ?> class="btn-bell btn-theme mx-2"><i class="fa fa-bell"></i></a>
         <?php }
     }
 endif;

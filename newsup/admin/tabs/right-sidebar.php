@@ -3,7 +3,7 @@
 ?>
 <div class="newsup-right-area newsup-d-grid align-start">
     <div class="newsup-right-box sidebar-detail-area">
-        <div class="newsup-img-sidebar"><img src="<?php echo esc_url(NEWSUP_THEME_URI) . 'images/newsup.customize.png' ?>"></div>
+        <div class="newsup-img-sidebar"><img src="<?php echo esc_url( NEWSUP_THEME_URI . 'images/newsup.customize.png' ); ?>" alt="<?php esc_attr_e( 'Newsup Customize', 'newsup' ); ?>"></div>
         <h3 class="newsup-right-area-title"><?php esc_html_e(' Go Pro with Newsup – Elevate Your News Experience','newsup'); ?></h3>
         <p class="newsup-right-area-desc"><?php esc_html_e('Access exclusive features, widgets, premium ready-made homepages, custom sections, smart controls, and powerful tools to make your website look sharper and work smarter.','newsup'); ?></p>
         <a href="https://themeansar.com/themes/newsup-pro/" target="_blank" class="newsup-btn-link">

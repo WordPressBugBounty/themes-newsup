@@ -185,7 +185,7 @@ class NewsUp_Admin {
                 <input type="radio" id="tab5" name="css-tabs" <?php checked( $active_tab, 'change-log' ); ?> >
                 <div class="newsup-head-top-items">
                     <div class="newsup-head-item">
-                        <a href="<?php echo esc_url( add_query_arg( [ 'tab'   => 'welcome'] ) ); ?>" class="newsup-site-icon"><img src=<?php echo esc_url(NEWSUP_THEME_URI) .'admin/images/mainlogo-1.png'; ?>  alt="mainlogo"></a>
+                        <a href="<?php echo esc_url( add_query_arg( [ 'tab'   => 'welcome'] ) ); ?>" class="newsup-site-icon"><img src="<?php echo esc_url( NEWSUP_THEME_URI . 'admin/images/mainlogo-1.png' ); ?>" alt="<?php esc_attr_e( 'Main Logo', 'newsup' ); ?>"></a>
                     </div>
                     <ul class="newsup-tabs">
                         <li class="newsup-tab">
@@ -662,7 +662,7 @@ class NewsUp_Admin {
     }
 
     private function newsup_upgrade_callback(){
-        return ('<p class="newsup-feature-area-desc"><a href='. esc_url('https://themeansar.com/themes/newsup-pro/','newsup') . ' target="_blank">'. esc_html('Go to Pro','newsup') . '</a></p>');
+        return '<p class="newsup-feature-area-desc"><a href="' . esc_url( 'https://themeansar.com/themes/newsup-pro/' ) . '" target="_blank">' . esc_html__( 'Go to Pro', 'newsup' ) . '</a></p>';
     }
        
     private function render_starter_sites_tab() {

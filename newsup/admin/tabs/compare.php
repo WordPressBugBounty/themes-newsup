@@ -19,7 +19,8 @@
 	        </div> 
 	    </div>
 	    <!-- /newsup-admin-feature-table -->
-	    <?php function newsup_admin_table_compare( $feature, $free = false ) { ?>
+	    <?php if ( ! function_exists( 'newsup_admin_table_compare' ) ) :
+		function newsup_admin_table_compare( $feature, $free = false ) { ?>
 			<!-- newsup-admin-feature-table -->
 			<div class="newsup-admin-tb-tittle">
 				<div class="newsup-admin-tb-list">
@@ -36,6 +37,7 @@
 			</div>
 			<!-- /newsup-admin-feature-table -->
 		<?php }
+		endif;
 
 		newsup_admin_table_compare( __( 'Live editing in Customizer', 'newsup' ), true );
 		newsup_admin_table_compare( __( 'Multiple Header Options', 'newsup' ) );

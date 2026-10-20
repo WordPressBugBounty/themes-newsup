@@ -1414,3 +1414,7 @@ Fixed Sidebar Comments Styling.
 
 = Version 5.6.5
 * Fixed Escaping Issues.
+
+= Version 5.6.6
+* Fixed Escaping Issues.
+* Fixed Sanitization Issues.
