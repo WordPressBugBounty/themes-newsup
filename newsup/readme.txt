@@ -1421,3 +1421,7 @@ Fixed Sidebar Comments Styling.
 
 = Version 5.6.7
 * Fixed Google Fonts Loading Issue.
+
+= Version 5.6.8
+* Enhanced Google Fonts.
+* Added Fonts Variables.

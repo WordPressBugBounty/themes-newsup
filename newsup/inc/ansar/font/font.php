@@ -12,20 +12,37 @@ function newsup_fonts_url() {
 	$heading_font_weight = newsup_get_option( 'heading_fontweight' );
 	$menu_font_family    = newsup_get_option( 'menu_fontfamily' );
 
-    foreach ( array( $heading_font_family => $heading_font_weight, $menu_font_family => '400' ) as $font => $weight ) {
-        $font = trim( explode( ',', $font )[0] );
+    $requested = array(
+        array( newsup_get_option( 'heading_fontfamily' ), newsup_get_option( 'heading_fontweight' ) ),
+        array( newsup_get_option( 'menu_fontfamily' ), '400' ),
+    );
 
-        if ( $font ) {
+    foreach ( $requested as $item ) {
+        list( $font, $weight ) = $item;
+
+        $font   = trim( explode( ',', (string) $font )[0], " \t\n\r\0\x0B'\"" );
+        $weight = absint( $weight );
+
+        if ( $font && $weight >= 100 && $weight <= 900 ) {
             $fonts[ $font ][] = $weight;
         }
     }
 
+    $fonts = apply_filters( 'blogarise_google_fonts', $fonts );
+
+    ksort( $fonts );
+
     $families = array();
 
     foreach ( $fonts as $font => $weights ) {
-        $families[] = 'family=' . rawurlencode(
-            $font . ':wght@' . implode( ';', array_unique( $weights ) )
-        );
+        $weights = array_filter( array_unique( array_map( 'absint', (array) $weights ) ) );
+        sort( $weights, SORT_NUMERIC );
+
+        if ( ! $font || empty( $weights ) ) {
+            continue;
+        }
+
+        $families[] = 'family=' . urlencode( $font ) . ':wght@' . implode( ';', $weights );
     }
 
     return 'https://fonts.googleapis.com/css2?' . implode( '&', $families ) . '&display=swap';
