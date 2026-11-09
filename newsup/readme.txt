@@ -1,11 +1,11 @@
 === Newsup ===
 Contributors: Themeansar
 Author: Themeansar
-Requires at least: WordPress 6.7
+Requires at least: WordPress 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 5.6.7
-Version: 5.6.7
+Stable tag: 5.6.9
+Version: 5.6.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -1425,3 +1425,7 @@ Fixed Sidebar Comments Styling.
 = Version 5.6.8
 * Enhanced Google Fonts.
 * Added Fonts Variables.
+
+= Version 5.6.9
+* Fixed identified security vulnerabilities.
+* Improved input validation and output escaping.

@@ -72,7 +72,7 @@ if (!class_exists('Newsup_Posts_Carousel')) :
                                     <div class="mg-blog-img">
                                         <a href="<?php the_permalink(); ?>">
                                         <?php if($url) { ?>
-                                            <img src="<?php echo esc_url($url); ?>" alt="<?php the_title(); ?>">
+                                            <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute( array( 'echo' => true ) ); ?>">
                                         <?php } ?>
                                         </a>
                                     </div>

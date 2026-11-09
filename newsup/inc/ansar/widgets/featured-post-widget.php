@@ -120,7 +120,7 @@ class Newsup_horizontal_vertical_posts extends WP_Widget {
 							<div class="img-small-post">
 								<a href="<?php the_permalink(); ?>">
 	                            	<?php if (!empty($url)): ?>
-	                                	<img src="<?php echo esc_url($url); ?>" alt="<?php the_title(); ?>">
+										<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute( array( 'echo' => true ) ); ?>">
 	                            	<?php endif; ?>
 	                        	</a>
 							</div>

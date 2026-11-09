@@ -84,7 +84,7 @@ if (!class_exists('Newsup_Dbl_Col_Cat_Posts')) :
                                                 <!-- img-small-post -->
                                                 <a href="<?php the_permalink(); ?>">
                                                     <?php if (!empty($url)): ?>
-                                                        <img src="<?php echo esc_url($url); ?>" alt="<?php the_title(); ?>">
+                                                        <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute( array( 'echo' => true ) ); ?>">
                                                     <?php endif; ?>
                                                 </a>
                                             </div>
@@ -146,7 +146,7 @@ if (!class_exists('Newsup_Dbl_Col_Cat_Posts')) :
                                                 <!-- img-small-post -->
                                                 <a href="<?php the_permalink(); ?>">
                                                     <?php if (!empty($url)): ?>
-                                                    <img src="<?php echo esc_url($url); ?>" alt="<?php the_title(); ?>">
+                                                    <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute( array( 'echo' => true ) ); ?>">
                                                     <?php endif; ?>
                                                 </a>
                                             </div>

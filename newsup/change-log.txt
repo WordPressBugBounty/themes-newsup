@@ -1,3 +1,7 @@
+= Version 5.6.9
+* Fixed identified security vulnerabilities.
+* Improved input validation and output escaping.
+
 = Version 5.6.8
 * Enhanced Google Fonts.
 * Added Fonts Variables.

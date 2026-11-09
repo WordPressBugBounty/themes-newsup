@@ -111,7 +111,7 @@ if (!defined('ABSPATH')) exit;
                                                     echo '<ul class="theme-cate">';
                                                     $c++;
                                                 }
-                                                echo '<li class="theme-cate-item">'.$in_cat['name'].'</li>';
+                                                echo '<li class="theme-cate-item">' . esc_html( $in_cat['name'] ) . '</li>';
                                                 
                                                 if ($in_cat === $lastcat) {
                                                     echo "</ul>";

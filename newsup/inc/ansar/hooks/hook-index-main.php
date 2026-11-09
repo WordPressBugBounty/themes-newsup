@@ -156,7 +156,7 @@ if (!function_exists('newsup_single_author_box')) :
                     <?php
                     $authorDesc = get_the_author_meta('description');
                     if (!empty($authorDesc)) {
-                        echo '<p class="bs-author-desc">' . $authorDesc . '</p>';
+                        echo '<p class="bs-author-desc">' . wp_kses_post( wpautop( $authorDesc ) ) . '</p>';
                     }
                     ?>             
                 </div>
