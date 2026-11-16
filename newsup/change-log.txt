@@ -1,4 +1,8 @@
-= Version 5.7
+= Version 5.7.1
+* Fixed: WordPress core function.
+* Fixed: PHP compatibility issues and type errors.
+
+= Version 5.7.0
 * Fixed styling issue.
 
 = Version 5.6.9

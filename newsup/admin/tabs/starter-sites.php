@@ -43,8 +43,8 @@ if (!defined('ABSPATH')) exit;
         $present_cat = array();
         $present_cat = array_values(array_unique($present_cat));
 
-        if (count($all_demos) == 0) {
-            wp_die('This theme is not supported yet!');
+        if ( empty($all_demos) || !is_array($all_demos) ) {
+            wp_die( esc_html__( 'This theme is not supported yet or unable to fetch demos!', 'newsup' ) );
         }
 
         //print_r($theme_data_api);
@@ -66,13 +66,15 @@ if (!defined('ABSPATH')) exit;
                     <ul class="uk-subnav uk-subnav-pill">
                         <li class="uk-active" uk-filter-control><a href="#">All</a></li>
                         <?php
-                        foreach ($all_categories as $category) {
-                            if (in_array($category['id'], $present_cat)) {
-                                ?>
-                                <li uk-filter-control="[data-color*='cat_<?php echo esc_html($category['id']); ?>']">
-                                    <a href="#"><?php echo esc_html($category['name']); ?></a>
-                                </li>
-                                <?php
+                        if ( ! empty( $all_categories ) && is_array( $all_categories ) ) {
+                            foreach ($all_categories as $category) {
+                                if (in_array($category['id'], $present_cat)) {
+                                    ?>
+                                    <li uk-filter-control="[data-color*='cat_<?php echo esc_html($category['id']); ?>']">
+                                        <a href="#"><?php echo esc_html($category['name']); ?></a>
+                                    </li>
+                                    <?php
+                                }
                             }
                         }
                         ?>

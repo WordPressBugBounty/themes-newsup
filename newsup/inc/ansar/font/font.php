@@ -8,10 +8,6 @@ function newsup_fonts_url() {
         'Montserrat' => array('400','500','600','700','800'),
         'Inter'        => array('400','500','600'),
     );
-	$heading_font_family = newsup_get_option( 'heading_fontfamily' );
-	$heading_font_weight = newsup_get_option( 'heading_fontweight' );
-	$menu_font_family    = newsup_get_option( 'menu_fontfamily' );
-
     $requested = array(
         array( newsup_get_option( 'heading_fontfamily' ), newsup_get_option( 'heading_fontweight' ) ),
         array( newsup_get_option( 'menu_fontfamily' ), '400' ),
@@ -28,7 +24,7 @@ function newsup_fonts_url() {
         }
     }
 
-    $fonts = apply_filters( 'blogarise_google_fonts', $fonts );
+    $fonts = apply_filters( 'newsup_google_fonts', $fonts );
 
     ksort( $fonts );
 

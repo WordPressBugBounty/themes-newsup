@@ -70,7 +70,7 @@ if (!function_exists('newsup_single_head_content')) :
                     <div class="mg-header">
                         <?php $tags = get_the_tags();
                         if($newsup_single_post_category == true){ newsup_post_categories();} ?>
-                        <h1 class="title single"> <a title="<?php the_title_attribute( array('before' => esc_html_e('Permalink to: ','newsup'),'after'  => '') ); ?>">
+                        <h1 class="title single"> <a title="<?php the_title_attribute( array('before' => esc_html__('Permalink to: ','newsup'), 'after' => '') ); ?>">    
                             <?php the_title(); ?></a>
                         </h1>
                         <?php 
@@ -92,11 +92,13 @@ if (!function_exists('newsup_single_head_content')) :
                                     <span class="newsup-tags"><i class="fas fa-tags"></i>
                                     <?php $keys = array_keys($tags);
                                         foreach ($tags as $key => $tag) {
-                                            $tag_link = get_tag_link($tag->term_id);
-                                            if ($key === end($keys)) {
-                                                echo '<a href="'.esc_url($tag_link).'">#'.esc_html($tag->name).'</a>';
-                                            } else {
-                                                echo ' <a href="'.esc_url($tag_link).'">#'.esc_html($tag->name).',</a>';
+                                            $tag_link = get_term_link($tag);
+                                            if (!is_wp_error($tag_link)) {
+                                                if ($key === end($keys)) {
+                                                    echo '<a href="'.esc_url($tag_link).'">#'.esc_html($tag->name).'</a>';
+                                                } else {
+                                                    echo ' <a href="'.esc_url($tag_link).'">#'.esc_html($tag->name).',</a>';
+                                                }
                                             }
                                         } ?>
                                     </span>
@@ -109,10 +111,10 @@ if (!function_exists('newsup_single_head_content')) :
                     </div>
                     <?php if($single_show_featured_image == true) {
                         if(has_post_thumbnail()){
-                        the_post_thumbnail( '', array( 'class' => 'img-fluid single-featured-image', 'loading' => 'eager', 'fetchpriority' => 'high', 'decoding' => 'async' ) );
+                            the_post_thumbnail( '', array( 'class' => 'img-fluid single-featured-image', 'loading' => 'eager', 'fetchpriority' => 'high', 'decoding' => 'async' ) );
                     
                             $thumbnail_id = get_post_thumbnail_id();
-                            $caption = get_post($thumbnail_id)->post_excerpt;
+                            $caption = wp_get_attachment_caption( $thumbnail_id );
                             if (!empty($caption)) {
                                 echo '<span class="featured-image-caption">' . esc_html($caption) . '</span>';
                             }
@@ -270,7 +272,7 @@ if (!function_exists('newsup_main_grid_content')) :
         global $post;
         while(have_posts()){ the_post();  
             $newsup_content_layout = esc_attr(get_theme_mod('newsup_content_layout','align-content-right')); ?>
-            <div id="post-<?php the_ID(); ?>" <?php if($newsup_content_layout == "grid-fullwidth") { echo post_class('col-lg-4 col-md-6'); } else { echo post_class('col-md-6'); } ?>>
+            <div id="post-<?php the_ID(); ?>" <?php post_class( $newsup_content_layout === 'grid-fullwidth' ? 'col-lg-4 col-md-6' : 'col-md-6' ); ?>>
             <!-- mg-posts-sec mg-posts-modul-6 -->
                 <div class="mg-blog-post-box"> 
                     <?php newsup_post_image_display_type($post); ?>

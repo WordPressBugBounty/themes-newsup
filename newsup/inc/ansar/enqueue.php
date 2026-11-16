@@ -29,7 +29,7 @@ function newsup_scripts() {
 	
 	wp_enqueue_style('smartmenus',NEWSUP_THEME_URI.'css/jquery.smartmenus.bootstrap.css', array(), NEWSUP_THEME_VERSION);
 
-	wp_enqueue_style('newsup-custom-css', NEWSUP_THEME_URI . 'inc/ansar/customize/assets/css/customizer.css', array(), NEWSUP_THEME_VERSION, '1.0', 'all');
+	wp_enqueue_style('newsup-custom-css', NEWSUP_THEME_URI . 'inc/ansar/customize/assets/css/customizer.css', array(), NEWSUP_THEME_VERSION, 'all');
 
 	wp_enqueue_style('newsup-common-css', NEWSUP_THEME_URI . 'css/common.css', array(), NEWSUP_THEME_VERSION);
 

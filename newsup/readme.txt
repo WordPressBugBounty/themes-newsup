@@ -4,8 +4,8 @@ Author: Themeansar
 Requires at least: WordPress 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 5.7
-Version: 5.7
+Stable tag: 5.7.1
+Version: 5.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -1430,5 +1430,9 @@ Fixed Sidebar Comments Styling.
 * Fixed identified security vulnerabilities.
 * Improved input validation and output escaping.
 
-= Version 5.7
+= Version 5.7.0
 * Fixed styling issue.
+
+= Version 5.7.1
+* Fixed: WordPress core function.
+* Fixed: PHP compatibility issues and type errors.
