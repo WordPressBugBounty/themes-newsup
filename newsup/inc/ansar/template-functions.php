@@ -161,12 +161,28 @@ function newsup_get_freatured_image_url($post_id, $size = 'newsup-featured') {
     if (has_post_thumbnail($post_id)) {
         $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), $size);
         $url = $thumb !== false ? '' . $thumb[0] . '' : '""';
-
+        
     } else {
         $url = '';
     }
     return $url;
 }
+function newsup_get_freatured_img($is_first_post = false, $size = 'large') {
+    
+    echo '<a href="'.esc_url(get_the_permalink()).'">';
+        $image_attributes = array(
+            'class'    => 'img-fluid mg-featured-image',
+            'decoding' => 'async',
+        );
+        if ( $is_first_post ) {
+            $image_attributes['fetchpriority'] = 'high';
+        } else {
+            $image_attributes['loading'] = 'lazy';
+        }
+        the_post_thumbnail( $size, $image_attributes );
+    echo '</a>';
+}
+
 
 if (!function_exists('newsup_edit_link')) :
 
@@ -216,30 +232,17 @@ function newsup_date_display_type() {
     } 
 }
 
-function newsup_post_image_display_type($post) {
-    $post_image_type = get_theme_mod('post_image_type','newsup_post_img_hei');
-    $url = newsup_get_freatured_image_url($post->ID, 'newsup-medium');
-    if ( $post_image_type == 'newsup_post_img_hei' ) {
-        if($url) { ?>
+function newsup_post_image_display_type( $post, $is_first_post ) {
+    $class = get_theme_mod('post_image_type','newsup_post_img_hei') == 'newsup_post_img_hei' ? 'back-img md' :'img';
+    if ( has_post_thumbnail() ) { ?>
         <div class="col-12 col-md-6">
-            <div class="mg-post-thumb back-img md" style="background-image: url('<?php echo esc_url($url); ?>');">
-                <?php echo newsup_post_format_type($post); ?>
-                <a class="link-div" href="<?php the_permalink(); ?>"></a>
+            <div class="mg-post-thumb <?php echo esc_attr($class); ?>">
+                <?php newsup_get_freatured_img($is_first_post);
+                echo newsup_post_format_type($post); ?>
             </div> 
         </div>
-        <?php } 
+    <?php
     }
-    elseif ( $post_image_type == 'newsup_post_img_acc' )  {
-    if(has_post_thumbnail()) { ?>
-        <div class="col-12 col-md-6">
-                <div class="mg-post-thumb img">
-        <?php echo '<a href="'.esc_url(get_the_permalink()).'">';
-            the_post_thumbnail( '', array( 'class'=>'img-responsive' ) );
-            echo '</a>'; ?>
-            <?php echo newsup_post_format_type($post); ?>
-                </div>
-        </div> <?php } 
-    } 
 }
 
 function newsup_post_format_type($post_id){

@@ -249,9 +249,10 @@ add_action('newsup_action_single_comments_box', 'newsup_single_comments_box', 40
 if (!function_exists('newsup_main_list_content')) :
     function newsup_main_list_content() {
         global $post;
-        while(have_posts()){ the_post(); ?>
+        $post_count = 0;
+        while(have_posts()){ the_post(); $is_first_post = ( 0 === $post_count++ ); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class('d-md-flex mg-posts-sec-post align-items-center'); ?>>
-                <?php newsup_post_image_display_type($post); ?>
+                <?php newsup_post_image_display_type($post, $is_first_post); ?>
                 <div class="mg-sec-top-post py-3 col">
                     <?php newsup_post_categories(); ?> 
                     <h4 class="entry-title title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
@@ -270,12 +271,13 @@ add_action('newsup_action_main_list_content', 'newsup_main_list_content', 40);
 if (!function_exists('newsup_main_grid_content')) :
     function newsup_main_grid_content() {
         global $post;
-        while(have_posts()){ the_post();  
+        $post_count = 0;
+        while(have_posts()){ the_post(); $is_first_post = ( 0 === $post_count++ );
             $newsup_content_layout = esc_attr(get_theme_mod('newsup_content_layout','align-content-right')); ?>
             <div id="post-<?php the_ID(); ?>" <?php post_class( $newsup_content_layout === 'grid-fullwidth' ? 'col-lg-4 col-md-6' : 'col-md-6' ); ?>>
             <!-- mg-posts-sec mg-posts-modul-6 -->
                 <div class="mg-blog-post-box"> 
-                    <?php newsup_post_image_display_type($post); ?>
+                    <?php newsup_post_image_display_type($post, $is_first_post); ?>
                     <article class="small">
                         <?php newsup_post_categories(); ?> 
                         <h4 class="entry-title title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>  

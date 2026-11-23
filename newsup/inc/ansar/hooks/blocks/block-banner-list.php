@@ -4,16 +4,15 @@ $newsup_number_of_slides = newsup_get_option('number_of_slides');
 $newsup_all_posts_main = newsup_get_posts($newsup_number_of_slides, $newsup_slider_category);
 $newsup_count = 1;
 
+global $post;
+$post_count = 0;
 if ($newsup_all_posts_main->have_posts()) :
     while ($newsup_all_posts_main->have_posts()) : $newsup_all_posts_main->the_post();
-    global $post;
+    $is_first_post = ( 0 === $post_count++ );
     $newsup_url = newsup_get_freatured_image_url($post->ID, 'newsup-slider-full');  ?>
     <div class="item">
-        <div class="mg-blog-post lg back-img" 
-            <?php if (!empty($newsup_url)): ?>
-            style="background-image: url('<?php echo esc_url($newsup_url); ?>');"
-            <?php endif; ?>>
-            <a class="link-div" href="<?php the_permalink(); ?>"> </a>
+        <div class="mg-blog-post lg back-img">
+            <?php newsup_get_freatured_img($is_first_post, 'full'); ?>
             <article class="bottom">
                 <?php echo newsup_post_format_type($post);
                 newsup_post_categories(); ?> 

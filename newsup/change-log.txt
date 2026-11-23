@@ -1,3 +1,6 @@
+= Version 5.7.2
+* Improved post image loading performance with fetch priority and lazy loading.
+
 = Version 5.7.1
 * Fixed: WordPress core function.
 * Fixed: PHP compatibility issues and type errors.

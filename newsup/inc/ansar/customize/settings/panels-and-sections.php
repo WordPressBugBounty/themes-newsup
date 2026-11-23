@@ -115,7 +115,7 @@ $wp_customize->add_panel('frontpage_option_panel',
 );
 // Panel page Options
 $wp_customize->add_panel( 'page_option_panel' , array(
-    'title' => __('Templates', 'newsup'),
+    'title' => __('Post Types', 'newsup'),
     'priority' => 30,
 ) );
     // blog-archive.

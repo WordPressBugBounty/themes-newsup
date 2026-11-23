@@ -10,10 +10,13 @@
         <div class="mg-posts-sec mg-posts-modul-6">
             <!-- mg-posts-sec-inner -->
                 <div class="mg-posts-sec-inner">
-                    <?php if ( have_posts() ) { /* Start the Loop */
-                        while ( have_posts() ) { the_post(); ?>
+                    <?php 
+                    global $post;
+                    $post_count = 0;
+                    if ( have_posts() ) { /* Start the Loop */
+                        while ( have_posts() ) { the_post(); $is_first_post = ( 0 === $post_count++ ); ?>
                             <article <?php post_class('d-md-flex mg-posts-sec-post') ?>>
-                                <?php newsup_post_image_display_type($post); ?>
+                                <?php newsup_post_image_display_type($post, $is_first_post); ?>
                                 <div class="mg-sec-top-post py-3 col">
                                     <?php newsup_post_categories(); ?> 
                                         <h4 class="entry-title title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
