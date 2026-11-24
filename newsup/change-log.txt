@@ -1,3 +1,6 @@
+= Version 5.7.3
+* Fixed Navigation CSS and JS.
+
 = Version 5.7.2
 * Improved post image loading performance with fetch priority and lazy loading.
 

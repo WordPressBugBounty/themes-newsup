@@ -29,6 +29,8 @@ function newsup_scripts() {
 	
 	wp_enqueue_style('smartmenus',NEWSUP_THEME_URI.'css/jquery.smartmenus.bootstrap.css', array(), NEWSUP_THEME_VERSION);
 
+	wp_enqueue_style('newsup-navigation',NEWSUP_THEME_URI.'css/navigation.css', array(), NEWSUP_THEME_VERSION);
+
 	wp_enqueue_style('newsup-custom-css', NEWSUP_THEME_URI . 'inc/ansar/customize/assets/css/customizer.css', array(), NEWSUP_THEME_VERSION, 'all');
 
 	wp_enqueue_style('newsup-common-css', NEWSUP_THEME_URI . 'css/common.css', array(), NEWSUP_THEME_VERSION);
@@ -41,13 +43,15 @@ function newsup_scripts() {
 
 	wp_enqueue_script( 'newsup-navigation', NEWSUP_THEME_URI . 'js/navigation.js', array('jquery'), NEWSUP_THEME_VERSION);
 
+	wp_enqueue_script('smartmenus-js', NEWSUP_THEME_URI . 'js/smartmenus.js' , array('newsup-navigation'), NEWSUP_THEME_VERSION);
+
 	wp_enqueue_script('bootstrap', NEWSUP_THEME_URI . 'js/bootstrap.js', array('jquery'), NEWSUP_THEME_VERSION);
 
 	wp_enqueue_script('owl-carousel-min', NEWSUP_THEME_URI . 'js/owl.carousel.min.js', array('jquery'), NEWSUP_THEME_VERSION);
 
-	wp_enqueue_script('smartmenus-js', NEWSUP_THEME_URI . 'js/jquery.smartmenus.js' , array('jquery'), NEWSUP_THEME_VERSION);
+	// wp_enqueue_script('smartmenus-js', NEWSUP_THEME_URI . 'js/jquery.smartmenus.js' , array('jquery'), NEWSUP_THEME_VERSION);
 
-	wp_enqueue_script('bootstrap-smartmenus-js', NEWSUP_THEME_URI . 'js/jquery.smartmenus.bootstrap.js' , array('jquery'), NEWSUP_THEME_VERSION);
+	// wp_enqueue_script('bootstrap-smartmenus-js', NEWSUP_THEME_URI . 'js/jquery.smartmenus.bootstrap.js' , array('jquery'), NEWSUP_THEME_VERSION);
 
 	wp_enqueue_script('newsup-marquee-js', NEWSUP_THEME_URI . 'js/jquery.marquee.js' , array('jquery'), NEWSUP_THEME_VERSION);
 	
