@@ -111,7 +111,8 @@
                 if (!parentLi.style.position) {
                     parentLi.style.position = 'relative';
                 }
-
+                parentA.removeAttribute('data-toggle');
+                parentA.removeAttribute('data-bs-toggle');
                 parentA.classList.add('has-submenu');
 
                 // Append .sub-arrow toggle caret if not already present
@@ -121,7 +122,6 @@
                     subArrow.className = 'sub-arrow';
                     subArrow.setAttribute('role', 'button');
                     subArrow.setAttribute('aria-label', 'Toggle submenu');
-                    subArrow.setAttribute('tabindex', '0');
                     parentA.appendChild(subArrow);
                 }
 

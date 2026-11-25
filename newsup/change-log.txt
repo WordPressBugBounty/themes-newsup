@@ -1,3 +1,6 @@
+= Version 5.7.4
+* Resolved a compatibility issue that affected navigation when using third-party plugins.
+
 = Version 5.7.3
 * Fixed Navigation CSS and JS.
 
